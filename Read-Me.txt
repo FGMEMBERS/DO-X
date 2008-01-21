@@ -1,0 +1,79 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+Dornier Do 26
+=============
+
+Manufacturer                  : Dornier
+Type                          : Hydravion
+Year                          : 1929
+Powerplant                    : 12 x Curtiss Conqueror (640 hp each)
+Wingspan                      : 157 ft 5 in
+Length                        : 134 ft 2 in
+Height                        : 33 ft
+Empty weight                  : 62280 lb
+Cruise speed                  : 109 mph
+Crew                          : 10/14 
+Passagers                     : 70
+
+Some useful keys:
+=================
+
+
+
+Thanks
+======
+
+
+
+===============
+BARANGER Emmanuel
+January, 04, 2008. 
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+Dornier Do 26
+=============
+
+Constructeur                  : Dornier
+Type                          : Hydravion de transport
+Année                         : 1929
+Moteur                        : 12 x Curtiss Conqueror (640 ch chacun)
+Envergure                     : 48.00 m
+Longueur                      : 40.10 m
+Hauteur                       : 10.10 m
+Poids max au décollage        : 28250 kg
+Vitesse de croisière          : 175 km/h
+Equipage                      : 10/14
+Passagers                     : 70
+
+
+Quelques touches utiles :
+=========================
+
+
+
+Remerciements
+=============
+
+
+===============
+BARANGER Emmanuel
+04 Janvier 2008.
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+

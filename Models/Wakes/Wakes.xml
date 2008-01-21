@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<!-- Original du De Havilland Breaver traduction : BARANGER Emmanuel -->
+
+<!--  Les sous-modèles sont des objets qui peuvent être lâchés ou lancés de l'avion d'utilisateur. 
+      Le déclenchement est une propriété booléenne que vous définissez. Quand les causes sont « vraies »
+      le sous-modèle est laché/Replacé. 
+      Un sous-modèle créera un objet d'AIBallistic qui suivra un chemin ballistique.
+      Par défaut un sous-modèle sera libéré quand le déclenchement correspondant sera « vrai ».
+      Les conditions initiales (IC) définissent le point du départ de l'objet (relativement position à la 
+      « rapportée » de l'avion d'utilisateur), et sa vitesse et direction initiales (relativement à l'avion).
+      Si vous voulez libérer beaucoup d'objets semblables avec l'IC semblable, alors vous pouvez employer 
+      les propriétés de <repeat>, de <delay> et de <count> pour définir ceci.
+
+  Les propriétés permises sont:
+
+      <name>         Le nom du sous-modèle.
+      <model>        Le chemin du modèle 3D.
+      <trigger>      La propriété qui agira en tant que déclenchement. 
+      <speed>        Vitesse initiale, en pieds/sec, relative à l'avion.
+      <repeat>       Placer « true » si vous voulez des répétitions de ce sous-modèle.
+      <delay>        Temps, en secondes, entre les répétitions.
+      <count>        Nombre de sous-modèles disponibles pour les répétitions.
+      <slaved>       Non utilisé pour l'instant.
+      <x-offset>     Position relative à l'avion sur l'axe avant/arrière. 
+                     L'avant est positif.
+      <y-offset>     Position relative à l'avion sur l'axe gauche/droite. 
+                     La droite est positive.
+      <z-offset>     Position relative à l'avion sur l'axe haut/bas.  
+                     Le haut est positif.
+      <yaw-offset>   L'azimut initial du sous-modèle, en degrés, relative au nez de l'avion.
+                     La droite est positive.
+      <pitch-offset> L'altitude initiale du sous-modèle, en degrés, relative au lancement de l'avion.
+                     Le haut de est positif.
+      <eda>          La région équivalente de drague en pi a ajusté. On assume que l'objet a a la masse 
+                     de 0.03 lingot et d'un coefficient de traînance de 0.295, et la densité d'air de 
+                     niveau de la mer est assumée. Ajuster l'EDA pour donner au modèle la balistique que 
+                     vous avez besoin. La valeur par défaut est 0.007.
+      <life>         Durée en secondes. Défaut à 900.0.
+      <buoyancy>     Dans ft/sec/sec. Travaux vis-à-vis de l'accélération de la pesanteur. Par exemple, 
+                     si l'ensemble à 32 le sous-modèle ne sentira aucune pesanteur. Si plus grand que 32 
+                     l'objet se lèveront. Le défaut est 0.
+      <wind>         Placer pour rectifier si vous voulez que le sous-modèle réagisse au vent. Le défaut est « false ». 
+-->  
+ 
+<PropertyList>
+
+  <submodel>
+    <name>RemousAvant</name>
+    <model>Aircraft/DO-26/Models/Wakes/NozeWakes.ac</model>
+    <trigger>gear/gear[0]/wow</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>  20.000 </x-offset>
+    <y-offset>   0.000 </y-offset>
+    <z-offset> -15.000 </z-offset>
+    <buoyancy>32</buoyancy>
+    <life>10</life>
+    <wind>false</wind>
+    <eda>100</eda>
+  </submodel>
+
+  <submodel>
+    <name>RemousArriere</name>
+    <model>Aircraft/DO-26/Models/Wakes/BackWakes.ac</model>
+    <trigger>gear/gear[2]/wow</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset> -20.000 </x-offset>
+    <y-offset>   0.000 </y-offset>
+    <z-offset> -15.000 </z-offset>
+    <buoyancy>32</buoyancy>
+    <life>10</life>
+    <wind>false</wind>
+    <eda>100</eda>
+  </submodel>
+
+  <submodel>
+    <name>RemousGauche</name>
+    <model>Aircraft/DO-26/Models/Wakes/FloatsWakes.ac</model>
+    <trigger>gear/gear[3]/wow</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>   3.000 </x-offset>
+    <y-offset> -16.000 </y-offset>
+    <z-offset> -15.000 </z-offset>
+    <buoyancy>32</buoyancy>
+    <life>10</life>
+    <wind>false</wind>
+    <eda>100</eda>
+  </submodel>
+
+  <submodel>
+    <name>RemousDroite</name>
+    <model>Aircraft/DO-26/Models/Wakes/FloatsWakes.ac</model>
+    <trigger>gear/gear[4]/wow</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>   3.000 </x-offset>
+    <y-offset>  16.000 </y-offset>
+    <z-offset> -15.000 </z-offset>
+    <buoyancy>32</buoyancy>
+    <life>10</life>
+    <wind>false</wind>
+    <eda>100</eda>
+  </submodel>
+
+</PropertyList>

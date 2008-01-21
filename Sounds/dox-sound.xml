@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+  <fx>
+ 
+    <crank>
+      <name>engstart</name>
+      <path>Sounds/engstart.wav</path>
+      <property>/engines/engine/cranking</property>
+      <volume>
+        <offset>0.4</offset>
+      </volume>
+    </crank>
+
+    <crank>
+      <name>crank</name>
+      <mode>looped</mode>
+      <path>Sounds/cranking.wav</path>
+      <condition>
+        <property>/engines/engine/cranking</property>
+        <not>
+          <property>/engines/engine/running</property>
+        </not>
+      </condition>
+      <volume>
+        <offset>0.5</offset>
+      </volume>
+    </crank>
+
+    <crank>
+      <name>cough</name>
+      <path>Sounds/coughing.wav</path>
+      <property>/engines/engine/running</property>
+      <volume>
+        <offset>0.3</offset>
+      </volume>
+    </crank>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Sounds/wasp.wav</path>
+      <property>/engines/engine/running</property>
+      <volume>
+        <property>/engines/engine/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.15</min>
+        <max>0.5</max>
+      </volume>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>1.0</min>
+        <max>1.5</max>
+      </volume>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <offset>1.0</offset>
+        <factor>-0.7</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+    </engine>
+
+    <propeller>
+      <name>propeller</name>
+      <mode>looped</mode>
+      <path>Sounds/turboprop1.wav</path>
+      <property>/engines/engine/running</property>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.2</min>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>0.5</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine/mp-osi</property>
+        <factor>0.0036</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+        <offset>0.9</offset>
+      </pitch>
+    </propeller>
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Aircraft/DO-X/Sounds/flotte.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+          <property>/gear/gear[4]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.25</factor>
+      </volume>
+    </rumble>
+
+    <squeal>
+     <name>water</name>
+     <path>Aircraft/DO-X/Sounds/flotte.wav</path>
+     <condition>
+       <or>
+         <property>/gear/gear[0]/wow</property>
+         <property>/gear/gear[1]/wow</property>
+         <property>/gear/gear[2]/wow</property>
+         <property>/gear/gear[3]/wow</property>
+         <property>/gear/gear[4]/wow</property>
+       </or>
+     </condition>
+     <volume>
+       <property>/velocities/speed-down-fps</property>
+       <factor>0.5</factor>
+       <max>1.0</max>
+     </volume>
+     <volume>
+       <property>/velocities/speed-down-fps</property>
+       <factor>0.5</factor>
+       <max>1.0</max>
+     </volume>
+<!--
+     <volume>
+       <property>/velocities/airspeed-kt</property>
+       <factor>0.01</factor>
+       <max>1.0</max>
+     </volume>
+-->
+     <volume>
+       <internal>dt_stop</internal>
+       <factor>0.05</factor>
+       <max>1.0</max>
+     </volume>
+     <pitch>
+       <property>/velocities/airspeed-kt</property>
+       <factor>0.0025</factor>
+       <offset>0.5</offset>
+       <max>1.0</max>
+     </pitch>
+   </squeal>
+
+  </fx>
+
+</PropertyList>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!-- <PropertyList include="dox-jsbsim-set.xml"> -->
+<PropertyList include="dox-yasim-set.xml">
+
+  <sim>
+    <description>Dornier Do X</description>
+    <author>Emmanuel BARANGER (3D/FDM), Pierre GEOFFROY (FDM)</author>
+  </sim>
+
+</PropertyList>
+

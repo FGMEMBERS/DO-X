@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>Emmanuel BARANGER (3D/FDM), Pierre GEOFFROY (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <type type="string">seaplane</type>
+
+    <startup>
+      <splash-texture>Aircraft/DO-X/dox-splash.rgb</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/DO-X/Sounds/dox-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/DO-X/Models/dox.xml</path>
+    </model>
+
+    <submodels>
+      <serviceable>true</serviceable>
+      <path>Aircraft/DO-X/Models/Wakes/Wakes.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+    </multiplay> 
+
+    <help>
+      <title>Dornier Do X</title>
+    </help>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="4">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="5">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="6">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="7">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="8">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="9">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="10">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="11">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="1">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="2">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="3">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="4">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="5">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="6">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="7">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="8">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="9">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="10">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="11">
+      <rpm>50</rpm>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/dox-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/DO-X/Nasal/doors.nas</file>
+    </doors>    
+  </nasal>
+  
+</PropertyList>
+
