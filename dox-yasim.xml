@@ -82,7 +82,8 @@
       incidence="0" 
       twist="0">
   <stall aoa="18" width="6" peak="1.5"/>
-  <flap1 start="0.0" end="1.00" lift="1.4" drag="1.2"/>
+  <flap1 start="0.486" end="0.959" lift="1.4" drag="1.2"/>
+
   <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
   <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 
