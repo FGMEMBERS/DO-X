@@ -95,7 +95,7 @@
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-X/Sounds/flotte.wav</path>
+      <path>/Sounds/wave.wav</path>
       <condition>
         <or>
           <property>/gear/gear[0]/wow</property>
@@ -114,7 +114,7 @@
 
     <squeal>
      <name>water</name>
-     <path>Aircraft/DO-X/Sounds/flotte.wav</path>
+     <path>Sounds/wave.wav</path>
      <condition>
        <or>
          <property>/gear/gear[0]/wow</property>
