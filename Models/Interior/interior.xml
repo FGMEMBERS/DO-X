@@ -4,4 +4,22 @@
 
   <path>interior.ac</path>
 
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>tour</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -11.681 </x-m>
+      <y-m>  -0.648 </y-m>
+      <z-m>  -0.384 </z-m>
+    </offsets>
+  </model>
+
 </PropertyList>

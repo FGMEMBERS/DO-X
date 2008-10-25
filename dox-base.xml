@@ -13,7 +13,7 @@
     <type type="string">seaplane</type>
 
     <startup>
-      <splash-texture>Aircraft/DO-X/dox-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/DO-X/dox-splash.png</splash-texture>
     </startup>
 
     <sound>

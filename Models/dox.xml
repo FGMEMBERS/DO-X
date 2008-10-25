@@ -8,22 +8,26 @@
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>gouvernail</object-name>
-    <object-name>interieur</object-name>
     <object-name>aile</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>flotteurs</object-name>
-    <object-name>cabine</object-name>
     <object-name>derive</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
-    <object-name>interieur</object-name>
-    <object-name>pilote</object-name>
     <object-name>axes</object-name>
+    <object-name>barresmoteurs</object-name>
 
     <!-- Objets transparents -->
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
     <object-name>vitres</object-name>
   </animation>
 
@@ -32,13 +36,26 @@
     <object-name>vitres</object-name>
   </animation>
 
+  <!-- Effets de vagues en particules -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/waves.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Intérieur, zone passagers -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> -4.949 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.734 </z-m>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>
       <heading-deg> 0.000 </heading-deg>
