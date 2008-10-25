@@ -8,7 +8,7 @@ OBJECT poly
 name "interieur"
 data 9
 interieur
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 2796
@@ -16211,7 +16211,7 @@ OBJECT poly
 name "tour"
 data 8
 tour.001
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 5012
