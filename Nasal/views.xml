@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -11,11 +11,11 @@
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.668 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">   0.318 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -11.525 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg>-15</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <x-offset-m archive="y">   0.525 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -11.334 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -55,11 +55,11 @@
   <view n="0">
     <internal archive="y">true</internal>
     <config>
-      <x-offset-m archive="y">  -0.668 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">   0.318 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -11.525 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg> -15.000 </pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <x-offset-m archive="y">  -0.525 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -11.334 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
     </config>
   </view>
 
@@ -98,24 +98,5 @@
       <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
     </config>
   </view>
-
-  <viewer>
-    <eye>
-      <latitude-deg type="double">0</latitude-deg>
-      <longitude-deg type="double">0</longitude-deg>
-      <altitude-ft type="double">0</altitude-ft>
-      <heading-deg type="double">0</heading-deg>
-      <pitch-deg type="double">0</pitch-deg>
-      <roll-deg type="double">0</roll-deg>
-    </eye>
-    <target>
-      <latitude-deg type="double">0</latitude-deg>
-      <longitude-deg type="double">0</longitude-deg>
-      <altitude-ft type="double">0</altitude-ft>
-      <heading-deg type="double">0</heading-deg>
-      <pitch-deg type="double">0</pitch-deg>
-      <roll-deg type="double">0</roll-deg>
-    </target>
-  </viewer>
 
 </PropertyList>

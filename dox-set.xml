@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <PropertyList include="dox-jsbsim-set.xml"> -->
-<PropertyList include="dox-yasim-set.xml">
+<!-- <PropertyList include="dox-jsbsim-cnf.xml"> -->
+<PropertyList include="dox-yasim-cnf.xml">
 
   <sim>
     <description>Dornier Do X</description>

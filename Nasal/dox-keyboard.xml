@@ -1,14 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
-   <key n="100">
+  <key n="100">
     <name>d</name>
     <desc>Canopy</desc>
     <binding>
      <command>nasal</command>
-     <script>doors.doorsystem.crewexport();</script>
+     <script>dox.doorsystem.crewexport();</script>
     </binding>
-   </key>
+  </key>
 
 </PropertyList>

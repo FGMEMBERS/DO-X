@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
  
 <PropertyList>
 
@@ -11,6 +11,8 @@
       <volume>
         <offset>0.4</offset>
       </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </crank>
 
     <crank>
@@ -26,6 +28,8 @@
       <volume>
         <offset>0.5</offset>
       </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </crank>
 
     <crank>
@@ -35,6 +39,8 @@
       <volume>
         <offset>0.3</offset>
       </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </crank>
 
     <engine>
@@ -66,6 +72,8 @@
         <max>2.0</max>
         <offset>0.15</offset>
       </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </engine>
 
     <propeller>
@@ -90,6 +98,8 @@
         <max>2.0</max>
         <offset>0.9</offset>
       </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </propeller>
 
     <rumble>
@@ -110,6 +120,8 @@
         <type>log</type>
         <factor>0.25</factor>
       </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </rumble>
 
     <squeal>
@@ -133,6 +145,8 @@
        <property>/velocities/speed-down-fps</property>
        <factor>0.5</factor>
        <max>1.0</max>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
      </volume>
 <!--
      <volume>
@@ -152,6 +166,8 @@
        <offset>0.5</offset>
        <max>1.0</max>
      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
    </squeal>
 
   </fx>

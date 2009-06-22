@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -22,20 +22,32 @@
 
     <model>
       <path archive="y">Aircraft/DO-X/Models/dox.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
     </model>
-
-    <submodels>
-      <serviceable>true</serviceable>
-      <path>Aircraft/DO-X/Models/Wakes/Wakes.xml</path>
-    </submodels>
 
     <multiplay>
       <chat_display>1</chat_display>
-    </multiplay> 
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
 
     <help>
       <title>Dornier Do X</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
     </help>
+
+    <menubar include="Dialogs/dox-menu.xml"/>
 
   </sim>
 
@@ -124,9 +136,11 @@
   </input>
  
   <nasal>
-    <doors>
+    <dox>
       <file>Aircraft/DO-X/Nasal/doors.nas</file>
-    </doors>    
+      <file>Aircraft/La-5/Nasal/immat.nas</file>
+      <file>Aircraft/DO-X/Nasal/liveries.nas</file>
+    </dox>    
   </nasal>
   
 </PropertyList>

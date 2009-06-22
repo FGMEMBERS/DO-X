@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "ac3dmat2.001" rgb 0.576 0.267 0.059 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.125 0.192 0.165 shi 4 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "nospec" rgb 1 1 1 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 0 trans 0.5
 OBJECT world
 kids 4

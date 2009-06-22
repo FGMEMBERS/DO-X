@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -8,17 +8,41 @@
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>tour</object-name>
+    <object-name>mur1</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
   </animation>
 
   <!-- Pilote -->
   <model>
     <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -11.681 </x-m>
-      <y-m>  -0.648 </y-m>
-      <z-m>  -0.384 </z-m>
+      <x-m> -11.472 </x-m>
+      <y-m>  -0.525 </y-m>
+      <z-m>  -0.503 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableaux de bord -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -12.249 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.352 </z-m>
     </offsets>
   </model>
 

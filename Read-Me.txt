@@ -1,4 +1,4 @@
-English/Fran√ßais
+English/FranÁais
 
 [English]
 ----------
@@ -6,20 +6,20 @@ English/Fran√ßais
 A little history
 ================
 
-Dornier Do 26
-=============
+Dornier Do X
+============
 
 Manufacturer                  : Dornier
 Type                          : Hydravion
-Year                          : 1929
-Powerplant                    : 12 x Curtiss Conqueror (640 hp each)
-Wingspan                      : 157 ft 5 in
-Length                        : 134 ft 2 in
-Height                        : 33 ft
-Empty weight                  : 62280 lb
-Cruise speed                  : 109 mph
-Crew                          : 10/14 
-Passagers                     : 70
+Year                          :
+Powerplant                    :
+Wingspan                      :
+Length                        :
+Height                        :
+Empty weight                  :
+Cruise speed                  :
+Crew                          :
+Passagers                     :
 
 Some useful keys:
 =================
@@ -30,40 +30,39 @@ Thanks
 ======
 
 
-
 ===============
 BARANGER Emmanuel
-January, 04, 2008. 
+January, 04, 2008
+June, 22, 2009
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
 
 
-[Fran√ßais]
+[FranÁais]
 ----------
 
 Un peu d'histoire
 =================
 
-Dornier Do 26
-=============
+Dornier Do X
+============
 
 Constructeur                  : Dornier
 Type                          : Hydravion de transport
-Ann√©e                         : 1929
-Moteur                        : 12 x Curtiss Conqueror (640 ch chacun)
-Envergure                     : 48.00 m
-Longueur                      : 40.10 m
-Hauteur                       : 10.10 m
-Poids max au d√©collage        : 28250 kg
-Vitesse de croisi√®re          : 175 km/h
-Equipage                      : 10/14
-Passagers                     : 70
+AnnÈe                         :
+Moteur                        :
+Envergure                     :
+Longueur                      :
+Hauteur                       :
+Poids ‡ vide                  :
+Vitesse de croisiËre          :
+Equipage                      :
+Passagers                     :
 
 
 Quelques touches utiles :
 =========================
-
 
 
 Remerciements
@@ -73,7 +72,7 @@ Remerciements
 ===============
 BARANGER Emmanuel
 04 Janvier 2008.
+22 Juin 2009
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
-
