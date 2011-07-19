@@ -11,4 +11,339 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- ******************************* PILOTEN-PANEL **********************************-->
+  <!-- TURN --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.725 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- SPEED --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.285 </x-m>
+      <y-m> -0.725 </y-m>
+      <z-m>  0.375 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FLUGLAGE --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.620 </y-m>
+      <z-m>  0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KOMPASS --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/remote/remote.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.505 </y-m>
+      <z-m>  0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Kreiselkompass --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.505 </y-m>
+      <z-m>  0.370 </z-m>
+    </offsets>
+  </model>
+
+  <!-- old ADF instrument --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.505 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Uhr --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.405 </y-m>
+      <z-m>  0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.405 </y-m>
+      <z-m>  0.375 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VERTICAL SPEED --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m> -0.405 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ****************************** MIDDLE-(ENGINE-CONTROL)-PANEL *********************************-->
+  <!-- Moteurs extérieur gauche avant --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-0.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m> -0.255 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <!-- Moteurs extérieur gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-6.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.255 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Moteur milieu gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m> -0.155 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <!-- Moteur milieu gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-8.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.155 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Moteur intérieur gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-4.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m> -0.055 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <!-- Moteur intérieur gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-10.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.055 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Moteurs intérieur droit avant --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-5.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m>  0.055 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Moteurs intérieur droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-11.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m>  0.055 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Moteur milieu droit avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-3.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m>  0.155 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <!-- Moteur milieu droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-9.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m>  0.155 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Moteur extérieur droit avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
+    <offsets>
+      <x-m>  0.120 </x-m>
+      <y-m>  0.255 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Moteur extérieur droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-7.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m>  0.255 </y-m>
+      <z-m> -0.360 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ****************************** COPILOTEN-PANEL *********************************-->
+  <!-- COPILOT TURN --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.290 </x-m>
+      <y-m>  0.405 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT SPEED --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.285 </x-m>
+      <y-m> 0.405 </y-m>
+      <z-m> 0.375 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT FLUGLAGE --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.505 </y-m>
+      <z-m> 0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT KOMPASS --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/remote/remote.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.620 </y-m>
+      <z-m> 0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT Kreiselkompass --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.620 </y-m>
+      <z-m> 0.370 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT old ADF instrument --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.620 </y-m>
+      <z-m> 0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT Uhr --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.725 </y-m>
+      <z-m> 0.465 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT ALT --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.725 </y-m>
+      <z-m> 0.375 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COPILOT VERTICAL SPEED --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
+    <offsets>
+      <x-m> 0.290 </x-m>
+      <y-m> 0.725 </y-m>
+      <z-m> 0.280 </z-m>
+    </offsets>
+  </model>
+
 </PropertyList>

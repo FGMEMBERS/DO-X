@@ -3,12 +3,6 @@
 <PropertyList>
 
   <path>engines.ac</path>
-  <offsets>
-    <x-m> 0.000 </x-m>
-    <y-m> 0.000 </y-m>
-    <z-m> 0.000 </z-m>
-    <pitch-deg>0</pitch-deg>
-  </offsets>
 
   <animation>
     <!-- Objets opaques -->
@@ -24,9 +18,6 @@
       <x-m> -1.982 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.129 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg>   0.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
     </offsets>
   </model>
 
@@ -37,9 +28,6 @@
       <x-m> 1.962 </x-m>
       <y-m> 0.000 </y-m>
       <z-m> 0.129 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg>   0.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
     </offsets>
   </model>
 

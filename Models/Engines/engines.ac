@@ -7,7 +7,7 @@ OBJECT poly
 name "echappe"
 data 7
 echappe
-texture "colors.png"
+texture "colors-E.png"
 texrep 1 1
 crease 30.000000
 numvert 3344
@@ -30641,7 +30641,7 @@ OBJECT poly
 name "moteur"
 data 6
 moteur
-texture "colors.png"
+texture "colors-E.png"
 texrep 1 1
 crease 30.000000
 numvert 505
@@ -34742,7 +34742,7 @@ OBJECT poly
 name "support"
 data 7
 support
-texture "colors.png"
+texture "colors-E.png"
 texrep 1 1
 crease 30.000000
 numvert 800
