@@ -109,9 +109,19 @@
 -->
   </animation>
 
+  <!-- Immatriculation -->
+  <model>
+    <path>Aircraft/DO-X/Models/Immat/immat.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
   <!-- Effets de vagues en particules -->
   <model>
-    <path>Aircraft/DO-X/Models/Effects/waves.xml</path>
+    <path>Aircraft/DO-X/Models/Effects/waves/waves.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
@@ -257,8 +267,8 @@
   <animation>
     <type>rotate</type>
     <object-name>direction</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>10</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -10 </factor>
     <center>
       <x-m> 18.787 </x-m>
       <y-m>  0.000 </y-m>
@@ -274,8 +284,8 @@
   <animation>
     <type>rotate</type>
     <object-name>directionG</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>10</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -10 </factor>
     <center>
       <x-m> 16.998 </x-m>
       <y-m> -1.742 </y-m>
@@ -291,8 +301,8 @@
   <animation>
     <type>rotate</type>
     <object-name>directionD</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>10</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -10 </factor>
     <center>
       <x-m> 16.998 </x-m>
       <y-m>  1.742 </y-m>
@@ -308,8 +318,8 @@
   <animation>
     <type>rotate</type>
     <object-name>gouvernail</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>10</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -10 </factor>
     <center>
       <x-m>  5.143 </x-m>
       <y-m>  0.000 </y-m>
@@ -326,7 +336,7 @@
   <animation>
     <type>rotate</type>
     <object-name>profondeur</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>10</factor>
     <center>
       <x-m> 18.299 </x-m>
@@ -344,8 +354,8 @@
   <animation>
     <type>rotate</type>
     <object-name>aileronG</object-name>
-    <property>/surface-positions/left-aileron-pos-norm</property>
-    <factor>20</factor>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 20 </factor>
     <center>
       <x-m> -0.876 </x-m>
       <y-m> 15.426 </y-m>
@@ -361,17 +371,17 @@
   <animation>
     <type>rotate</type>
     <object-name>aileronD</object-name>
-    <property>/surface-positions/left-aileron-pos-norm</property>
-    <factor>20</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 20 </factor>
     <center>
       <x-m> -0.876 </x-m>
       <y-m> 15.426 </y-m>
       <z-m> -0.046 </z-m>
     </center>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
