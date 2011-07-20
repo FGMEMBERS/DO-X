@@ -148,7 +148,7 @@
       <file>Aircraft/DO-X/Nasal/doors.nas</file>
     </doors>
     <dox>
-      <file>Aircraft/La-5/Nasal/immat.nas</file>
+      <file>Aircraft/DO-X/Nasal/immat.nas</file>
       <file>Aircraft/DO-X/Nasal/liveries.nas</file>
     </dox>    
   </nasal>

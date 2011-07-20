@@ -2,25 +2,57 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y"> -60 </chase-distance-m>
+  <chase-distance-m type="double" archive="y">-100.0</chase-distance-m>
 
   <view n="100">
-    <name>Passanger Seat View</name>
+    <name>Copilot Seat View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
-      <dynamic-view type="bool">true</dynamic-view>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
       <x-offset-m archive="y">   0.525 </x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -11.334 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg> 70 </default-field-of-view-deg>
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
 
   <view n="101">
+    <name>Engine Panel View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y">   0.000 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -12.200 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg> -90.000 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="102">
+    <name>Front Deck View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y">   0.000 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -15.000 </z-offset-m>	<!-- Back /window inside is 12.355 -->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="103">
     <name>Tail Camera View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
@@ -28,15 +60,15 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
+      <pitch-offset-deg>-5</pitch-offset-deg>
       <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up   -->
-      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
+      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
     </config>
   </view>
 
-  <view n="102">
+  <view n="104">
     <name>Cabine View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
@@ -44,11 +76,11 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
+      <pitch-offset-deg>-5</pitch-offset-deg>
       <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y"> -1.402 </y-offset-m> <!--Up   -->
-      <z-offset-m archive="y"> -6.633 </z-offset-m> <!--Back -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
+      <y-offset-m archive="y"> -1.402 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -6.633 </z-offset-m> <!--Back-->
     </config>
   </view>
 
@@ -58,8 +90,8 @@
       <x-offset-m archive="y">  -0.525 </x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -11.334 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg> 70 </default-field-of-view-deg>
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>70</default-field-of-view-deg>
     </config>
   </view>
 
