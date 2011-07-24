@@ -7,8 +7,9 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-    <object-name>tour</object-name>
+    <object-name>inttour</object-name>
     <object-name>mur1</object-name>
+    <object-name>mur2</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
@@ -31,12 +32,12 @@
     <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -11.472 </x-m>
-      <y-m>  -0.525 </y-m>
-      <z-m>  -0.503 </z-m>
+      <y-m>  -0.540 </y-m>
+      <z-m>  -0.500 </z-m>
     </offsets>
   </model>
 
-  <!-- Tableaux de bord -->
+  <!-- Cockpit enviroment -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/panel.xml</path>
     <offsets>
@@ -47,3 +48,4 @@
   </model>
 
 </PropertyList>
+

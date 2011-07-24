@@ -152,9 +152,6 @@
       <x-m> -7.239 </x-m>
       <y-m> -9.350 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -165,9 +162,6 @@
       <x-m> -7.239 </x-m>
       <y-m> -5.513 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -178,9 +172,6 @@
       <x-m> -7.239 </x-m>
       <y-m> -1.845 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -191,9 +182,6 @@
       <x-m> -7.239 </x-m>
       <y-m>  1.845 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -204,9 +192,6 @@
       <x-m> -7.239 </x-m>
       <y-m>  5.513 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -217,9 +202,249 @@
       <x-m> -7.239 </x-m>
       <y-m>  9.350 </y-m>
       <z-m>  3.329 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Cranking effects -->
+  <!-- Coté gauche -->
+  <!-- Extérieur gauche - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -9.812 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur gauche - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -8.887 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu gauche - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -5.975 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu gauche - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -5.050 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur gauche - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -2.307 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur gauche - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m> -1.382 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur gauche - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -9.812 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur gauche - Droite arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -8.887 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu gauche - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -5.975 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu gauche - Droite arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -5.050 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur gauche - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -2.307 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur gauche - Droite arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m> -1.382 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Coté droit -->
+  <!-- Extérieur droit - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  9.812 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur droit - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  8.887 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu droit - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  5.975 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu droit - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  5.050 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur droit - Droite avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  2.307 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur droit - Gauche avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -8.790 </x-m>
+      <y-m>  1.382 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur droit - Droite arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  9.812 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Extérieur droit - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  8.887 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu droit - Droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  5.975 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Milieu droit - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  5.050 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur droit - Droite arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  2.307 </y-m>
+      <z-m>  3.643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur droit - Gauche arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -6.454 </x-m>
+      <y-m>  1.382 </y-m>
+      <z-m>  3.643 </z-m>
     </offsets>
   </model>
 
