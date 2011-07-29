@@ -41,7 +41,7 @@
 
   <!-- 1. old ADF instrument --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-lite.xml</path>
     <offsets>
       <x-m>  0.089 </x-m>
       <y-m> -0.560 </y-m>
@@ -124,7 +124,7 @@
 
   <!-- 11. COPILOT old ADF instrument --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-lite.xml</path>
     <offsets>
       <x-m>  0.089 </x-m>
       <y-m>  0.560 </y-m>

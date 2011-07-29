@@ -2,10 +2,9 @@
 
 <PropertyList> 
 
-  <path>afn2.ac</path>
+  <path>afn2-lite.ac</path>
     
   <animation>
-    <object-name>fond</object-name>
     <object-name>visses</object-name>
     <object-name>rebord</object-name>
     <object-name>face</object-name>

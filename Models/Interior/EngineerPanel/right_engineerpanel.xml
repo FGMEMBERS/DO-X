@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>engineerpanel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>throttle0</object-name>
+    <object-name>throttle2</object-name>
+    <object-name>throttle4</object-name>
+    <object-name>throttle6</object-name>
+    <object-name>throttle8</object-name>
+    <object-name>throttle10</object-name>
+    <object-name>mixture0</object-name>
+    <object-name>mixture2</object-name>
+    <object-name>mixture4</object-name>
+    <object-name>mixture6</object-name>
+    <object-name>mixture8</object-name>
+    <object-name>mixture10</object-name>
+    <object-name>verkleidungL</object-name>
+    <object-name>v_handlaufL</object-name>
+  </animation>
+
+  <!-- Les moteurs numérotés vue de dessus 
+
+              avant
+              |   | 
+  gauche 0 2  4   5 3 1 droite
+         6 8 10  11 9 7
+              |   |
+               \ /
+             arrière
+                |
+  -->
+
+  <!-- 5  -->
+  <!-- Throttle -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle4</object-name>
+    <property>controls/engines/engine[5]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m> -0.774 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture4</object-name>
+    <property>controls/engines/engine[5]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m>  0.774 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- 11  -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle10</object-name>
+    <property>controls/engines/engine[11]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m>  0.463 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture10</object-name>
+    <property>controls/engines/engine[11]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m>  0.463 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- 3  -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle2</object-name>
+    <property>controls/engines/engine[3]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m>  0.150 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture2</object-name>
+    <property>controls/engines/engine[3]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m>  0.150 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- 9  -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle8</object-name>
+    <property>controls/engines/engine[9]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture8</object-name>
+    <property>controls/engines/engine[9]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.150 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- 1  -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle0</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m> -0.461 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture0</object-name>
+    <property>controls/engines/engine[1]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.461 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- 7  -->
+  <!-- Throttle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle6</object-name>
+    <property>controls/engines/engine[7]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m> -0.774 </y-m>
+      <z-m> -0.130 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>mixture6</object-name>
+    <property>controls/engines/engine[7]/mixture</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.774 </y-m>
+      <z-m> -0.193 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- ###############  Instruments ################### -->
+  <!-- Moteurs intérieur droit avant --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-5.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Moteurs intérieur droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-11.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Moteur milieu droit avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-3.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Moteur milieu droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-9.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Moteur extérieur droit avant -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Moteur extérieur droit arrière -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-7.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+</PropertyList>
+

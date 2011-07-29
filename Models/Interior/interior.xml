@@ -27,6 +27,16 @@
     <object-name>intvitres</object-name>
   </animation>
 
+  <!-- Lattenrost -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Slats/slats.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
   <!-- Pilote -->
   <model>
     <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
@@ -44,6 +54,31 @@
       <x-m> -12.249 </x-m>
       <y-m>   0.000 </y-m>
       <z-m>  -0.352 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Engineer enviroment -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/right_engineerpanel.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m>  0.850 </y-m>
+      <z-m>  0.380 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>     0 </pitch-deg>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/left_engineerpanel.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m> -0.850 </y-m>
+      <z-m>  0.380 </z-m>
+      <roll-deg>     0 </roll-deg>
+      <pitch-deg>    0 </pitch-deg>
+      <heading-deg> 90 </heading-deg>
     </offsets>
   </model>
 
