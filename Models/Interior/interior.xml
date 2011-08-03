@@ -27,13 +27,23 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <!-- Lattenrost -->
+  <!-- Slats / Lattenrost -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/Slats/slats.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Caisse dans NavigationCabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/caisse.xml</path>
+    <offsets>
+      <x-m> -9.500 </x-m>
+      <y-m> -0.590 </y-m>
+      <z-m> -0.658 </z-m> <!-- up -->
     </offsets>
   </model>
 

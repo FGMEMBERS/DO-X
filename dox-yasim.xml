@@ -477,8 +477,8 @@
   </gear>
 
   <!-- wing floats Left 3 -->
-  <gear x="6" y="5" z="-4.7" 
-        compression="1.4"  
+  <gear x="6" y="6" z="-4.8" 
+        compression="1.2"  
         spring="0.9" 
         damp="10" 
         sfric="0.8" 
@@ -492,8 +492,8 @@
   </gear>
 
   <!-- wing floats right 4 -->
-  <gear x="6" y="-5" z="-4.7" 
-        compression="1.4"  
+  <gear x="6" y="-6" z="-4.8" 
+        compression="1.2"  
         spring="0.9" 
         damp="10" 
         sfric="0.8" 

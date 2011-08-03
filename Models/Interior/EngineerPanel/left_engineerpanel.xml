@@ -6,20 +6,20 @@
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>throttle0</object-name>
-    <object-name>throttle2</object-name>
-    <object-name>throttle4</object-name>
-    <object-name>throttle6</object-name>
-    <object-name>throttle8</object-name>
-    <object-name>throttle10</object-name>
-    <object-name>mixture0</object-name>
-    <object-name>mixture2</object-name>
-    <object-name>mixture4</object-name>
-    <object-name>mixture6</object-name>
-    <object-name>mixture8</object-name>
-    <object-name>mixture10</object-name>
-    <object-name>verkleidungL</object-name>
-    <object-name>v_handlaufL</object-name>
+    <object-name>throttleA</object-name>
+    <object-name>throttleB</object-name>
+    <object-name>throttleC</object-name>
+    <object-name>throttleD</object-name>
+    <object-name>throttleE</object-name>
+    <object-name>throttleF</object-name>
+    <object-name>mixtureA</object-name>
+    <object-name>mixtureB</object-name>
+    <object-name>mixtureC</object-name>
+    <object-name>mixtureD</object-name>
+    <object-name>mixtureE</object-name>
+    <object-name>mixtureF</object-name>
+    <object-name>verkleidung</object-name>
+    <object-name>v_handlauf</object-name>
   </animation>
 
   <!-- Les moteurs numérotés vue de dessus 
@@ -38,7 +38,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle4</object-name>
+    <object-name>throttleF</object-name>
     <property>controls/engines/engine[4]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -59,7 +59,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture4</object-name>
+    <object-name>mixtureF</object-name>
     <property>controls/engines/engine[4]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -81,7 +81,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle10</object-name>
+    <object-name>throttleE</object-name>
     <property>controls/engines/engine[10]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -102,7 +102,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture10</object-name>
+    <object-name>mixtureE</object-name>
     <property>controls/engines/engine[10]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -124,7 +124,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle2</object-name>
+    <object-name>throttleD</object-name>
     <property>controls/engines/engine[2]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -145,7 +145,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture2</object-name>
+    <object-name>mixtureD</object-name>
     <property>controls/engines/engine[2]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -167,7 +167,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle8</object-name>
+    <object-name>throttleC</object-name>
     <property>controls/engines/engine[8]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -188,7 +188,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture8</object-name>
+    <object-name>mixtureC</object-name>
     <property>controls/engines/engine[8]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -210,7 +210,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle0</object-name>
+    <object-name>throttleB</object-name>
     <property>controls/engines/engine[0]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -231,7 +231,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture0</object-name>
+    <object-name>mixtureB</object-name>
     <property>controls/engines/engine[0]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -253,7 +253,7 @@
   <!-- Throttle -->
   <animation>
     <type>rotate</type>
-    <object-name>throttle6</object-name>
+    <object-name>throttleA</object-name>
     <property>controls/engines/engine[6]/throttle</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -274,7 +274,7 @@
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
-    <object-name>mixture6</object-name>
+    <object-name>mixtureA</object-name>
     <property>controls/engines/engine[6]/mixture</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
@@ -295,7 +295,7 @@
   <!-- ###############  Instruments ################### -->
   <!-- Moteur intérieur gauche avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-4.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-4.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m>  0.719 </y-m> <!-- near the panel -->
@@ -305,7 +305,7 @@
   
   <!-- Moteur intérieur gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-10.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-10.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m>  0.480 </y-m> <!-- near the panel -->
@@ -315,7 +315,7 @@
 
   <!-- Moteur milieu gauche avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-2.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m>  0.120 </y-m> <!-- near the panel -->
@@ -325,7 +325,7 @@
   
   <!-- Moteur milieu gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-8.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-8.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m> -0.120 </y-m> <!-- near the panel -->
@@ -335,7 +335,7 @@
 
   <!-- Moteurs extérieur gauche avant --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-0.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-0.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m> -0.480 </y-m> <!-- near the panel -->
@@ -345,7 +345,7 @@
   
   <!-- Moteurs extérieur gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-6.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-6.xml</path>
     <offsets>
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m> -0.719 </y-m> <!-- near the panel -->

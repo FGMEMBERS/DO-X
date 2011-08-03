@@ -7,18 +7,20 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>panel</object-name>
-
+    <object-name>leather</object-name>
+    <object-name>visses</object-name>
+    
     <!-- Objets transparents -->
   </animation>
 
-<!-- *********  Central-Position of the Instruments in the front of the Cockpit ************-->
+  <!-- *********  Central-Position of the Instruments in the front of the Cockpit ************ -->
   <!-- KOMPASS Central --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/remote/compass-big.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-big.xml</path>
     <offsets>
-      <x-m>  -0.370 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0.150 </z-m>
+      <x-m> -0.375 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.150 </z-m>
     </offsets>
   </model>
 
@@ -26,8 +28,8 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att-big.xml</path>
     <offsets>
-      <x-m>  -0.370 </x-m>
-      <y-m> 0 </y-m>
+      <x-m> -0.370 </x-m>
+      <y-m>  0.000 </y-m>
       <z-m> -0.050 </z-m>
     </offsets>
   </model>
@@ -39,11 +41,11 @@
   <!--  4.              5.  -->
   <!--  6.              7.  -->
 
-  <!-- 1. old ADF instrument --> 
+  <!-- 1. MAGNETIC COMPASS --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-lite.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
     <offsets>
-      <x-m>  0.089 </x-m>
+      <x-m>  0.100 </x-m>
       <y-m> -0.560 </y-m>
       <z-m>  0.535 </z-m>
     </offsets>
@@ -75,9 +77,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
-      <y-m> -0.725 </y-m>
-      <z-m>  0.370 </z-m>
+      <x-m>  0.156 </x-m> <!-- near to panel -->
+      <y-m> -0.725 </y-m> <!-- right -->
+      <z-m>  0.415 </z-m> <!-- up -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -86,9 +88,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.156 </x-m>
       <y-m> -0.405 </y-m>
-      <z-m>  0.370 </z-m>
+      <z-m>  0.415 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -97,9 +99,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.185 </x-m>
+      <x-m>  0.173 </x-m>
       <y-m> -0.725 </y-m>
-      <z-m>  0.250 </z-m>
+      <z-m>  0.300 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -108,9 +110,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m>  0.185 </x-m>
+      <x-m>  0.173 </x-m>
       <y-m> -0.405 </y-m>
-      <z-m>  0.250 </z-m>
+      <z-m>  0.300 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -122,11 +124,11 @@
   <!--  14.              15.  -->
   <!--  16.              17.  -->
 
-  <!-- 11. COPILOT old ADF instrument --> 
+  <!-- 11. MAGNETIC COMPASS --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-lite.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
     <offsets>
-      <x-m>  0.089 </x-m>
+      <x-m>  0.100 </x-m>
       <y-m>  0.560 </y-m>
       <z-m>  0.535 </z-m>
     </offsets>
@@ -158,9 +160,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
-      <y-m>  0.725 </y-m>
-      <z-m>  0.370 </z-m>
+      <x-m>  0.156 </x-m> <!-- near to panel -->
+      <y-m>  0.725 </y-m> <!-- right -->
+      <z-m>  0.415 </z-m> <!-- up -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -169,9 +171,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.156 </x-m>
       <y-m>  0.405 </y-m>
-      <z-m>  0.370 </z-m>
+      <z-m>  0.415 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -180,9 +182,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.185 </x-m>
+      <x-m>  0.173 </x-m>
       <y-m>  0.725 </y-m>
-      <z-m>  0.250 </z-m>
+      <z-m>  0.300 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -191,9 +193,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m>  0.185 </x-m>
+      <x-m>  0.173 </x-m>
       <y-m>  0.405 </y-m>
-      <z-m>  0.250 </z-m>
+      <z-m>  0.300 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -351,5 +353,5 @@
     </offsets>
   </model>
 
-
 </PropertyList>
+
