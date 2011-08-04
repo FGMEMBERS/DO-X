@@ -43,6 +43,8 @@
     <object-name>axes</object-name>
     <object-name>barresmoteurs</object-name>
 
+    <object-name>trous</object-name>
+
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
   </animation>
@@ -74,6 +76,8 @@
     <object-name>directionD</object-name>
     <object-name>axes</object-name>
     <object-name>barresmoteurs</object-name>
+
+    <object-name>trous</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -489,7 +493,7 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -10 </factor>
     <center>
-      <x-m> 18.787 </x-m>
+      <x-m> 18.857 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  1.746 </z-m>
     </center>
@@ -558,7 +562,7 @@
     <property>surface-positions/elevator-pos-norm</property>
     <factor>10</factor>
     <center>
-      <x-m> 18.299 </x-m>
+      <x-m> 18.378 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  1.713 </z-m>
     </center>
@@ -576,9 +580,9 @@
     <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 20 </factor>
     <center>
-      <x-m> -0.876 </x-m>
+      <x-m> -0.703 </x-m>
       <y-m> 15.426 </y-m>
-      <z-m> -0.046 </z-m>
+      <z-m> -0.008 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -593,9 +597,9 @@
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 20 </factor>
     <center>
-      <x-m> -0.876 </x-m>
+      <x-m> -0.703 </x-m>
       <y-m> 15.426 </y-m>
-      <z-m> -0.046 </z-m>
+      <z-m> -0.008 </z-m>
     </center>
     <axis>
       <x> 0 </x>
