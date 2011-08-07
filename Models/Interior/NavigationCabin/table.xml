@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>table.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>table</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>

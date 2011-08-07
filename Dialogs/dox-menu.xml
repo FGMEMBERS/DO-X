@@ -14,6 +14,13 @@
         </binding>
       </item>
       <item>
+        <label>Yokes On/Off</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/yokes-visible</property>
+        </binding>
+      </item>
+      <item>
         <label>Immatriculation</label>
         <binding>
           <command>nasal</command>

@@ -42,6 +42,8 @@
     <object-name>directionD</object-name>
     <object-name>axes</object-name>
     <object-name>barresmoteurs</object-name>
+    <object-name>socleRadio</object-name>
+    <object-name>socleWind</object-name>
 
     <object-name>trous</object-name>
 
@@ -76,6 +78,8 @@
     <object-name>directionD</object-name>
     <object-name>axes</object-name>
     <object-name>barresmoteurs</object-name>
+    <object-name>socleRadio</object-name>
+    <object-name>socleWind</object-name>
 
     <object-name>trous</object-name>
 
@@ -140,6 +144,17 @@
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RadioDirectionFinder on the Front Deck-->
+  <model>
+    <path>Aircraft/DO-X/Models/RadioDirFinder/radiodir.xml</path>
+    <offsets>
+      <x-m> -15.931 </x-m>
+      <y-m>   1.045 </y-m>
+      <z-m>   0.000 </z-m>
+      <heading-deg> 90 </heading-deg>
     </offsets>
   </model>
 

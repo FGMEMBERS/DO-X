@@ -43,8 +43,21 @@
     <path>Aircraft/DO-X/Models/Interior/NavigationCabin/caisse.xml</path>
     <offsets>
       <x-m> -9.500 </x-m>
-      <y-m> -0.590 </y-m>
+      <y-m> -0.720 </y-m>
       <z-m> -0.658 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Table dans NavigationCabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/table.xml</path>
+    <offsets>
+      <x-m> -10.205 </x-m>
+      <y-m> -1.060 </y-m>
+      <z-m> .0 </z-m> <!-- up -->
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>     0 </pitch-deg>
+      <heading-deg>  -2 </heading-deg>
     </offsets>
   </model>
 
@@ -53,8 +66,8 @@
     <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -11.472 </x-m>
-      <y-m>  -0.540 </y-m>
-      <z-m>  -0.500 </z-m>
+      <y-m>  -0.660 </y-m>
+      <z-m>  -0.400 </z-m>
     </offsets>
   </model>
 

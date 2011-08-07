@@ -20,7 +20,7 @@
     <offsets>
       <x-m> -0.375 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.150 </z-m>
+      <z-m>  0.260 </z-m>
     </offsets>
   </model>
 
@@ -30,7 +30,38 @@
     <offsets>
       <x-m> -0.370 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.050 </z-m>
+      <z-m>  0.082 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Yokes --> 
+  <!-- Yoke Pilot --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yoke.xml</path>
+    <offsets>
+      <x-m>  0.650 </x-m> <!-- near to panel -->
+      <y-m> -0.670 </y-m> <!-- right -->
+      <z-m> -0.420 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Yoke Copilot -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yoke.xml</path>
+    <offsets>
+      <x-m>  0.650 </x-m> <!-- near to panel -->
+      <y-m>  0.670 </y-m> <!-- right -->
+      <z-m> -0.420 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Yokeboot -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yokeboot.xml</path>
+    <offsets>
+      <x-m>  0.650 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m> -0.420 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -207,7 +238,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m> -0.255 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -219,7 +250,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.255 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -232,7 +263,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m> -0.170 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -244,7 +275,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.170 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -257,7 +288,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m> -0.085 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -269,7 +300,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.085 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -282,7 +313,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m>  0.085 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -295,7 +326,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.085 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -308,7 +339,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m>  0.170 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -320,7 +351,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.170 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -333,7 +364,7 @@
     <offsets>
       <x-m>  0.230 </x-m>
       <y-m>  0.255 </y-m>
-      <z-m> -0.275 </z-m>
+      <z-m> -0.070 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -346,7 +377,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.255 </y-m>
-      <z-m> -0.350 </z-m>
+      <z-m> -0.145 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
