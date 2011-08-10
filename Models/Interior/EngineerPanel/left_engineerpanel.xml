@@ -45,15 +45,59 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m> -0.774 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleF</object-name>
+   <property>controls/engines/engine[4]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleF</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[4]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[4]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
   </animation>
   
   <!-- Mixture -->
@@ -88,9 +132,9 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m>  0.463 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -98,7 +142,51 @@
       <z>  0 </z>
     </axis>
   </animation>
-  
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleE</object-name>
+   <property>controls/engines/engine[10]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleE</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[10]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[10]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+  </animation>
+
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
@@ -131,15 +219,59 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m>  0.150 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleD</object-name>
+   <property>controls/engines/engine[2]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleD</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[2]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[2]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
   </animation>
   
   <!-- Mixture -->
@@ -174,9 +306,9 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m> -0.463 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -184,7 +316,51 @@
       <z>  0 </z>
     </axis>
   </animation>
-  
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleC</object-name>
+   <property>controls/engines/engine[8]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleC</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[8]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[8]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+  </animation>
+
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
@@ -217,15 +393,59 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m> -0.461 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleB</object-name>
+   <property>controls/engines/engine[0]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleB</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[0]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[0]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
   </animation>
   
   <!-- Mixture -->
@@ -260,15 +480,59 @@
       <entry><ind> 1 </ind><dep> 80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.050 </x-m>
-      <y-m> -0.774 </y-m>
-      <z-m> -0.130 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttleA</object-name>
+   <property>controls/engines/engine[6]/throttle</property>
+   <factor>0</factor>
+   <axis>
+    <x>  0 </x>
+    <y> -1 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleA</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[6]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[6]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
   </animation>
   
   <!-- Mixture -->
@@ -302,6 +566,24 @@
       <z-m>  0.260 </z-m> <!-- up -->
     </offsets>
   </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-4.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-4.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
+    </offsets>
+  </model>
   
   <!-- Moteur intérieur gauche arrière -->
   <model>
@@ -313,6 +595,24 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-10.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-10.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- Moteur milieu gauche avant -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-2.xml</path>
@@ -320,6 +620,24 @@
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m>  0.120 </y-m> <!-- near the panel -->
       <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-2.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-2.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m>  0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
     </offsets>
   </model>
   
@@ -333,6 +651,24 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-8.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-8.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.120 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- Moteurs extérieur gauche avant --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpm-0.xml</path>
@@ -340,6 +676,24 @@
       <x-m> -0.292 </x-m> <!-- back -->
       <y-m> -0.480 </y-m> <!-- near the panel -->
       <z-m>  0.260 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-0.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-0.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.480 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
     </offsets>
   </model>
   
@@ -352,6 +706,203 @@
       <z-m>  0.260 </z-m> <!-- up -->
     </offsets>
   </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-in-6.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.410 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/oiltemp/oiltemp-out-6.xml</path>
+    <offsets>
+      <x-m> -0.292 </x-m> <!-- back -->
+      <y-m> -0.719 </y-m> <!-- near the panel -->
+      <z-m>  0.560 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- ###############  Wheel for all Engines on left side panel ################### -->
+  <!-- ThrottleWheel -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/throttleWheelL.xml</path>
+    <offsets>
+      <x-m>  0.010 </x-m> <!-- right -->
+      <y-m> -0.885 </y-m> <!-- near the panel -->
+      <z-m> -0.060 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- ###############  Labels activated by hotspots ################### -->
+  <animation>
+    <type>material</type>
+    <object-name>Label1</object-name>
+    <object-name>Label2</object-name>
+    <object-name>Label3</object-name>
+    <object-name>Label4</object-name>
+    <object-name>Label5</object-name>
+    <object-name>Label6</object-name>
+    <emission>
+        <red>1.0</red>
+        <green>0.8</green>
+        <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Label1</object-name>
+    <object-name>Label2</object-name>
+    <object-name>Label3</object-name>
+    <object-name>Label4</object-name>
+    <object-name>Label5</object-name>
+    <object-name>Label6</object-name>
+    <condition>
+        <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <!-- Instruments --> 
+  <text>
+    <name>Label1</name>
+    <type type="string">literal</type>
+    <text type="string">LARBOARD / LEFT WING</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.08</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>1.5</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.160 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- back -->
+      <z-m>  0.750 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <text>
+    <name>Label2</name>
+    <type type="string">literal</type>
+    <text type="string">Oil temperature quitting the engine (not supported)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.05</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>1.5</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.160 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- back -->
+      <z-m>  0.630 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <text>
+    <name>Label3</name>
+    <type type="string">literal</type>
+    <text type="string">Oil temperature before flowing through the engine (not supported)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.05</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>2</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.160 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- back -->
+      <z-m>  0.480 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <text>
+    <name>Label4</name>
+    <type type="string">literal</type>
+    <text type="string">RPM for every engine</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.05</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>2</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.160 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- back -->
+      <z-m>  0.300 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <text>
+    <name>Label5</name>
+    <type type="string">literal</type>
+    <text type="string">outer back | outer front | middle back -THROTTLES- middle front | inner back | inner front</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.04</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>3</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.350 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.020 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <text>
+    <name>Label6</name>
+    <type type="string">literal</type>
+    <text type="string">MIXTURES</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.04</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>1</max-width>
+    <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.350 </x-m> <!-- distance to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m> -0.110 </z-m> <!-- up -->
+    </offsets>
+  </text>
 
 </PropertyList>
 

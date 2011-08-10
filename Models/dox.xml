@@ -117,6 +117,12 @@
 -->
   </animation>
 
+  <!-- Une ombre pour OSG 
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/DO-X/Models/shadow.xml</path>
+  </model> -->
+
   <!-- Immatriculation -->
   <model>
     <path>Aircraft/DO-X/Models/Immat/immat.xml</path>

@@ -12,4 +12,18 @@
     <!-- Objets transparents -->
   </animation>
 
+  <animation>
+   <type>pick</type>
+   <object-name>YokeBoots</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>property-toggle</command>
+       <property>sim/yokes-visible</property>
+     </binding>
+   </action>
+  </animation>
+
 </PropertyList>

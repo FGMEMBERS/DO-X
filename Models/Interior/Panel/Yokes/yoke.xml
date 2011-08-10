@@ -17,8 +17,8 @@
     <object-name>Yoke</object-name>
     <object-name>YokeColumn</object-name> 
     <condition>
-    <not>
-      <property>sim/yokes-visible</property>
+      <not>
+       <property>sim/yokes-visible</property>
       </not>
     </condition>
   </animation>
@@ -28,7 +28,7 @@
     <object-name>YokeColumn</object-name>
     <object-name>Yoke</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> -5 </factor>
+    <factor> -4 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>

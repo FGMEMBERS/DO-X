@@ -53,8 +53,8 @@
     <path>Aircraft/DO-X/Models/Interior/NavigationCabin/table.xml</path>
     <offsets>
       <x-m> -10.205 </x-m>
-      <y-m> -1.060 </y-m>
-      <z-m> .0 </z-m> <!-- up -->
+      <y-m>  -1.060 </y-m>
+      <z-m>   0.000 </z-m> <!-- up -->
       <roll-deg>      0 </roll-deg>
       <pitch-deg>     0 </pitch-deg>
       <heading-deg>  -2 </heading-deg>
@@ -65,9 +65,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -11.472 </x-m>
-      <y-m>  -0.660 </y-m>
-      <z-m>  -0.400 </z-m>
+      <x-m> -11.480 </x-m>
+      <y-m>  -0.695 </y-m>
+      <z-m>  -0.090 </z-m>
     </offsets>
   </model>
 

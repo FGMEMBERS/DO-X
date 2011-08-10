@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>throttleWheel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>throttleWheel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleWheel</object-name>
+    <property>controls/engines/engine[5]/throttle</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m> 0.000 </x-m> <!-- near to panel -->
+      <y-m> 1.000 </y-m> <!-- right -->
+      <z-m> 0.000 </z-m> <!-- up -->
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>throttleWheel</object-name>
+   <visible>true</visible>
+   <action>
+     <name>small increase (scrollwheel)</name>
+     <button>3</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[1]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[3]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[5]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[7]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[9]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[11]/throttle</property>
+       <step>0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+   <action>
+     <name>small decrease (scrollwheel)</name>
+     <button>4</button>
+     <repeatable>true</repeatable>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[1]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[3]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[5]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[7]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[9]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[11]/throttle</property>
+       <step>-0.10</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>0</wrap>
+     </binding>
+   </action>
+  </animation>
+
+</PropertyList>
