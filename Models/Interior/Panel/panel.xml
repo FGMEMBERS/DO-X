@@ -384,5 +384,541 @@
     </offsets>
   </model>
 
+  <!--************************ Text on the Panel **************************-->
+  <animation>
+    <type>material</type>
+    <object-name>Registration</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <text>
+    <name>Registration</name>
+    <type type="string">text-value</type>
+    <property type="string">/sim/multiplay/callsign</property>
+    <format type="string">%s</format>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.016</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.5</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.145 </x-m> <!-- near to panel -->
+      <y-m> -0.403 </y-m> <!-- right -->
+      <z-m>  0.485 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- Labels activated by hotspots -->
+  <animation>
+    <type>material</type>
+    <object-name>LabelRDF</object-name>
+    <object-name>LabelAFN2</object-name>
+    <object-name>LabelAI</object-name>
+    <object-name>LabelTacho</object-name>
+    <object-name>LabelCompass</object-name>
+    <object-name>LabelHI</object-name>
+    <object-name>LabelASI</object-name>
+    <object-name>LabelTurn</object-name>
+    <object-name>LabelClock</object-name>
+    <object-name>LabelAltimeter</object-name>
+    <object-name>LabelVSI</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LabelRDF</object-name>
+    <object-name>LabelAFN2</object-name>
+    <object-name>LabelAI</object-name>
+    <object-name>LabelTacho</object-name>
+    <object-name>LabelCompass</object-name>
+    <object-name>LabelHI</object-name>
+    <object-name>LabelASI</object-name>
+    <object-name>LabelTurn</object-name>
+    <object-name>LabelClock</object-name>
+    <object-name>LabelAltimeter</object-name>
+    <object-name>LabelVSI</object-name>
+    <condition>
+      <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <!-- Radio Direction Finder on FrontDeck --> 
+  <text>
+    <name>LabelRDF</name>
+    <type type="string">literal</type>
+    <text type="string">Radio Direction Finder (use ADF frequency)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.1</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.8</max-height>
+    <max-width>1.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -3.200 </x-m> <!-- near to panel -->
+      <y-m>  0.830 </y-m> <!-- right -->
+      <z-m>  0.570 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+  <!-- AFN zentral --> 
+  <text>
+    <name>LabelAFN2</name>
+    <type type="string">literal</type>
+    <text type="string">AFN Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.02</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.350 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.260 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- Fluglage zentral --> 
+  <text>
+    <name>LabelAI</name>
+    <type type="string">literal</type>
+    <text type="string">Altitude Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.02</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> -0.330 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.082 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- RPM on Middle Panel --> 
+  <text>
+    <name>LabelTacho</name>
+    <type type="string">literal</type>
+    <text type="string">Seperate Tachometer for every of the 12 engines</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.018</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.2</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.250 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.082 </z-m> <!-- up -->
+      <pitch-deg> -15 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- Positions on the Panel -->
+  <!--          1.          -->
+  <!--      2.      3.      -->
+  <!--  4.              5.  -->
+  <!--  6.              7.  -->
+
+  <!-- 1. MAGNETIC COMPASS --> 
+  <text>
+    <name>LabelCompass</name>
+    <type type="string">literal</type>
+    <text type="string">Magnetic Compass</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.105 </x-m> <!-- near to panel -->
+      <y-m> -0.560 </y-m> <!-- right -->
+      <z-m>  0.570 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 2. SPEED -->
+  <text>
+    <name>LabelASI</name>
+    <type type="string">literal</type>
+    <text type="string">Airspeed Indicator (km/h)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m> -0.620 </y-m> <!-- right -->
+      <z-m>  0.500 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 3. TURN -->
+  <text>
+    <name>LabelTurn</name>
+    <type type="string">literal</type>
+    <text type="string">Turn &amp; Bank</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m> -0.505 </y-m> <!-- right -->
+      <z-m>  0.496 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 4. VERTICAL SPEED --> 
+  <text>
+    <name>LabelVSI</name>
+    <type type="string">literal</type>
+    <text type="string">Vertical Speed Indicator (m/s)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.161 </x-m> <!-- near to panel -->
+      <y-m> -0.725 </y-m> <!-- right -->
+      <z-m>  0.470 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 5. HI / KURS Gyro --> 
+  <text>
+    <name>LabelHI</name>
+    <type type="string">literal</type>
+    <text type="string">Heading Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m> -0.405 </y-m> <!-- right -->
+      <z-m>  0.475 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 6. ALT --> 
+  <text>
+    <name>LabelAltimeter</name>
+    <type type="string">literal</type>
+    <text type="string">Altimeter (km)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.2</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.177 </x-m> <!-- near to panel -->
+      <y-m> -0.725 </y-m> <!-- right -->
+      <z-m>  0.373 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 7. Clock -->
+  <text>
+    <name>LabelClock</name>
+    <type type="string">literal</type>
+    <text type="string">Clock</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.177 </x-m> <!-- near to panel -->
+      <y-m> -0.405 </y-m> <!-- right -->
+      <z-m>  0.345 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- Positions on the Copilot-Panel -->
+  <!--          11.          -->
+  <!--      12.      13.      -->
+  <!--  14.              15.  -->
+  <!--  16.              17.  -->
+
+  <!-- 11. MAGNETIC COMPASS --> 
+  <text>
+    <name>LabelCompass</name>
+    <type type="string">literal</type>
+    <text type="string">Magnetic Compass</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.105 </x-m> <!-- near to panel -->
+      <y-m>  0.560 </y-m> <!-- right -->
+      <z-m>  0.570 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 12. SPEED -->
+  <text>
+    <name>LabelASI</name>
+    <type type="string">literal</type>
+    <text type="string">Airspeed Indicator (km/h)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m>  0.620 </y-m> <!-- right -->
+      <z-m>  0.500 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 13. TURN -->
+  <text>
+    <name>LabelTurn</name>
+    <type type="string">literal</type>
+    <text type="string">Turn &amp; Bank</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m>  0.505 </y-m> <!-- right -->
+      <z-m>  0.496 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 14. VERTICAL SPEED --> 
+  <text>
+    <name>LabelVSI</name>
+    <type type="string">literal</type>
+    <text type="string">Vertical Speed Indicator (m/s)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.161 </x-m> <!-- near to panel -->
+      <y-m>  0.725 </y-m> <!-- right -->
+      <z-m>  0.470 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 15. HI / KURS Gyro --> 
+  <text>
+    <name>LabelHI</name>
+    <type type="string">literal</type>
+    <text type="string">Heading Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.160 </x-m> <!-- near to panel -->
+      <y-m>  0.405 </y-m> <!-- right -->
+      <z-m>  0.475 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 16. ALT --> 
+  <text>
+    <name>LabelAltimeter</name>
+    <type type="string">literal</type>
+    <text type="string">Altimeter (km)</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.2</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.177 </x-m> <!-- near to panel -->
+      <y-m>  0.725 </y-m> <!-- right -->
+      <z-m>  0.373 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
+  <!-- 17. Clock -->
+  <text>
+    <name>LabelClock</name>
+    <type type="string">literal</type>
+    <text type="string">Clock</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.177 </x-m> <!-- near to panel -->
+      <y-m>  0.405 </y-m> <!-- right -->
+      <z-m>  0.345 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </text>
+
 </PropertyList>
 
