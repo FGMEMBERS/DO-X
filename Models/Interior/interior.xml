@@ -13,19 +13,6 @@
     <object-name>planchets</object-name>
 
     <!-- Objets transparents -->
-    <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intvitres</object-name>
   </animation>
 
   <!-- Slats / Lattenrost -->

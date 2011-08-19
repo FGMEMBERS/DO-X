@@ -11,4 +11,31 @@
     </binding>
   </key>
 
+  <key n="115">
+    <name>s</name>
+    <desc>Start Engines</desc>
+    <binding>
+     <command>nasal</command>
+     <script>dox.startEngines();</script>
+    </binding>
+  </key>
+
+  <key n="83">
+    <name>S</name>
+    <desc>Stop Engine</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.stopEngines();</script>
+    </binding>
+  </key>
+
+  <key n="9">
+    <name>Ctrl-I</name>
+    <desc>Do X Engineer Menu</desc>
+    <binding>
+      <command>dialog-show</command>
+      <dialog-name>dox-engineer</dialog-name>
+    </binding>
+  </key>
+
 </PropertyList>

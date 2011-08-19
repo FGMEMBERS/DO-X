@@ -27,6 +27,13 @@
           <script>dox.immat_dialog.toggle()</script>
         </binding>
       </item>
+      <item>
+        <label>Engineer Menu</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>dox-engineer</dialog-name>
+        </binding>
+      </item>
     </menu>
   </default>
 

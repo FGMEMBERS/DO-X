@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>dox-engineer</name>
+  <modal>false</modal>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Do X Engineer Menu</label>
+  </text>
+
+  <hrule><dummy/></hrule>
+  <!-- Les moteurs numérotés vue de dessus 
+
+              avant
+              |   | 
+  gauche 0 2  4   5 3 1 droite
+         6 8 10  11 9 7
+              |   |
+               \ /
+             arrière
+                |
+  -->
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>0</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(0)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>2</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(2)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>4</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(4)</script>
+      </binding>
+    </button>
+
+    <text>
+      <label>|  Front  |</label>
+    </text>
+
+    <button>
+      <legend>5</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(5)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>3</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(3)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>1</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(1)</script>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>6</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(6)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>8</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(8)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>10</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(10)</script>
+      </binding>
+    </button>
+
+    <text>
+      <label>|  Back  |</label>
+    </text>
+
+    <button>
+      <legend>11</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(11)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>9</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(9)</script>
+      </binding>
+    </button>
+
+    <button>
+      <legend>7</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dox.switchClutch(7)</script>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+</PropertyList>

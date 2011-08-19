@@ -14,13 +14,13 @@
   </animation>
 
   <!-- *********  Central-Position of the Instruments in the front of the Cockpit ************ -->
-  <!-- KOMPASS Central --> 
+  <!-- UHR Central --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2-big.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m> -0.375 </x-m>
+      <x-m> -0.415 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.260 </z-m>
+      <z-m>  0.210 </z-m>
     </offsets>
   </model>
 
@@ -28,9 +28,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att-big.xml</path>
     <offsets>
-      <x-m> -0.370 </x-m>
+      <x-m> -0.460 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.082 </z-m>
+      <z-m>  0.020 </z-m>
     </offsets>
   </model>
 
@@ -66,19 +66,18 @@
   </model>
 
   <!-- ******************************* PILOT-PANEL **********************************-->
-  <!-- Positions on the Panel -->
-  <!--          1.          -->
-  <!--      2.      3.      -->
-  <!--  4.              5.  -->
-  <!--  6.              7.  -->
+  <!-- Positions on the Panel  -->
+  <!--             1           -->
+  <!--       2   3   4   5.    -->
+  <!--       6.          7.    -->
 
   <!-- 1. MAGNETIC COMPASS --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
     <offsets>
-      <x-m>  0.100 </x-m>
-      <y-m> -0.560 </y-m>
-      <z-m>  0.535 </z-m>
+      <x-m>  0.020 </x-m>
+      <y-m> -0.620 </y-m>
+      <z-m>  0.565 </z-m>
     </offsets>
   </model>
 
@@ -86,31 +85,31 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.155 </x-m>
-      <y-m> -0.620 </y-m>
-      <z-m>  0.445 </z-m>
+      <x-m>  0.090 </x-m>
+      <y-m> -0.785 </y-m>
+      <z-m>  0.455 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
 
-  <!-- 3. TURN --> 
-  <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
-    <offsets>
-      <x-m>  0.155 </x-m>
-      <y-m> -0.505 </y-m>
-      <z-m>  0.445 </z-m>
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </model>
-
-  <!-- 4. VERTICAL SPEED --> 
+  <!-- 3. VERTICAL SPEED --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.156 </x-m> <!-- near to panel -->
-      <y-m> -0.725 </y-m> <!-- right -->
-      <z-m>  0.415 </z-m> <!-- up -->
+      <x-m>  0.090 </x-m> <!-- near to panel -->
+      <y-m> -0.675 </y-m> <!-- right -->
+      <z-m>  0.455 </z-m> <!-- up -->
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- 4. TURN --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.090 </x-m>
+      <y-m> -0.575 </y-m>
+      <z-m>  0.455 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -119,10 +118,10 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
     <offsets>
-      <x-m>  0.156 </x-m>
-      <y-m> -0.405 </y-m>
-      <z-m>  0.415 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m>  0.086 </x-m>
+      <y-m> -0.447 </y-m>
+      <z-m>  0.442 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
 
@@ -130,48 +129,47 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.173 </x-m>
-      <y-m> -0.725 </y-m>
-      <z-m>  0.300 </z-m>
+      <x-m>  0.111 </x-m>
+      <y-m> -0.770 </y-m>
+      <z-m>  0.325 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
 
-  <!-- 7. Clock --> 
+  <!-- 7. AFN --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
     <offsets>
-      <x-m>  0.173 </x-m>
-      <y-m> -0.405 </y-m>
-      <z-m>  0.300 </z-m>
+      <x-m>  0.115 </x-m>
+      <y-m> -0.447 </y-m>
+      <z-m>  0.308 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
 
   <!-- ****************************** COPILOT-PANEL *********************************-->
   <!-- Positions on the Copilot-Panel -->
-  <!--          11.          -->
-  <!--      12.      13.      -->
-  <!--  14.              15.  -->
-  <!--  16.              17.  -->
+  <!--               11            -->
+  <!--       12   13   14   15.    -->
+  <!--       16.            17.    -->
 
   <!-- 11. MAGNETIC COMPASS --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
     <offsets>
-      <x-m>  0.100 </x-m>
-      <y-m>  0.560 </y-m>
-      <z-m>  0.535 </z-m>
+      <x-m>  0.020 </x-m>
+      <y-m>  0.635 </y-m>
+      <z-m>  0.565 </z-m>
     </offsets>
   </model>
 
-  <!-- 12. COPILOT SPEED --> 
+  <!-- 12. COPILOT CONRTOL FOR FLIGHTGEAR MOUSE PILOTS --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/msctrl/msctrl.xml</path>
     <offsets>
-      <x-m>  0.155 </x-m>
-      <y-m>  0.620 </y-m>
-      <z-m>  0.445 </z-m>
+      <x-m>  0.090 </x-m>
+      <y-m>  0.447 </y-m>
+      <z-m>  0.455 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -180,9 +178,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
-      <x-m>  0.155 </x-m>
-      <y-m>  0.505 </y-m>
-      <z-m>  0.445 </z-m>
+      <x-m>  0.090 </x-m>
+      <y-m>  0.575 </y-m>
+      <z-m>  0.455 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -191,42 +189,42 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.156 </x-m> <!-- near to panel -->
-      <y-m>  0.725 </y-m> <!-- right -->
-      <z-m>  0.415 </z-m> <!-- up -->
+      <x-m>  0.090 </x-m> <!-- near to panel -->
+      <y-m>  0.675 </y-m> <!-- right -->
+      <z-m>  0.455 </z-m> <!-- up -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
 
-  <!-- 15. COPILOT HI / KURS Gyro --> 
+  <!-- 15. COPILOT SPEED --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.156 </x-m>
-      <y-m>  0.405 </y-m>
-      <z-m>  0.415 </z-m>
+      <x-m>  0.090 </x-m>
+      <y-m>  0.785 </y-m>
+      <z-m>  0.455 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
 
-  <!-- 16. COPILOT ALT --> 
+  <!-- 16. COPILOT AFN2 --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
+    <offsets>
+      <x-m>  0.115 </x-m>
+      <y-m>  0.447 </y-m>
+      <z-m>  0.308 </z-m>
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- 17. COPILOT ALT --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.173 </x-m>
-      <y-m>  0.725 </y-m>
-      <z-m>  0.300 </z-m>
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </model>
-
-  <!-- 17. COPILOT Clock --> 
-  <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
-    <offsets>
-      <x-m>  0.173 </x-m>
-      <y-m>  0.405 </y-m>
-      <z-m>  0.300 </z-m>
+      <x-m>  0.111 </x-m>
+      <y-m>  0.770 </y-m>
+      <z-m>  0.325 </z-m>
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
@@ -234,11 +232,11 @@
   <!-- ****************************** MIDDLE-(ENGINE-CONTROL)-PANEL *********************************-->
   <!-- Moteurs extérieur gauche avant --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-0.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-0.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m> -0.255 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m> -0.300 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -246,24 +244,25 @@
   </model>
   <!-- Moteurs extérieur gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-6.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-6.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m> -0.255 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m> -0.300 </y-m>
+      <z-m> -0.210 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
+
   <!-- Moteur milieu gauche avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-2.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m> -0.170 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m> -0.250 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -271,11 +270,11 @@
   </model>
   <!-- Moteur milieu gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-8.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-8.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m> -0.170 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m> -0.250 </y-m>
+      <z-m> -0.210 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -284,11 +283,11 @@
 
   <!-- Moteur intérieur gauche avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-4.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-4.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m> -0.085 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m> -0.200 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -296,11 +295,37 @@
   </model>
   <!-- Moteur intérieur gauche arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-10.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-10.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m> -0.085 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m> -0.200 </y-m>
+      <z-m> -0.210 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -33 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Average RPM for the locked (clutch on)  larboard engines -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmL.xml</path>
+    <offsets>
+      <x-m>  0.260 </x-m>
+      <y-m> -0.080 </y-m>
+      <z-m> -0.170 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -33 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Average RPM for the locked (clutch on)  starboard engines -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmR.xml</path>
+    <offsets>
+      <x-m>  0.260 </x-m>
+      <y-m>  0.080 </y-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -309,11 +334,11 @@
   
   <!-- Moteurs intérieur droit avant --> 
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-5.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-5.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m>  0.085 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m>  0.200 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -322,11 +347,11 @@
   
   <!-- Moteurs intérieur droit arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-11.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-11.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m>  0.085 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m>  0.200 </y-m>
+      <z-m> -0.210 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -335,11 +360,11 @@
 
   <!-- Moteur milieu droit avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-3.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-3.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m>  0.170 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m>  0.250 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -347,11 +372,11 @@
   </model>
   <!-- Moteur milieu droit arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-9.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-9.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m>  0.170 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m>  0.250 </y-m>
+      <z-m> -0.210 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -360,11 +385,11 @@
 
   <!-- Moteur extérieur droit avant -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-1.xml</path>
     <offsets>
       <x-m>  0.230 </x-m>
-      <y-m>  0.255 </y-m>
-      <z-m> -0.070 </z-m>
+      <y-m>  0.300 </y-m>
+      <z-m> -0.135 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -373,25 +398,26 @@
   
   <!-- Moteur extérieur droit arrière -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/rpm/rpm-7.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-7.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m>  0.255 </y-m>
-      <z-m> -0.145 </z-m>
+      <y-m>  0.300 </y-m>
+      <z-m> -0.210 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
+
   <!--************************ Text on the Panel **************************-->
   <animation>
     <type>material</type>
     <object-name>Registration</object-name>
     <emission>
-      <red>   1 </red>
-      <green> 1 </green>
-      <blue>  1 </blue>
+        <red>1.0</red>
+        <green>1.0</green>
+        <blue>1.0</blue>
     </emission>
   </animation>
 
@@ -408,54 +434,39 @@
     <max-height>0.2</max-height>
     <max-width>0.5</max-width>
     <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
+        <width type="int">32</width>
+        <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m>  0.145 </x-m> <!-- near to panel -->
-      <y-m> -0.403 </y-m> <!-- right -->
-      <z-m>  0.485 </z-m> <!-- up -->
+      <x-m>  0.085 </x-m> <!-- near to panel -->
+      <y-m> -0.620 </y-m> <!-- right -->
+      <z-m>  0.455 </z-m> <!-- up -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
 
-  <!-- Labels activated by hotspots -->
+<!-- Labels activated by hotspots -->
+
   <animation>
     <type>material</type>
     <object-name>LabelRDF</object-name>
-    <object-name>LabelAFN2</object-name>
     <object-name>LabelAI</object-name>
-    <object-name>LabelTacho</object-name>
-    <object-name>LabelCompass</object-name>
-    <object-name>LabelHI</object-name>
-    <object-name>LabelASI</object-name>
-    <object-name>LabelTurn</object-name>
-    <object-name>LabelClock</object-name>
-    <object-name>LabelAltimeter</object-name>
-    <object-name>LabelVSI</object-name>
+    <object-name>LabelMiddle</object-name>
     <emission>
-      <red>   1.0 </red>
-      <green> 0.8 </green>
-      <blue>  0.0 </blue>
+        <red>1.0</red>
+        <green>0.8</green>
+        <blue>0.0</blue>
     </emission>
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>LabelRDF</object-name>
-    <object-name>LabelAFN2</object-name>
     <object-name>LabelAI</object-name>
-    <object-name>LabelTacho</object-name>
-    <object-name>LabelCompass</object-name>
-    <object-name>LabelHI</object-name>
-    <object-name>LabelASI</object-name>
-    <object-name>LabelTurn</object-name>
-    <object-name>LabelClock</object-name>
-    <object-name>LabelAltimeter</object-name>
-    <object-name>LabelVSI</object-name>
+    <object-name>LabelMiddle</object-name>
     <condition>
-      <property>/sim/panel-hotspots</property>
+        <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
 
@@ -472,39 +483,14 @@
     <max-height>0.8</max-height>
     <max-width>1.1</max-width>
     <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
+        <width type="int">32</width>
+        <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
       <x-m> -3.200 </x-m> <!-- near to panel -->
       <y-m>  0.830 </y-m> <!-- right -->
       <z-m>  0.570 </z-m> <!-- up -->
-    </offsets>
-  </text>
-
-  <!-- AFN zentral --> 
-  <text>
-    <name>LabelAFN2</name>
-    <type type="string">literal</type>
-    <text type="string">AFN Indicator</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.02</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m> -0.350 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.260 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
 
@@ -521,8 +507,8 @@
     <max-height>0.2</max-height>
     <max-width>0.1</max-width>
     <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
+        <width type="int">32</width>
+        <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
@@ -535,9 +521,9 @@
 
   <!-- RPM on Middle Panel --> 
   <text>
-    <name>LabelTacho</name>
+    <name>LabelMiddle</name>
     <type type="string">literal</type>
-    <text type="string">Seperate Tachometer for every of the 12 engines</text>
+    <text type="string">Clutch Control Lights for every Engine. Two instruments with the average RPM of the locked lar- and starboard engines</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.018</character-size>
@@ -546,8 +532,8 @@
     <max-height>0.2</max-height>
     <max-width>0.2</max-width>
     <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
+        <width type="int">32</width>
+        <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
@@ -558,367 +544,6 @@
     </offsets>
   </text>
 
-  <!-- Positions on the Panel -->
-  <!--          1.          -->
-  <!--      2.      3.      -->
-  <!--  4.              5.  -->
-  <!--  6.              7.  -->
-
-  <!-- 1. MAGNETIC COMPASS --> 
-  <text>
-    <name>LabelCompass</name>
-    <type type="string">literal</type>
-    <text type="string">Magnetic Compass</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.105 </x-m> <!-- near to panel -->
-      <y-m> -0.560 </y-m> <!-- right -->
-      <z-m>  0.570 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 2. SPEED -->
-  <text>
-    <name>LabelASI</name>
-    <type type="string">literal</type>
-    <text type="string">Airspeed Indicator (km/h)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m> -0.620 </y-m> <!-- right -->
-      <z-m>  0.500 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 3. TURN -->
-  <text>
-    <name>LabelTurn</name>
-    <type type="string">literal</type>
-    <text type="string">Turn &amp; Bank</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m> -0.505 </y-m> <!-- right -->
-      <z-m>  0.496 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 4. VERTICAL SPEED --> 
-  <text>
-    <name>LabelVSI</name>
-    <type type="string">literal</type>
-    <text type="string">Vertical Speed Indicator (m/s)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.161 </x-m> <!-- near to panel -->
-      <y-m> -0.725 </y-m> <!-- right -->
-      <z-m>  0.470 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 5. HI / KURS Gyro --> 
-  <text>
-    <name>LabelHI</name>
-    <type type="string">literal</type>
-    <text type="string">Heading Indicator</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m> -0.405 </y-m> <!-- right -->
-      <z-m>  0.475 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 6. ALT --> 
-  <text>
-    <name>LabelAltimeter</name>
-    <type type="string">literal</type>
-    <text type="string">Altimeter (km)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.2</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.177 </x-m> <!-- near to panel -->
-      <y-m> -0.725 </y-m> <!-- right -->
-      <z-m>  0.373 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 7. Clock -->
-  <text>
-    <name>LabelClock</name>
-    <type type="string">literal</type>
-    <text type="string">Clock</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.177 </x-m> <!-- near to panel -->
-      <y-m> -0.405 </y-m> <!-- right -->
-      <z-m>  0.345 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- Positions on the Copilot-Panel -->
-  <!--          11.          -->
-  <!--      12.      13.      -->
-  <!--  14.              15.  -->
-  <!--  16.              17.  -->
-
-  <!-- 11. MAGNETIC COMPASS --> 
-  <text>
-    <name>LabelCompass</name>
-    <type type="string">literal</type>
-    <text type="string">Magnetic Compass</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.105 </x-m> <!-- near to panel -->
-      <y-m>  0.560 </y-m> <!-- right -->
-      <z-m>  0.570 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 12. SPEED -->
-  <text>
-    <name>LabelASI</name>
-    <type type="string">literal</type>
-    <text type="string">Airspeed Indicator (km/h)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m>  0.620 </y-m> <!-- right -->
-      <z-m>  0.500 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 13. TURN -->
-  <text>
-    <name>LabelTurn</name>
-    <type type="string">literal</type>
-    <text type="string">Turn &amp; Bank</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m>  0.505 </y-m> <!-- right -->
-      <z-m>  0.496 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 14. VERTICAL SPEED --> 
-  <text>
-    <name>LabelVSI</name>
-    <type type="string">literal</type>
-    <text type="string">Vertical Speed Indicator (m/s)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.161 </x-m> <!-- near to panel -->
-      <y-m>  0.725 </y-m> <!-- right -->
-      <z-m>  0.470 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 15. HI / KURS Gyro --> 
-  <text>
-    <name>LabelHI</name>
-    <type type="string">literal</type>
-    <text type="string">Heading Indicator</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.1</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.160 </x-m> <!-- near to panel -->
-      <y-m>  0.405 </y-m> <!-- right -->
-      <z-m>  0.475 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 16. ALT --> 
-  <text>
-    <name>LabelAltimeter</name>
-    <type type="string">literal</type>
-    <text type="string">Altimeter (km)</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.2</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.177 </x-m> <!-- near to panel -->
-      <y-m>  0.725 </y-m> <!-- right -->
-      <z-m>  0.373 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
-
-  <!-- 17. Clock -->
-  <text>
-    <name>LabelClock</name>
-    <type type="string">literal</type>
-    <text type="string">Clock</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.012</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.2</max-height>
-    <max-width>0.07</max-width>
-    <font-resolution>
-      <width type="int">32</width>
-      <height type="int">32</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.177 </x-m> <!-- near to panel -->
-      <y-m>  0.405 </y-m> <!-- right -->
-      <z-m>  0.345 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
-    </offsets>
-  </text>
 
 </PropertyList>
 

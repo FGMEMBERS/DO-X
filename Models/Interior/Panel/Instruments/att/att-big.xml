@@ -5,13 +5,11 @@
   <path>att-big.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>visses</object-name>
     <object-name>rebord</object-name>
     <object-name>ball</object-name>
     <object-name>ball2</object-name>
     <object-name>markings</object-name>
-
+    <object-name>fond</object-name>
     <object-name>vitre</object-name>
   </animation>
 
@@ -27,6 +25,7 @@
     <object-name>ball</object-name>
     <object-name>ball2</object-name>
     <object-name>markings</object-name>
+    <object-name>rebord</object-name>
     <emission>
       <red>   0.50 </red>
       <green> 0.25 </green>
