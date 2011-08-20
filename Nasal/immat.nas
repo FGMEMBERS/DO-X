@@ -19,15 +19,15 @@ var refresh_immat = func {
     }
 }
 
-#var immat_dialog = gui.Dialog.new("/sim/gui/dialogs/dox/status/dialog",
-#				  "Aircraft/DO-X/Dialogs/immat.xml");
+var immat_dialog = gui.Dialog.new("/sim/gui/dialogs/dox/immat/dialog",
+				  "Aircraft/DO-X/Dialogs/immat.xml");
 
 setlistener("/sim/signals/fdm-initialized", func {
   if (props.globals.getNode("/sim/model/immat") == nil) {
     var immat = props.globals.getNode("/sim/model/immat",1);
     var callsign = props.globals.getNode("/sim/multiplay/callsign").getValue();
     if (callsign != "callsign") immat.setValue(callsign);
-  else immat.setValue("D-1929");
+  else immat.setValue("F-HLBL");
   }
   refresh_immat();
   setlistener("sim/model/immat", refresh_immat, 0);
