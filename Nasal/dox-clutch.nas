@@ -14,225 +14,141 @@
 #             arrière
 #                |
 
-print("Geladen: dox-clutch.nas");
+#############  Throttle Control for the keybord PgUp and PgDown by pilot ###############
+#................ called from the /Nasal/dox-keyboard.xml
+
+# all engines
+var throttleControl = func{
+
+  # Initialization for the count of locked engines (so they are under pilots control)
+  # the unlocked engines are under engineer control
+    var pilotengines = [];
+    var sel = props.globals.getNode("/sim/input/selected", 1);
+    var engs = props.globals.getNode("/controls/engines").getChildren("engine");
+
+    foreach(var e; engs) {
+        var index = e.getIndex();
+        var s = sel.getChild("engine", index, 1);
+        if(s.getType() == "NONE") s.setBoolValue(1);
+        var clutch = getprop("/engines/engine["~index~"]/clutch");
+        #print("Clutch" ~index~": "~clutch);
+        if(clutch == 1){
+          append(pilotengines, { index: index, controls: e, selected: s });
+        }
+    }
+    controlRootThrottle(arg[0],arg[1],pilotengines,"all");
+}
+
+####################### only the locked engines on the left (larboard) #####################
+#.called from the /Nasal/dox-keyboard.xml and the /Interior/Panel/Throttle/throttle.xml
+
+#left engines
+var throttleControlL = func{
+    var pilotenginesL = [];
+    var list = [0,2,4,6,8,10];
+
+    foreach(var n; list) {
+        var sel = props.globals.getNode("/sim/input/selected", 1);
+        var e = props.globals.getNode("/controls/engines/engine["~n~"]");
+        var s = sel.getChild("engine", n, 1);
+        if(s.getType() == "NONE") s.setBoolValue(1);
+        var clutch = getprop("/engines/engine["~n~"]/clutch");
+        #print("Larboard-Clutch" ~n~": "~clutch);
+        if(clutch == 1){
+          append(pilotenginesL, {index: n, controls: e, selected: s});
+        }
+    }
+    controlRootThrottle(arg[0],arg[1],pilotenginesL,"left");
+}
+
+####################### only the locked engines on the right (starboard) #####################
+#.called from the /Nasal/dox-keyboard.xml and the /Interior/Panel/Throttle/throttle.xml
+
+#right engines
+var throttleControlR = func{
+    var pilotenginesR = [];
+    var list = [1,3,5,7,9,11];
+
+    foreach(var n; list) {
+        var sel = props.globals.getNode("/sim/input/selected", 1);
+        var e = props.globals.getNode("/controls/engines/engine["~n~"]");
+        var s = sel.getChild("engine", n, 1);
+        if(s.getType() == "NONE") s.setBoolValue(1);
+        var clutch = getprop("/engines/engine["~n~"]/clutch");
+        #print("Starboard-Clutch" ~n~": "~clutch);
+        if(clutch == 1){
+          append(pilotenginesR, {index: n, controls: e, selected: s});
+        }
+    }
+    controlRootThrottle(arg[0],arg[1],pilotenginesR,"right");
+}
 
 
-#############  Scrollfunktion am Engineerpanel fuer einzelne Gashebel ###############
+###################   Main functionn for the throttle increase decrease ######################
+#.......................called only from the functions in this file
+var controlRootThrottle = func{
+  # arg[0] is the throttle increment
+  # arg[1] is the auto-throttle target speed increment
+  # both comming from the dox-keyboard.xml an go through the function before.
+    var thropiL = props.globals.getNode("/controls/engines/throttle-pilot-left", 1);
+    var thropiR = props.globals.getNode("/controls/engines/throttle-pilot-right", 1);
+    
+    # only for control on terminal
+    #var t1 = getprop("/controls/engines/throttle-pilot-left");
+    #var t2 = getprop("/controls/engines/throttle-pilot-right");
+    #print("Hello from "~arg[3]~" L: "~t1~" R: "~t2~" before increase/decrease");
+
+    var auto = props.globals.getNode("/autopilot/locks/speed", 1);
+    var passive = props.globals.getNode("/autopilot/locks/passive-mode", 1);
+    if (!auto.getValue() or passive.getValue()) {
+        foreach(var e; arg[2]) {
+            if(e.selected.getValue()) {
+                var node = e.controls.getNode("throttle", 1);
+                var val = node.getValue() + arg[0];
+                node.setValue(val < -1.0 ? -1.0 : val > 1.0 ? 1.0 : val);
+            }
+        }
+        # increase or decrease the left or right throttle gear for pilot
+        if(arg[3] == "all"){
+          scrollGear(arg[0],"controls/engines/throttle-pilot-left");
+          scrollGear(arg[0],"controls/engines/throttle-pilot-right");
+        }
+        if(arg[3] == "left"){
+          scrollGear(arg[0],"controls/engines/throttle-pilot-left");
+        }
+        if(arg[3] == "right"){
+          scrollGear(arg[0],"controls/engines/throttle-pilot-right");
+        }
+    } else {
+        var node = props.globals.getNode("/autopilot/settings/target-speed-kt", 1);
+        if (node.getValue() == nil) {
+            node.setValue(0.0);
+        }
+        node.setValue(node.getValue() + arg[1]);
+        if (node.getValue() < 0.0) {
+            node.setValue(0.0);
+        }
+    }
+
+    # only for control on terminal
+    #var t3 = getprop("/controls/engines/throttle-pilot-left");
+    #var t4 = getprop("/controls/engines/throttle-pilot-right");
+    #print("Hello from "~arg[3]~" L: "~t3~" R: "~t4~" after increase/decrease");
+}
+#############  scrollfunction for whatever you want increase or decrease ####################
+var scrollGear = func(scale,path){
+    var val=getprop(path) + (scale);
+    if(val >1.0) val = 1.0;
+    if(val < 0.0) val = 0.0;
+    setprop(path,val);
+}
+
+#############  scrollfunction for the single throttle gears at engineer panel ###############
 
 var engControl = func(scale,eng,ctrl) {
     var clutch = getprop("/engines/engine["~eng~"]/clutch");
     if (clutch == 0) {
-      var prop1="controls/engines/engine["~eng~"]/"~ctrl;
-      var val1=getprop(prop1) + (scale);
-      if(val1 >1.0) val1 = 1.0;
-      if(val1 < 0.0) val1 = 0.0;
-      setprop(prop1,val1);
+      scrollGear(scale,"controls/engines/engine["~eng~"]/"~ctrl);
     }
 }
 
-############# Testscript:  Aus Nasal Console aufrufbar via dox.switchClutch();
-var rpm_down = func(eng){
-  setprop("engines/engine["~eng~"]/rpm", 0);
-  settimer(rpm_down,10);
-}
-
-var switchClutch = func(eng){
-  var status = getprop("engines/engine["~eng~"]/running");
-  var r1 = getprop("engines/engine["~eng~"]/rpm");
-  var mix = getprop("engines/engine["~eng~"]/mixture");
-  var magnetos = getprop("/controls/engines/engine["~eng~"]/magnetos");
-
-	  if (status){
-      setprop("engines/engine["~eng~"]/rpm", 0);
-      setprop("engines/engine["~eng~"]/mixture", 0);
-      setprop("engines/engine["~eng~"]/mp-inhg", 0);
-      setprop("engines/engine["~eng~"]/mp-osi", 0);
-      setprop("/controls/engines/engine["~eng~"]/magnetos", 0);
-      setprop("/controls/engines/engine["~eng~"]/cutoff", 1);
-      screen.log.write("WARNING: One Engine off!", 1.0, 0.7, 0.0);
-    }
-    else {
-      setprop("engines/engine["~eng~"]/rpm", 300);
-      setprop("engines/engine["~eng~"]/mixture", 1);
-      setprop("/controls/engines/engine["~eng~"]/magnetos", 1);
-      setprop("/controls/engines/engine["~eng~"]/cutoff", 0);
-    }
-  }
-
-var switchClutch = func{
-  var status = getprop("engines/engine["~arg[0]~"]/running");
-  var r1 = getprop("engines/engine["~arg[0]~"]/rpm");
-  var magnetos = props.globals.getNode("/controls/engines/engine["~arg[0]~"]/magnetos", 1);
-  var cutoff = props.globals.getNode("/controls/engines/engine["~arg[0]~"]/cutoff", 1);
-  var mpinhg = props.globals.getNode("engines/engine["~arg[0]~"]/mp-inhg", 1);
-  var mposi = props.globals.getNode("engines/engine["~arg[0]~"]/mp-osi", 1);
-
-	  if (status == 1){
-      r1 = 10;
-      mix = 0.0;
-      magnetos.setValue(0);
-      mpinhg.setValue(0);
-      mposi.setValue(0);
-      cutoff.setValue(1);
-      magnetos.setAttribute("writable", 0);
-      cutoff.setAttribute("writable", 0);
-      mpinhg.setAttribute("writable", 0);
-      mposi.setAttribute("writable", 0);
-    }
-    else {
-      r1 = 300;
-      mix = 1.0;
-      magnetos.setAttribute("writable", 1);
-      cutoff.setAttribute("writable", 1);
-      mpinhg.setAttribute("writable", 1);
-      mposi.setAttribute("writable", 1);
-      magnetos.setValue(1);
-      cutoff.setValue(0);
-    }
-    setprop("engines/engine["~arg[0]~"]/rpm", r1);
-    setprop("engines/engine["~arg[0]~"]/mixture", mix);
-  }
-
-############## Warning messages for the pilot, when clutch was setting ##########
-setlistener("/engines/engine[0]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Outer larboard front-engine -> unlocked", 1.0, 0.7, 0.0);
-    }else{
-      screen.log.write("Outer larboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[1]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Outer starboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Outer starboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[2]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Middle larboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Middle larboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[3]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Middle starboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Middle starboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[4]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Inner larboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Inner larboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[5]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Inner starboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Inner starboard front-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[6]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Outer larboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Outer larboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[7]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Outer starboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Outer starboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[8]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Middle larboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Middle larboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[9]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Middle starboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Middle starboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[10]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Inner larboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Inner larboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-setlistener("/engines/engine[11]/clutch", func(clutch) {
-    var clutch = clutch.getValue();
-    if (clutch == 0){
-      screen.log.write("Inner starboard back-engine -> unlocked", 1.0, 0.1, 0.1);
-    }else{
-      screen.log.write("Inner starboard back-engine -> locked", 0.7, 1.0, 0.7);
-    }
-});
-
-#var engControl = func(scale,eng,ctrl) {
-    # auskommentierte Zeilen sind mit Shift Taste unterstuetzt.
-    #var shft = getprop("devices/status/keyboard/shift");
-    #var amt = getprop("/devices/status/mice/mouse/accel-y");
-    #var eng2 =1-eng;
-    #var prop1="controls/engines/engine["~eng~"]/"~ctrl;
-    #var prop2="controls/engines/engine["~eng2~"]/"~ctrl;
-
-    #var val1=getprop(prop1) + (scale);
-    #if(val1 >1.0) val1 = 1.0;
-    #if(val1 < 0.0) val1 = 0.0;
-    #setprop(prop1,val1);
-
-    #if(!shft){
-    #   var val2=getprop(prop2) + (amt * scale);
-    #   if(val2 >1.0) val2 = 1.0;
-    #   if(val2 < 0.0) val2 = 0.0;
-    #   setprop(prop2,val2);
-    #   }
-#}
-
-# Ask for the clutch setting and give out the warning
-#setlistener("/engines/engine[0]/clutch", func(clutch) {
-#    var clutch = clutch.getValue();
-#
-#    if (clutch == 0){
-#      print("Vorderer Backbord-Motor aussen wurde ausgekuppelt.");
-#      screen.log.write("Outer larboard front-engine -> unlocked", 1.0, 0.1, 0.1);
-#        var magnetos = props.globals.getNode("/controls/engines/engine[0]/magnetos", 1);
-#        var cutoff = props.globals.getNode("/controls/engines/engine[0]/cutoff", 1);
-#        magnetos.setValue(0);
-#        cutoff.setValue(1);
-#        magnetos.setAttribute("writable", 0);
-#        cutoff.setAttribute("writable", 0);
-#    }else{
-#      print("Vorderer Backbord-Motor aussen eingekuppelt.");
-#      screen.log.write("Outer larboard front-engine -> locked", 0.7, 1.0, 0.7);
-#        var magnetos = props.globals.getNode("/controls/engines/engine[0]/magnetos", 1);
-#        var cutoff = props.globals.getNode("/controls/engines/engine[0]/cutoff", 1);
-#        magnetos.setAttribute("writable", 1);
-#        cutoff.setAttribute("writable", 1);
-#        magnetos.setValue(1);
-#        cutoff.setValue(0);
-#    }
-#});

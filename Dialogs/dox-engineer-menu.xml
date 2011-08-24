@@ -1,6 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
   <name>dox-engineer</name>
   <modal>false</modal>
   <layout>vbox</layout>
@@ -24,12 +25,21 @@
   <group>
     <layout>hbox</layout>
     <empty><stretch>true</stretch></empty>
+    <text>
+      <label>/     \</label>
+    </text>
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
 
     <button>
       <legend>0</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(0)</script>
+        <script>dox.switchEngine(0)</script>
       </binding>
     </button>
 
@@ -37,7 +47,7 @@
       <legend>2</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(2)</script>
+        <script>dox.switchEngine(2)</script>
       </binding>
     </button>
 
@@ -45,7 +55,7 @@
       <legend>4</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(4)</script>
+        <script>dox.switchEngine(4)</script>
       </binding>
     </button>
 
@@ -57,7 +67,7 @@
       <legend>5</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(5)</script>
+        <script>dox.switchEngine(5)</script>
       </binding>
     </button>
 
@@ -65,7 +75,7 @@
       <legend>3</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(3)</script>
+        <script>dox.switchEngine(3)</script>
       </binding>
     </button>
 
@@ -73,7 +83,7 @@
       <legend>1</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(1)</script>
+        <script>dox.switchEngine(1)</script>
       </binding>
     </button>
 
@@ -88,7 +98,7 @@
       <legend>6</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(6)</script>
+        <script>dox.switchEngine(6)</script>
       </binding>
     </button>
 
@@ -96,7 +106,7 @@
       <legend>8</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(8)</script>
+        <script>dox.switchEngine(8)</script>
       </binding>
     </button>
 
@@ -104,7 +114,7 @@
       <legend>10</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(10)</script>
+        <script>dox.switchEngine(10)</script>
       </binding>
     </button>
 
@@ -116,7 +126,7 @@
       <legend>11</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(11)</script>
+        <script>dox.switchEngine(11)</script>
       </binding>
     </button>
 
@@ -124,7 +134,7 @@
       <legend>9</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(9)</script>
+        <script>dox.switchEngine(9)</script>
       </binding>
     </button>
 
@@ -132,10 +142,28 @@
       <legend>7</legend>
       <binding>
         <command>nasal</command>
-        <script>dox.switchClutch(7)</script>
+        <script>dox.switchEngine(7)</script>
       </binding>
     </button>
 
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+    <text>
+      <label>|       |</label>
+    </text>
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+    <text>
+      <label>\     /</label>
+    </text>
     <empty><stretch>true</stretch></empty>
   </group>
 
@@ -154,4 +182,15 @@
 
     <empty><stretch>true</stretch></empty>
   </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+    <text>
+      <label>If speed is up to 80km/h or 35kts unlock clutch first.</label>
+    </text>
+    <empty><stretch>true</stretch></empty>
+  </group>
+  
 </PropertyList>
+

@@ -139,7 +139,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[5]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner starboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[5]/clutch</property>
@@ -152,7 +161,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[5]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner starboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[5]/clutch</property>
@@ -327,7 +345,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[11]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner starboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[11]/clutch</property>
@@ -340,7 +367,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[11]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner starboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[11]/clutch</property>
@@ -515,7 +551,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[3]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle starboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[3]/clutch</property>
@@ -528,7 +573,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[3]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle starboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[3]/clutch</property>
@@ -703,7 +757,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[9]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle starboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[9]/clutch</property>
@@ -716,7 +779,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[9]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle starboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[9]/clutch</property>
@@ -891,7 +963,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[1]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer starboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[1]/clutch</property>
@@ -904,7 +985,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[1]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer starboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[1]/clutch</property>
@@ -1079,7 +1169,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[7]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer starboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[7]/clutch</property>
@@ -1092,7 +1191,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[7]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer starboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[7]/clutch</property>

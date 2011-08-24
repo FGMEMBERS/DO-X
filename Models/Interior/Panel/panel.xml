@@ -65,6 +65,16 @@
     </offsets>
   </model>
 
+  <!-- Throttle Control Pilot-->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.170 </x-m> <!-- near to panel -->
+      <y-m> -0.970 </y-m> <!-- right -->
+      <z-m>  0.250 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- ******************************* PILOT-PANEL **********************************-->
   <!-- Positions on the Panel  -->
   <!--             1           -->
@@ -311,8 +321,21 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmL.xml</path>
     <offsets>
       <x-m>  0.260 </x-m>
-      <y-m> -0.080 </y-m>
+      <y-m> -0.100 </y-m>
       <z-m> -0.170 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -33 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- AFT-German -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/aft-ger/aft-ger.xml</path>
+    <offsets>
+      <x-m>  0.280 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.165 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -324,7 +347,7 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmR.xml</path>
     <offsets>
       <x-m>  0.260 </x-m>
-      <y-m>  0.080 </y-m>
+      <y-m>  0.100 </y-m>
       <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
@@ -434,8 +457,8 @@
     <max-height>0.2</max-height>
     <max-width>0.5</max-width>
     <font-resolution>
-        <width type="int">32</width>
-        <height type="int">32</height>
+      <width type="int">32</width>
+      <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
@@ -446,17 +469,17 @@
     </offsets>
   </text>
 
-<!-- Labels activated by hotspots -->
-
+  <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
     <object-name>LabelRDF</object-name>
     <object-name>LabelAI</object-name>
     <object-name>LabelMiddle</object-name>
+    <object-name>LabelThrottle</object-name>
     <emission>
-        <red>1.0</red>
-        <green>0.8</green>
-        <blue>0.0</blue>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
     </emission>
   </animation>
 
@@ -465,8 +488,9 @@
     <object-name>LabelRDF</object-name>
     <object-name>LabelAI</object-name>
     <object-name>LabelMiddle</object-name>
+    <object-name>LabelThrottle</object-name>
     <condition>
-        <property>/sim/panel-hotspots</property>
+      <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
 
@@ -483,8 +507,8 @@
     <max-height>0.8</max-height>
     <max-width>1.1</max-width>
     <font-resolution>
-        <width type="int">32</width>
-        <height type="int">32</height>
+      <width type="int">32</width>
+      <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
@@ -507,14 +531,14 @@
     <max-height>0.2</max-height>
     <max-width>0.1</max-width>
     <font-resolution>
-        <width type="int">32</width>
-        <height type="int">32</height>
+      <width type="int">32</width>
+      <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m> -0.330 </x-m> <!-- near to panel -->
+      <x-m> -0.410 </x-m> <!-- near to panel -->
       <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.082 </z-m> <!-- up -->
+      <z-m>  0.120 </z-m> <!-- up -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
@@ -532,8 +556,8 @@
     <max-height>0.2</max-height>
     <max-width>0.2</max-width>
     <font-resolution>
-        <width type="int">32</width>
-        <height type="int">32</height>
+      <width type="int">32</width>
+      <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
@@ -544,6 +568,29 @@
     </offsets>
   </text>
 
+  <!-- Throttle Gear left side of the pilot panel --> 
+  <text>
+    <name>LabelThrottle</name>
+    <type type="string">literal</type>
+    <text type="string">Throttle gears for the left and right locked engines</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.2</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.170 </x-m> <!-- near to panel -->
+      <y-m> -0.950 </y-m> <!-- right -->
+      <z-m>  0.450 </z-m> <!-- up -->
+    </offsets>
+  </text>
 
 </PropertyList>
 

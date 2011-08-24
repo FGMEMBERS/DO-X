@@ -32,6 +32,7 @@
     <object-name>face</object-name>
     <object-name>front</object-name>
     <object-name>HdgBug</object-name>
+    <object-name>Hdg-Knob</object-name>
     <emission>
       <red>   0.50 </red>
       <green> 0.25 </green>

@@ -192,6 +192,122 @@
   </crank> 
 
 
+<!-- engine stop only ask over magnetos setting for the moment :-( -->
+<crank>
+   <name>stop0</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[0]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop1</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[1]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop4</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[4]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop5</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[5]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop8</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[8]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop9</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[9]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank> 
+
+
 <!-- internal -->
 
   <engine>
@@ -963,6 +1079,120 @@
    </volume>
   </crank> 
 
+<!-- engine stop only ask over magnetos setting for the moment :-( -->
+<crank>
+   <name>stop2</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[2]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop3</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[3]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop6</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[6]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop7</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[7]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop10</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[10]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank>
+
+<crank>
+   <name>stop11</name>
+   <path>Aircraft/DO-X/Sounds/engine_down.wav</path>
+   <condition>
+      <equals>
+     <property>controls/engines/engine[11]/magnetos</property>
+      <value>0</value>
+      </equals>
+   </condition>
+   <position>
+    <x>15.0</x>
+    <y>-5.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>0.007</offset>
+   </volume>
+  </crank> 
 
 <!-- internal -->
 
@@ -1799,6 +2029,33 @@
    </volume>
   </door>
 
+  <anchor>
+   <name>Anchor down</name>
+   <path>Aircraft/DO-X/Sounds/anchor-down.wav</path>
+   <condition>
+    <equals>
+     <property>/controls/anchor</property>
+     <value>1.0</value>
+    </equals>
+   </condition>
+   <volume>
+    <max>1.5</max>
+   </volume>
+  </anchor>
+  <anchorup>
+   <name>Anchor up</name>
+   <path>Aircraft/DO-X/Sounds/anchor-up.wav</path>
+   <condition>
+    <equals>
+     <property>/controls/anchor</property>
+     <value>0.0</value>
+    </equals>
+   </condition>
+   <volume>
+    <max>1.5</max>
+   </volume>
+  </anchorup>
+
 <!-- cannot disable click in external views, otherwise heard when ctrl-V -->
 
   <click>
@@ -1808,7 +2065,7 @@
     <property>/instrumentation/generic/click</property>
    </condition>
    <volume>
-    <max>0.2</max>
+    <max>1.0</max>
    </volume>
   </click>
 
@@ -1821,7 +2078,7 @@
     </not>
    </condition>
    <volume>
-    <max>0.2</max>
+    <max>1.0</max>
    </volume>
   </click>
 

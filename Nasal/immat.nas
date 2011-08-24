@@ -27,7 +27,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     var immat = props.globals.getNode("/sim/model/immat",1);
     var callsign = props.globals.getNode("/sim/multiplay/callsign").getValue();
     if (callsign != "callsign") immat.setValue(callsign);
-  else immat.setValue("F-HLBL");
+  else immat.setValue("D-1929");
   }
   refresh_immat();
   setlistener("sim/model/immat", refresh_immat, 0);

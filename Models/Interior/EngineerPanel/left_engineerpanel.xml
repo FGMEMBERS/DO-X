@@ -138,7 +138,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[4]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner larboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[4]/clutch</property>
@@ -151,7 +160,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[4]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner larboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[4]/clutch</property>
@@ -327,7 +345,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[10]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner larboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[10]/clutch</property>
@@ -340,7 +367,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[10]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Inner larboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[10]/clutch</property>
@@ -515,7 +551,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[2]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle larboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[2]/clutch</property>
@@ -528,7 +573,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[2]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle larboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[2]/clutch</property>
@@ -703,7 +757,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[8]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle larboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[8]/clutch</property>
@@ -716,7 +779,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[8]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Middle larboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[8]/clutch</property>
@@ -891,7 +963,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[0]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer larboard front-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[0]/clutch</property>
@@ -904,7 +985,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[0]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer larboard front-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[0]/clutch</property>
@@ -1080,7 +1170,16 @@
    <action>
      <name>increase</name>
      <button>0</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[6]/clutch") == 1){
+          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer larboard back-engine -> locked", 0.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[6]/clutch</property>
@@ -1093,7 +1192,16 @@
    <action>
      <name>decrease</name>
      <button>1</button>
-     <repeatable>true</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>
+        if (getprop("/engines/engine[6]/clutch") == 0){
+          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
+        }else{
+          screen.log.write("Outer larboard back-engine -> unlocked",1.0, 0.7, 0.0);
+        }
+        </script>
+     </binding>
      <binding>
        <command>property-adjust</command>
        <property>/engines/engine[6]/clutch</property>

@@ -117,11 +117,11 @@
 -->
   </animation>
 
-  <!-- Une ombre pour OSG 
+  <!-- Une ombre pour OSG  -->
   <model>
     <name>shadowOSG</name>
     <path>Aircraft/DO-X/Models/shadow.xml</path>
-  </model> -->
+  </model>
 
   <!-- Immatriculation -->
   <model>
@@ -143,6 +143,19 @@
     </offsets>
   </model>
 
+  <!-- Anchor -->
+  <model>
+    <path>Aircraft/DO-X/Models/Exterior/Anchor/anchor.xml</path>
+    <offsets>
+      <x-m> -18.812 </x-m>
+      <y-m>   1.834 </y-m>
+      <z-m>  -4.123 </z-m>
+      <roll-deg>    28 </roll-deg>    <!-- R X -->
+      <pitch-deg>   37 </pitch-deg>   <!-- R Y -->
+      <heading-deg>  0 </heading-deg> <!-- R Z -->
+    </offsets>
+  </model>
+
   <!-- Intérieur, zone passagers -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/interior.xml</path>
@@ -155,7 +168,7 @@
 
   <!-- RadioDirectionFinder on the Front Deck-->
   <model>
-    <path>Aircraft/DO-X/Models/RadioDirFinder/radiodir.xml</path>
+    <path>Aircraft/DO-X/Models/Exterior/RadioDirFinder/radiodir.xml</path>
     <offsets>
       <x-m> -15.931 </x-m>
       <y-m>   1.045 </y-m>

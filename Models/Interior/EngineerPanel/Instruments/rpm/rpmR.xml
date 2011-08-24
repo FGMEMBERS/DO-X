@@ -35,10 +35,11 @@
   </animation>
 
   <!-- Moteurs extérieur gauche avant -->
+  <!-- Only locked engines -->
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/engines/engine[1]/averagerpm</property>
+    <property>/controls/engines/average-rpm-right</property>
     <min>0</min>
     <max>3600</max>
     <interpolation>

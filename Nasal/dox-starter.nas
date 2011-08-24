@@ -11,8 +11,66 @@
 #               \ /
 #             arrière
 #                |
+############# Engineer Controll of the Engines ###################################
 
+var switchEngine = func(eng){
+  var status = getprop("engines/engine["~eng~"]/running");
+  var clutch = getprop("engines/engine["~eng~"]/clutch");
+  var as = getprop("/instrumentation/airspeed-indicator/true-speed-kt");
+  var mix = getprop("engines/engine["~eng~"]/mixture");
+  var r1 = getprop("engines/engine["~eng~"]/rpm");
+  var magnetos = props.globals.getNode("/controls/engines/engine["~eng~"]/magnetos", 1);
+  var cutoff = props.globals.getNode("/controls/engines/engine["~eng~"]/cutoff", 1);
+  var mpinhg = props.globals.getNode("/controls/engines/engine["~eng~"]/mp-inhg", 1);
+  var mposi = props.globals.getNode("/controls/engines/engine["~eng~"]/mp-osi", 1);
 
+  # engine is running
+  # speed is not above 35kt (80 km/h)
+  # speed is higher than 35kt, clutch must be unlocked
+  if (status == 1){
+    if (as < 35){
+        r1 = 10;
+        mix = 0.0;
+        magnetos.setValue(0);
+        mpinhg.setValue(0);
+        mposi.setValue(0);
+        cutoff.setValue(1);
+        magnetos.setAttribute("writable", 0);
+        cutoff.setAttribute("writable", 0);
+        mpinhg.setAttribute("writable", 0);
+        mposi.setAttribute("writable", 0);
+        screen.log.write("WARNING: One Engine -> off", 1.0, 0.1, 0.1);
+    }elsif (clutch == 0){
+        r1 = 10;
+        mix = 0.0;
+        magnetos.setValue(0);
+        mpinhg.setValue(0);
+        mposi.setValue(0);
+        cutoff.setValue(1);
+        magnetos.setAttribute("writable", 0);
+        cutoff.setAttribute("writable", 0);
+        mpinhg.setAttribute("writable", 0);
+        mposi.setAttribute("writable", 0);
+        screen.log.write("WARNING: One Engine -> off", 1.0, 0.1, 0.1);
+    }else{
+        screen.log.write("Unlock this engine first!", 1.0, 0.7, 0.0);
+    }
+  # or start up this engine
+  }else {
+    r1 = 300;
+    mix = 1.0;
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
+    mpinhg.setAttribute("writable", 1);
+    mposi.setAttribute("writable", 1);
+    magnetos.setValue(1);
+    cutoff.setValue(0);
+  }
+  setprop("engines/engine["~eng~"]/rpm", r1);
+  setprop("engines/engine["~eng~"]/mixture", mix);
+}
+
+###############  Use for keybord startup with s ###################################
 var startEngines = func{
 
   var r0 = getprop("engines/engine[0]/running");
@@ -31,10 +89,10 @@ var startEngines = func{
   if(!r4) {
     var magnetos = props.globals.getNode("/controls/engines/engine[4]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[4]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[4]/rpm", 600);
     setprop("engines/engine[4]/mixture", 1.0);
     return
@@ -42,10 +100,10 @@ var startEngines = func{
   if(!r5) {
     var magnetos = props.globals.getNode("/controls/engines/engine[5]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[5]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[5]/rpm", 600);
     setprop("engines/engine[5]/mixture", 1.0);
     return
@@ -53,10 +111,10 @@ var startEngines = func{
   if(!r10) {
     var magnetos = props.globals.getNode("/controls/engines/engine[10]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[10]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[10]/rpm", 600);
     setprop("engines/engine[10]/mixture", 1.0);
     return
@@ -64,10 +122,10 @@ var startEngines = func{
   if(!r11) {
     var magnetos = props.globals.getNode("/controls/engines/engine[11]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[11]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[11]/rpm", 600);
     setprop("engines/engine[11]/mixture", 1.0);
     return
@@ -75,10 +133,10 @@ var startEngines = func{
   if(!r2) {
     var magnetos = props.globals.getNode("/controls/engines/engine[2]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[2]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[2]/rpm", 600);
     setprop("engines/engine[2]/mixture", 1.0);
     return
@@ -86,10 +144,10 @@ var startEngines = func{
   if(!r3) {
     var magnetos = props.globals.getNode("/controls/engines/engine[3]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[3]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[3]/rpm", 600);
     setprop("engines/engine[3]/mixture", 1.0);
     return
@@ -97,10 +155,10 @@ var startEngines = func{
   if(!r8) {
     var magnetos = props.globals.getNode("/controls/engines/engine[8]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[8]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[8]/rpm", 600);
     setprop("engines/engine[8]/mixture", 1.0);
     return
@@ -108,10 +166,10 @@ var startEngines = func{
   if(!r9) {
     var magnetos = props.globals.getNode("/controls/engines/engine[9]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[9]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[9]/rpm", 600);
     setprop("engines/engine[9]/mixture", 1.0);
     return
@@ -119,10 +177,10 @@ var startEngines = func{
   if(!r0) {
     var magnetos = props.globals.getNode("/controls/engines/engine[0]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[0]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[0]/rpm", 600);
     setprop("engines/engine[0]/mixture", 1.0);
     return
@@ -130,10 +188,10 @@ var startEngines = func{
   if(!r1) {
     var magnetos = props.globals.getNode("/controls/engines/engine[1]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[1]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[1]/rpm", 600);
     setprop("engines/engine[1]/mixture", 1.0);
     return
@@ -141,10 +199,10 @@ var startEngines = func{
   if(!r6) {
     var magnetos = props.globals.getNode("/controls/engines/engine[6]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[6]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[6]/rpm", 600);
     setprop("engines/engine[6]/mixture", 1.0);
     return
@@ -152,17 +210,17 @@ var startEngines = func{
   if(!r7) {
     var magnetos = props.globals.getNode("/controls/engines/engine[7]/magnetos", 1);
     var cutoff = props.globals.getNode("/controls/engines/engine[7]/cutoff", 1);
+    magnetos.setAttribute("writable", 1);
+    cutoff.setAttribute("writable", 1);
     magnetos.setValue(1);
     cutoff.setValue(0);
-    magnetos.setAttribute("writable", 0);
-    cutoff.setAttribute("writable", 0);
     setprop("engines/engine[7]/rpm", 600);
     setprop("engines/engine[7]/mixture", 1.0);
     return
   }
 }
 
-
+###############  use for keybord cutoff with S ###################################
 var stopEngines = func{
 
   var r0 = getprop("engines/engine[0]/running");

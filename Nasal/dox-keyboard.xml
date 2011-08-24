@@ -38,4 +38,80 @@
     </binding>
   </key>
 
+  <key n="57">
+    <name>PgUp</name>
+   <desc>Throttle</desc>
+   <binding>
+    <command>nasal</command>
+    <script>dox.throttleControl(0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="51">
+    <name>PgDown</name>
+   <desc>Throttle</desc>
+   <binding>
+    <command>nasal</command>
+    <script>dox.throttleControl(-0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="44">
+    <name>,</name>
+    <repeatable>true</repeatable>
+    <desc>Throttle Left Up</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.throttleControlL(0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="59">
+    <name>.</name>
+    <repeatable>true</repeatable>
+    <desc>Throttle Left Down</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.throttleControlL(-0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="46">
+    <name>;</name>
+    <repeatable>true</repeatable>
+    <desc>Throttle Right Up</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.throttleControlR(0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="58">
+    <name>:</name>
+    <repeatable>true</repeatable>
+    <desc>Throttle Right Down</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.throttleControlR(-0.01,1.0)</script>
+    </binding>
+  </key>
+
+  <key n="66">
+    <name>B</name>
+    <desc>Anchor down</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.castAnchor();</script>
+    </binding>
+  </key>
+
+  <key n="98">
+    <name>b</name>
+    <desc>Anchor up</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dox.hoistAnchor();</script>
+    </binding>
+  </key>
+
 </PropertyList>

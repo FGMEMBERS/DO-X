@@ -47,6 +47,18 @@
       </generic>
     </multiplay>
 
+    <controls>
+      <generic>
+        <int  type="double" n="3" alias="/controls/engines/throttle-pilot-left"/>
+        <int  type="double" n="4" alias="/controls/engines/throttle-pilot-right"/>
+        <int  type="double" n="5" alias="/controls/engines/average-rpm-left"/>
+        <int  type="double" n="6" alias="/controls/engines/average-rpm-right"/>
+        <int  type="double" n="7" alias="/controls/anchor-lat"/>
+        <int  type="double" n="8" alias="/controls/anchor-lon"/>
+        <int  type="bool" n="9" alias="/controls/anchor"/>
+      </generic>
+    </controls>
+
     <help>
       <title>Dornier Do X</title>
      <!--
@@ -56,6 +68,14 @@
       </key>
      -->
       <key>
+        <name>B</name>
+        <desc>Cast Anchor (down)</desc>
+      </key>
+      <key>
+        <name>b</name>
+        <desc>Hoist Anchor (up)</desc>
+      </key>
+      <key>
         <name>s</name>
         <desc>Start engine by engine</desc>
       </key>
@@ -64,8 +84,40 @@
         <desc>Stop engine by engine</desc>
       </key>
       <key>
+        <name>PgUp</name>
+        <desc>Increase speed of locked engines</desc>
+      </key>
+      <key>
+        <name>PgDown</name>
+        <desc>Decrease speed of locked engines</desc>
+      </key>
+      <key>
+        <name>,</name>
+        <desc>Increase speed left locked engines</desc>
+      </key>
+      <key>
+        <name>;</name>
+        <desc>Decrease speed left locked engines</desc>
+      </key>
+      <key>
+        <name>.</name>
+        <desc>Increase speed right locked engines</desc>
+      </key>
+      <key>
+        <name>:</name>
+        <desc>Decrease speed right locked engines</desc>
+      </key>
+      <key>
+        <name>m</name>
+        <desc>Increase Mixtures</desc>
+      </key>
+      <key>
+        <name>M</name>
+        <desc>Decrease Mixtures</desc>
+      </key>
+      <key>
         <name>Ctrl-I</name>
-        <desc>Open DO X Engine Control</desc>
+        <desc>Open DO X Engineer Menu</desc>
       </key>
     </help>
 
@@ -73,8 +125,11 @@
 
   </sim>
 
+  <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
   <controls>
     <engines>
+      <throttle-pilot-left>0</throttle-pilot-left>
+      <throttle-pilot-right>0</throttle-pilot-right>
       <engine n="0">
         <magnetos>3</magnetos>
       </engine>
@@ -118,12 +173,10 @@
     <engine n="0">
       <rpm>50</rpm>
       <clutch type="bool">1</clutch>
-      <averagerpm type="double">50</averagerpm> <!-- only for carry the left wing average rpm-->
     </engine>
     <engine n="1">
       <rpm>50</rpm>
       <clutch type="bool">1</clutch>
-      <averagerpm type="double">50</averagerpm> <!-- only for carry the right wing average rpm-->
     </engine>
     <engine n="2">
       <rpm>50</rpm>
@@ -176,15 +229,17 @@
       <file>Aircraft/DO-X/Nasal/doors.nas</file>
     </doors>
     <dox>
+      <file>Aircraft/DO-X/Nasal/dox.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-anchor.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-oil.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-starter.nas</file>
       <file>Aircraft/DO-X/Nasal/immat.nas</file>
       <file>Aircraft/DO-X/Nasal/liveries.nas</file>
-      <file>Aircraft/DO-X/Nasal/dox.nas</file>
-      <file>Aircraft/DO-X/Nasal/dox-starter.nas</file>
-      <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
-      <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>
-      <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
-    </dox>    
+    </dox>
   </nasal>
-  
+
 </PropertyList>
 
