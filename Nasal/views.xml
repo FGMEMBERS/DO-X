@@ -53,71 +53,7 @@
   </view>
 
   <view n="103">
-    <name>Engineer Cabin View</name>
-    <internal archive="y">true</internal>
-    <type>lookfrom</type>
-    <config>
-      <from-model type="bool">true</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  0.000 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">  0.850 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -4.000 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg type="double"> 0 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 50 </default-field-of-view-deg>
-    </config>
-  </view>
-
-  <view n="104">
-    <name>Front Deck View</name>
-    <internal archive="y">true</internal>
-    <type>lookfrom</type>
-    <config>
-      <dynamic-view type="bool">true</dynamic-view>
-      <from-model type="bool">true</from-model>
-      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.000 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -15.850 </z-offset-m>	<!-- Back /window inside is 12.355 -->
-      <pitch-offset-deg type="double"> 0 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
-    </config>
-  </view>
-
-  <view n="105">
-    <name>Tail Camera View</name>
-    <type>lookfrom</type>
-    <internal archive="y">true</internal>
-    <config>
-      <from-model type="bool">true</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
-      <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
-    </config>
-  </view>
-
-  <view n="106">
-    <name>Cabine View</name>
-    <type>lookfrom</type>
-    <internal archive="y">true</internal>
-    <config>
-      <from-model type="bool">true</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y"> -1.402 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> -6.633 </z-offset-m> <!--Back-->
-      <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
-    </config>
-  </view>
-
-  <view n="107">
-    <name>Engineer Right</name>
+    <name>Engineer Right Panel</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
@@ -133,8 +69,8 @@
     </config>
   </view>
 
-  <view n="108">
-    <name>Engineer Left</name>
+  <view n="104">
+    <name>Engineer Left Panel</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
@@ -147,6 +83,86 @@
       <pitch-offset-deg> 0 </pitch-offset-deg>
       <heading-offset-deg type="double"> 90 </heading-offset-deg>
       <default-field-of-view-deg type="double"> 66 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="105">
+    <name>Radio Cabin View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.000 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  0.450 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -3.500 </z-offset-m>	<!-- Back  -->
+      <heading-offset-deg type="double"> -90 </heading-offset-deg>
+      <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="106">
+    <name>Help Engine Cabin View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.500 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  0.150 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -1.580 </z-offset-m>	<!-- Back  -->
+      <heading-offset-deg type="double"> 90 </heading-offset-deg>
+      <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="107">
+    <name>Front Deck View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <dynamic-view type="bool">true</dynamic-view>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y">   0.000 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">   0.275 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -15.850 </z-offset-m>	<!-- Back /window inside is 12.355 -->
+      <pitch-offset-deg type="double"> 0 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="108">
+    <name>Tail Camera View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
+      <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="109">
+    <name>Cabine View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> -1.402 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -6.633 </z-offset-m> <!--Back-->
+      <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
     </config>
   </view>
 

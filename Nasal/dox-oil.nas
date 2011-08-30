@@ -1,10 +1,3 @@
-
-# Dialogs for special Menus
-
-#var engineer_dialog = gui.Dialog.new("/sim/gui/dialogs/dox/config/dialog", "Aircraft/DO-X/Dialogs/dox-engineer-menu.xml");
-
-#var immat_dialog = gui.Dialog.new("/sim/gui/dialogs/dox/status/dialog", "Aircraft/DO-X/Dialogs/immat.xml");
-
 # ==================================================
 # Engines oil temperature IN and OUT
 # Version totalement à refaire.... c'est temporaire

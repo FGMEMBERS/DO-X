@@ -8,10 +8,10 @@
     <type>select</type>
     <object-name>anchor</object-name>
     <condition>
-      <not-equals>
+      <equals>
         <property>controls/anchor</property>
-        <value> 0 </value>
-      </not-equals>
+        <value> 1 </value>
+      </equals>
     </condition>
   </animation>
 

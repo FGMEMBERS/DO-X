@@ -10,9 +10,53 @@
     <object-name>inttour</object-name>
     <object-name>mur1</object-name>
     <object-name>mur2</object-name>
+    <object-name>mur3</object-name>
+    <object-name>mur4</object-name>
     <object-name>planchets</object-name>
 
     <!-- Objets transparents -->
+  </animation>
+
+  <!-- Interior lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>mur1</object-name>
+    <object-name>mur2</object-name>
+    <object-name>mur3</object-name>
+    <object-name>mur4</object-name>
+    <object-name>planchets</object-name>
+		<condition>
+      <or>
+        <equals>
+          <property>controls/lighting/panel</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/lighting/navigationcabin</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/lighting/engineerpanel</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/lighting/radiocabin</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/lighting/helpenginecabin</property>
+          <value>1</value>
+        </equals>
+      </or>
+		</condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor>0.3</factor>
+    </emission>
   </animation>
 
   <!-- Slats / Lattenrost -->
@@ -22,16 +66,6 @@
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Caisse dans NavigationCabin  -->
-  <model>
-    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/caisse.xml</path>
-    <offsets>
-      <x-m> -9.500 </x-m>
-      <y-m> -0.720 </y-m>
-      <z-m> -0.658 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -45,6 +79,26 @@
       <roll-deg>      0 </roll-deg>
       <pitch-deg>     0 </pitch-deg>
       <heading-deg>  -2 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Navigation lamp -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-nav.xml</path>
+    <offsets>
+      <x-m>-10.200 </x-m>
+      <y-m>-0.840 </y-m>
+      <z-m> 1.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Electric Panel for the light in the NavigationCabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/lightpanel.xml</path>
+    <offsets>
+      <x-m> -10.770 </x-m>
+      <y-m> -1.270 </y-m>
+      <z-m> 0.400 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -65,6 +119,16 @@
       <x-m> -12.249 </x-m>
       <y-m>   0.000 </y-m>
       <z-m>  -0.352 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cockpit lamp -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-panel.xml</path>
+    <offsets>
+      <x-m>-11.500 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.130 </z-m>
     </offsets>
   </model>
 
@@ -90,6 +154,57 @@
       <roll-deg>     0 </roll-deg>
       <pitch-deg>    0 </pitch-deg>
       <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Engineer lamp -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-engineer.xml</path>
+    <offsets>
+      <x-m>-7.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Radio in the Radio Cabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/RadioCabin/radio.xml</path>
+    <offsets>
+      <x-m> -3.700 </x-m><!-- back -->
+      <y-m>  1.300 </y-m><!-- right -->
+      <z-m>  0.080 </z-m><!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Table dans Radio Cabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/table.xml</path>
+    <offsets>
+      <x-m> -3.300 </x-m>
+      <y-m>  0.950 </y-m>
+      <z-m>  0.000 </z-m> <!-- up -->
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Radio Cabin lamp -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-radio.xml</path>
+    <offsets>
+      <x-m>-3.350 </x-m>
+      <y-m> 0.700 </y-m>
+      <z-m> 0.860 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Helpengineroom lamp -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-helpengine.xml</path>
+    <offsets>
+      <x-m>-2.300 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.620 </z-m>
     </offsets>
   </model>
 

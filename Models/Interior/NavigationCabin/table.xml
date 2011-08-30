@@ -11,4 +11,21 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- Interior lighting -->
+  <animation>
+    <type>material</type>
+      <condition>
+        <equals>
+          <property>controls/lighting/navigationcabin</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor>0.5</factor>
+    </emission>
+  </animation>
+
 </PropertyList>

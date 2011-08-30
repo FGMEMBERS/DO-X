@@ -13,18 +13,38 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- Interior lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>panel</object-name>
+    <object-name>leather</object-name>
+    <object-name>visses</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/panel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor>0.3</factor>
+    </emission>
+  </animation>
+
   <!-- *********  Central-Position of the Instruments in the front of the Cockpit ************ -->
-  <!-- UHR Central --> 
+  <!-- Clock Central --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
       <x-m> -0.415 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.210 </z-m>
+      <z-m>  0.220 </z-m>
     </offsets>
   </model>
 
-  <!-- FLUGLAGE Central --> 
+  <!-- ATT Central --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att-big.xml</path>
     <offsets>
@@ -62,6 +82,27 @@
       <x-m>  0.650 </x-m> <!-- near to panel -->
       <y-m>  0.000 </y-m> <!-- right -->
       <z-m> -0.420 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Seats --> 
+  <!-- Seat Pilot --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Seats/seat.xml</path>
+    <offsets>
+      <x-m>  0 </x-m> <!-- near to panel -->
+      <y-m> -0.670 </y-m> <!-- right -->
+      <z-m> 0 </z-m> <!-- up -->
+    </offsets>
+  </model>
+  
+  <!-- Seat Copilot -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Seats/seat.xml</path>
+    <offsets>
+      <x-m>  0 </x-m> <!-- near to panel -->
+      <y-m>  0.670 </y-m> <!-- right -->
+      <z-m> 0 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -335,7 +376,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.165 </z-m>
+      <z-m> -0.175 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>

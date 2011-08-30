@@ -15,7 +15,7 @@
     </offsets>
 
     <condition>
-      <property>engines/engine/cranking</property>
+      <property>engines/engine[7]/cranking</property>
     </condition>
 
     <attach>world</attach>

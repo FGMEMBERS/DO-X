@@ -7,6 +7,13 @@
       <label>Dornier Do X</label>
       <enabled type="bool">true</enabled>
       <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/start-idling</property>
+        </binding>
+      </item>
+      <item>
         <label>Select Livery</label>
         <binding>
           <command>nasal</command>
@@ -32,6 +39,13 @@
         <binding>
           <command>dialog-show</command>
           <dialog-name>dox-engineer</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Interior Lights on/off</label>
+        <binding>
+          <command>nasal</command>
+          <script>dox.interiorLights()</script>
         </binding>
       </item>
     </menu>

@@ -56,6 +56,11 @@
         <int  type="double" n="7" alias="/controls/anchor-lat"/>
         <int  type="double" n="8" alias="/controls/anchor-lon"/>
         <int  type="bool" n="9" alias="/controls/anchor"/>
+        <int  type="bool" n="11" alias="/controls/lighting/panel"/>
+        <int  type="bool" n="12" alias="/controls/lighting/navigationcabin"/>
+        <int  type="bool" n="13" alias="/controls/lighting/engineerpanel"/>
+        <int  type="bool" n="14" alias="/controls/lighting/radiocabin"/>
+        <int  type="bool" n="15" alias="/controls/lighting/helpenginecabin"/>
       </generic>
     </controls>
 
@@ -116,6 +121,10 @@
         <desc>Decrease Mixtures</desc>
       </key>
       <key>
+        <name>L</name>
+        <desc>Interior Lights on/off</desc>
+      </key>
+      <key>
         <name>Ctrl-I</name>
         <desc>Open DO X Engineer Menu</desc>
       </key>
@@ -167,6 +176,14 @@
         <magnetos>3</magnetos>
       </engine>
     </engines>
+
+    <lighting>
+      <panel type="bool">0</panel>
+      <navigationcabin type="bool">0</navigationcabin>
+      <engineerpanel type="bool">0</engineerpanel>
+      <radiocabin type="bool">0</radiocabin>
+      <helpenginecabin type="bool">0</helpenginecabin>
+    </lighting>
   </controls>
 
   <engines>

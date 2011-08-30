@@ -28,6 +28,23 @@
     <object-name>v_handlauf</object-name>
   </animation>
 
+  <!-- Interior lighting -->
+  <animation>
+    <type>material</type>
+      <condition>
+        <equals>
+          <property>controls/lighting/engineerpanel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.4 </green>
+      <blue>  0.4 </blue>
+      <factor>0.8</factor>
+    </emission>
+  </animation>
+
   <!-- Les moteurs numérotés vue de dessus 
 
               avant

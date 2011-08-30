@@ -135,13 +135,6 @@ var controlRootThrottle = func{
     #var t4 = getprop("/controls/engines/throttle-pilot-right");
     #print("Hello from "~arg[3]~" L: "~t3~" R: "~t4~" after increase/decrease");
 }
-#############  scrollfunction for whatever you want increase or decrease ####################
-var scrollGear = func(scale,path){
-    var val=getprop(path) + (scale);
-    if(val >1.0) val = 1.0;
-    if(val < 0.0) val = 0.0;
-    setprop(path,val);
-}
 
 #############  scrollfunction for the single throttle gears at engineer panel ###############
 
@@ -151,4 +144,52 @@ var engControl = func(scale,eng,ctrl) {
       scrollGear(scale,"controls/engines/engine["~eng~"]/"~ctrl);
     }
 }
+
+#############  scrollfunction for whatever you want increase or decrease ####################
+var scrollGear = func(scale,path){
+    var val=getprop(path) + (scale);
+    if(val >1.0) val = 1.0;
+    if(val < 0.0) val = 0.0;
+    setprop(path,val);
+}
+
+############# Argh... it is nessecary to  hear, what the engines done, ######################
+############ cause the pilots Throttle Gear find not the right position ####################
+# We build a new joystick function
+# Joystick axis handlers (use cmdarg).  Shouldn't be called from
+# other contexts.  A non-null argument reverses the axis direction.
+var doxAxisHandler = func(pre, post) {
+    func(invert = 0) {
+      var engines = [];
+      var sel = props.globals.getNode("/sim/input/selected", 1);
+      var engs = props.globals.getNode("/controls/engines").getChildren("engine");
+      foreach(var e; engs) {
+          var index = e.getIndex();
+          var s = sel.getChild("engine", index, 1);
+          if(s.getType() == "NONE") s.setBoolValue(1);
+          var clutch = getprop("/engines/engine["~index~"]/clutch");
+          if(clutch == 1){
+            append(engines, { index: index, controls: e, selected: s });
+          }
+      }
+      var val = cmdarg().getNode("setting").getValue();
+      if(invert) val = -val;
+      foreach(var e; engines){
+          if(e.selected.getValue())
+              setprop(pre ~ e.index ~ post, (1 - val) / 2);
+      }
+    setprop("controls/engines/throttle-pilot-left",((1 - val) / 2));
+    setprop("controls/engines/throttle-pilot-right",((1 - val) / 2));
+    }
+}
+
+# And now, overwrite the original joystick function
+controls.throttleAxis = doxAxisHandler("/controls/engines/engine[", "]/throttle");
+
+
+
+
+
+
+
 

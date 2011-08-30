@@ -1,6 +1,8 @@
 # ==================================================
 # If anchor is down, hold position
 # ==================================================
+# This message will display on start the DO-X aircraft on Flightgear
+screen.log.write("Cast Anchor - press Shift B", 1.0, 1.0, 1.0);
 
 # anchor down
 var castAnchor = func{
@@ -14,9 +16,14 @@ var castAnchor = func{
     # set new position
     anchorLat.setValue(lat.getValue());
     anchorLon.setValue(lon.getValue());
-    anchor.setValue(1);
-    screen.log.write("Cast Anchor!", 1.0, 0.7, 0.0);
-    holdPos();
+
+    if(anchor.getValue() == 1){
+      screen.log.write("Anchor is already down!", 1.0, 0.7, 0.0);
+    }else{
+      anchor.setValue(1);
+      screen.log.write("Cast Anchor!", 1.0, 0.7, 0.0);
+      holdPos();
+    }
   }else{
     screen.log.write("Do not cast anchor in flight!", 1.0, 0.0, 0.0);
   }
@@ -42,11 +49,11 @@ var holdPos = func{
     var anchorLon = anchorLon.getValue();
     setprop("/position/longitude-deg", anchorLon);
   }
-  # Position updated 4 times / sec
+  # Position updated at framerate time
   settimer(holdPos, 0);
 }
 
-# if somebody want to try take of with anchor, chains will 
+# if somebody want to try take of with anchor, chains will ruptured 
 setlistener("/instrumentation/airspeed-indicator/true-speed-kt", func(as) {
     var as = getprop("/instrumentation/airspeed-indicator/true-speed-kt");
     var anchor = props.globals.getNode("/controls/anchor", 1);

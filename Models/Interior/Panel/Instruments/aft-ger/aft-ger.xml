@@ -15,7 +15,7 @@
   <animation> 
     <type>scale</type>
     <object-name>spirit_column</object-name>
-    <property>/orientation/pich-deg</property>
+    <property>/orientation/pitch-deg</property>
     <x-offset> 1 </x-offset>
     <y-offset> 1 </y-offset>
     <z-offset> 1 </z-offset>
@@ -31,24 +31,26 @@
     </center>
   </animation>
 
-  <!--
-  animation> 
+  <animation> 
     <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-      <red>   0.75 </red>
+    <object-name>spirit_bottom</object-name>
+    <object-name>spirit_column</object-name>
+    <object-name>glas_tube</object-name>
+    <emission>
+      <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>0.3</factor-prop>
     </emission>
-  </animation
-  -->
+  </animation>
 
   <animation>
     <type>select</type>
     <object-name>spirit_column</object-name>
     <object-name>spirit_bottom</object-name>
     <condition>
-      <property>/orientation/pich-deg</property>
+      <property>/orientation/pitch-deg</property>
     </condition>
   </animation>
 
@@ -56,5 +58,46 @@
     <type>noshadow</type>
   </animation>
 
-</PropertyList>
+  <!-- Labels activated by hotspots -->
+  <animation>
+    <type>material</type>
+    <object-name>LabelAFT</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>LabelAFT</object-name>
+    <condition>
+      <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>LabelAFT</name>
+    <type type="string">literal</type>
+    <text type="string">Pitch Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.010 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.065 </z-m> <!-- up -->
+    </offsets>
+  </text>
+
+</PropertyList>
