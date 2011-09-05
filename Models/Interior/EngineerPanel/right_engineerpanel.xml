@@ -31,6 +31,26 @@
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
+    <object-name>throttleA</object-name>
+    <object-name>throttleB</object-name>
+    <object-name>throttleC</object-name>
+    <object-name>throttleD</object-name>
+    <object-name>throttleE</object-name>
+    <object-name>throttleF</object-name>
+    <object-name>mixtureA</object-name>
+    <object-name>mixtureB</object-name>
+    <object-name>mixtureC</object-name>
+    <object-name>mixtureD</object-name>
+    <object-name>mixtureE</object-name>
+    <object-name>mixtureF</object-name>
+    <object-name>clutchA</object-name>
+    <object-name>clutchB</object-name>
+    <object-name>clutchC</object-name>
+    <object-name>clutchD</object-name>
+    <object-name>clutchE</object-name>
+    <object-name>clutchF</object-name>
+    <object-name>verkleidung</object-name>
+    <object-name>v_handlauf</object-name>
       <condition>
         <equals>
           <property>controls/lighting/engineerpanel</property>

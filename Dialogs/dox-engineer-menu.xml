@@ -26,7 +26,16 @@
     <layout>hbox</layout>
     <empty><stretch>true</stretch></empty>
     <text>
-      <label>/     \</label>
+      <label>^</label>
+    </text>
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+    <text>
+      <label>/ """" \</label>
     </text>
     <empty><stretch>true</stretch></empty>
   </group>
@@ -37,6 +46,7 @@
 
     <button>
       <legend>0</legend>
+      <key>0</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(0)</script>
@@ -45,6 +55,7 @@
 
     <button>
       <legend>2</legend>
+      <key>2</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(2)</script>
@@ -53,6 +64,7 @@
 
     <button>
       <legend>4</legend>
+      <key>4</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(4)</script>
@@ -65,6 +77,7 @@
 
     <button>
       <legend>5</legend>
+      <key>5</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(5)</script>
@@ -73,6 +86,7 @@
 
     <button>
       <legend>3</legend>
+      <key>3</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(3)</script>
@@ -81,6 +95,7 @@
 
     <button>
       <legend>1</legend>
+      <key>1</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(1)</script>
@@ -96,6 +111,7 @@
 
     <button>
       <legend>6</legend>
+      <key>6</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(6)</script>
@@ -104,6 +120,7 @@
 
     <button>
       <legend>8</legend>
+      <key>8</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(8)</script>
@@ -111,7 +128,8 @@
     </button>
 
     <button>
-      <legend>10</legend>
+      <legend>10 +</legend>
+      <key>+</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(10)</script>
@@ -123,7 +141,8 @@
     </text>
 
     <button>
-      <legend>11</legend>
+      <legend>11 -</legend>
+      <key>-</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(11)</script>
@@ -132,6 +151,7 @@
 
     <button>
       <legend>9</legend>
+      <key>9</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(9)</script>
@@ -140,12 +160,22 @@
 
     <button>
       <legend>7</legend>
+      <key>7</key>
       <binding>
         <command>nasal</command>
         <script>dox.switchEngine(7)</script>
       </binding>
     </button>
 
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+    <text>
+      <label>    Larboard (Backbord)   |       |   Starboard (Steuerbord)</label>
+    </text>
     <empty><stretch>true</stretch></empty>
   </group>
 
@@ -187,7 +217,7 @@
     <layout>hbox</layout>
     <empty><stretch>true</stretch></empty>
     <text>
-      <label>If speed is up to 80km/h or 35kts unlock clutch first.</label>
+      <label>If speed is more than 80km/h or 35kts unlock clutch first.</label>
     </text>
     <empty><stretch>true</stretch></empty>
   </group>

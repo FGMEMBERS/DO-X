@@ -1,7 +1,7 @@
 # ==================================================
 # If anchor is down, hold position
 # ==================================================
-# This message will display on start the DO-X aircraft on Flightgear
+# This message will display if the DO-X is the selected aircraft on splash screen in Flightgear
 screen.log.write("Cast Anchor - press Shift B", 1.0, 1.0, 1.0);
 
 # anchor down

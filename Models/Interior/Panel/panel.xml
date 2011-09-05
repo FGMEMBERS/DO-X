@@ -116,6 +116,147 @@
     </offsets>
   </model>
 
+  <!-- Pedals --> 
+  <!-- Pedal Pilot Left--> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-l.xml</path>
+    <offsets>
+      <x-m>  0.420 </x-m> <!-- near to panel -->
+      <y-m> -0.775 </y-m> <!-- right -->
+      <z-m> -0.135 </z-m> <!-- up -->
+      <pitch-deg> -56 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-l.xml</path>
+    <offsets>
+      <x-m>  0.380 </x-m> <!-- near to panel -->
+      <y-m> -0.775 </y-m> <!-- right -->
+      <z-m> -0.327 </z-m> <!-- up -->
+      <pitch-deg> 18.3 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-l.xml</path>
+    <offsets>
+      <x-m>  0.440 </x-m> <!-- near to panel -->
+      <y-m> -0.705 </y-m> <!-- right -->
+      <z-m> -0.140 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Pedal Pilot Right--> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-r.xml</path>
+    <offsets>
+      <x-m>  0.420 </x-m> <!-- near to panel -->
+      <y-m> -0.580 </y-m> <!-- right -->
+      <z-m> -0.135 </z-m> <!-- up -->
+      <pitch-deg> -56 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-r.xml</path>
+    <offsets>
+      <x-m>  0.380 </x-m> <!-- near to panel -->
+      <y-m> -0.580 </y-m> <!-- right -->
+      <z-m> -0.327 </z-m> <!-- up -->
+      <pitch-deg> 18.3 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-r.xml</path>
+    <offsets>
+      <x-m>  0.440 </x-m> <!-- near to panel -->
+      <y-m> -0.510 </y-m> <!-- right -->
+      <z-m> -0.140 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Pedal Copilot Left--> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-l.xml</path>
+    <offsets>
+      <x-m>  0.420 </x-m> <!-- near to panel -->
+      <y-m>  0.580 </y-m> <!-- right -->
+      <z-m> -0.135 </z-m> <!-- up -->
+      <pitch-deg> -56 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-l.xml</path>
+    <offsets>
+      <x-m>  0.380 </x-m> <!-- near to panel -->
+      <y-m>  0.580 </y-m> <!-- right -->
+      <z-m> -0.327 </z-m> <!-- up -->
+      <pitch-deg> 18.3 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-l.xml</path>
+    <offsets>
+      <x-m>  0.440 </x-m> <!-- near to panel -->
+      <y-m>  0.510 </y-m> <!-- right -->
+      <z-m> -0.140 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- Pedal Copilot Right--> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-r.xml</path>
+    <offsets>
+      <x-m>  0.420 </x-m> <!-- near to panel -->
+      <y-m>  0.775 </y-m> <!-- right -->
+      <z-m> -0.135 </z-m> <!-- up -->
+      <pitch-deg> -56 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-r.xml</path>
+    <offsets>
+      <x-m>  0.380 </x-m> <!-- near to panel -->
+      <y-m>  0.775 </y-m> <!-- right -->
+      <z-m> -0.327 </z-m> <!-- up -->
+      <pitch-deg> 18.3 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-r.xml</path>
+    <offsets>
+      <x-m>  0.440 </x-m> <!-- near to panel -->
+      <y-m>  0.705 </y-m> <!-- right -->
+      <z-m> -0.140 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- The leverage for the elevator-Yoke -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/leverage-el.xml</path>
+    <offsets>
+      <x-m>  0.650 </x-m> <!-- near to panel -->
+      <y-m>  0.565 </y-m> <!-- right -->
+      <z-m> -0.220 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- The leverage for the  aileron-Yoke -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/leverage-ai.xml</path>
+    <offsets>
+      <x-m>  0.650 </x-m> <!-- near to panel -->
+      <y-m>  0.440 </y-m> <!-- right -->
+      <z-m> -0.220 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- ******************************* PILOT-PANEL **********************************-->
   <!-- Positions on the Panel  -->
   <!--             1           -->
@@ -285,9 +426,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-0.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
+      <x-m>  0.245 </x-m>
       <y-m> -0.300 </y-m>
-      <z-m> -0.135 </z-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -299,7 +440,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.300 </y-m>
-      <z-m> -0.210 </z-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -311,9 +452,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-2.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
-      <y-m> -0.250 </y-m>
-      <z-m> -0.135 </z-m>
+      <x-m>  0.245 </x-m>
+      <y-m> -0.240 </y-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -324,8 +465,8 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-8.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m> -0.250 </y-m>
-      <z-m> -0.210 </z-m>
+      <y-m> -0.240 </y-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -336,9 +477,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-4.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
-      <y-m> -0.200 </y-m>
-      <z-m> -0.135 </z-m>
+      <x-m>  0.245 </x-m>
+      <y-m> -0.180 </y-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -349,8 +490,8 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-10.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m> -0.200 </y-m>
-      <z-m> -0.210 </z-m>
+      <y-m> -0.180 </y-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -361,9 +502,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmL.xml</path>
     <offsets>
-      <x-m>  0.260 </x-m>
-      <y-m> -0.100 </y-m>
-      <z-m> -0.170 </z-m>
+      <x-m>  0.265 </x-m>
+      <y-m> -0.075 </y-m>
+      <z-m> -0.185 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -387,9 +528,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmR.xml</path>
     <offsets>
-      <x-m>  0.260 </x-m>
-      <y-m>  0.100 </y-m>
-      <z-m> -0.170 </z-m>
+      <x-m>  0.265 </x-m>
+      <y-m>  0.075 </y-m>
+      <z-m> -0.185 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -400,9 +541,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-5.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
-      <y-m>  0.200 </y-m>
-      <z-m> -0.135 </z-m>
+      <x-m>  0.245 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -414,8 +555,8 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-11.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m>  0.200 </y-m>
-      <z-m> -0.210 </z-m>
+      <y-m>  0.180 </y-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -426,9 +567,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-3.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
-      <y-m>  0.250 </y-m>
-      <z-m> -0.135 </z-m>
+      <x-m>  0.245 </x-m>
+      <y-m>  0.240 </y-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -439,8 +580,8 @@
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-9.xml</path>
     <offsets>
       <x-m>  0.280 </x-m>
-      <y-m>  0.250 </y-m>
-      <z-m> -0.210 </z-m>
+      <y-m>  0.240 </y-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -451,9 +592,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-1.xml</path>
     <offsets>
-      <x-m>  0.230 </x-m>
+      <x-m>  0.245 </x-m>
       <y-m>  0.300 </y-m>
-      <z-m> -0.135 </z-m>
+      <z-m> -0.170 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -466,7 +607,7 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.300 </y-m>
-      <z-m> -0.210 </z-m>
+      <z-m> -0.220 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> -33 </pitch-deg>
       <heading-deg> 0 </heading-deg>

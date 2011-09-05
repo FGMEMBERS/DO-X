@@ -2,11 +2,11 @@
 
 <PropertyList>
 
-  <path>seat.ac</path>
+  <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage.ac</path>
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>seatP</object-name>
+    <object-name>leverage</object-name>
 
     <!-- Objets transparents -->
   </animation>
@@ -24,8 +24,20 @@
       <red>   0.5 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor>0.3</factor>
+      <factor>0.2</factor>
     </emission>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+    <object-name>leverage</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 0.012 </factor>
+   <axis>
+     <x>-1.0</x>
+     <y> 0.0</y>
+     <z> 0.0</z>
+   </axis>
   </animation>
 
 </PropertyList>

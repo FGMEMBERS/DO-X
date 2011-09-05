@@ -38,29 +38,31 @@
         <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
         <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
         <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
-        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
-        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
-        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <int type="bool" n="8" alias="/controls/lighting/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int type="double" n="9" alias="/sim/model/lights/beacon/state"> 0 </int>      <!-- 9 beacon-lights -->
+        <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>     <!--10 strobe-lights -->
+        <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int>  <!--11 landing-lights -->
+        <int n="12" alias="/controls/electric/key-pos">  0 </int>             <!--12 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!--2 altitude for MP shadow -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
     <controls>
       <generic>
-        <int  type="double" n="3" alias="/controls/engines/throttle-pilot-left"/>
-        <int  type="double" n="4" alias="/controls/engines/throttle-pilot-right"/>
-        <int  type="double" n="5" alias="/controls/engines/average-rpm-left"/>
-        <int  type="double" n="6" alias="/controls/engines/average-rpm-right"/>
-        <int  type="double" n="7" alias="/controls/anchor-lat"/>
-        <int  type="double" n="8" alias="/controls/anchor-lon"/>
-        <int  type="bool" n="9" alias="/controls/anchor"/>
-        <int  type="bool" n="11" alias="/controls/lighting/panel"/>
-        <int  type="bool" n="12" alias="/controls/lighting/navigationcabin"/>
-        <int  type="bool" n="13" alias="/controls/lighting/engineerpanel"/>
-        <int  type="bool" n="14" alias="/controls/lighting/radiocabin"/>
-        <int  type="bool" n="15" alias="/controls/lighting/helpenginecabin"/>
+        <int  type="double" n="13" alias="/controls/engines/throttle-pilot-left"/>
+        <int  type="double" n="14" alias="/controls/engines/throttle-pilot-right"/>
+        <int  type="double" n="15" alias="/controls/engines/average-rpm-left"/>
+        <int  type="double" n="16" alias="/controls/engines/average-rpm-right"/>
+        <int  type="double" n="17" alias="/controls/anchor-lat"/>
+        <int  type="double" n="18" alias="/controls/anchor-lon"/>
+        <int  type="bool" n="19" alias="/controls/anchor"/>
+        <int  type="bool" n="20" alias="/controls/lighting/panel"/>
+        <int  type="bool" n="21" alias="/controls/lighting/navigationcabin"/>
+        <int  type="bool" n="22" alias="/controls/lighting/engineerpanel"/>
+        <int  type="bool" n="23" alias="/controls/lighting/radiocabin"/>
+        <int  type="bool" n="24" alias="/controls/lighting/helpenginecabin"/>
       </generic>
     </controls>
 
@@ -121,7 +123,7 @@
         <desc>Decrease Mixtures</desc>
       </key>
       <key>
-        <name>L</name>
+        <name>l</name>
         <desc>Interior Lights on/off</desc>
       </key>
       <key>
@@ -248,6 +250,7 @@
     <dox>
       <file>Aircraft/DO-X/Nasal/dox.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-anchor.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-lights.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-oil.nas</file>

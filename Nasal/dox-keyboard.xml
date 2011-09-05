@@ -109,8 +109,8 @@
     </binding>
   </key>
 
-  <key n="76">
-    <name>L</name>
+  <key n="108">
+    <name>l</name>
     <desc>Interior Lights on/off</desc>
     <binding>
       <command>nasal</command>

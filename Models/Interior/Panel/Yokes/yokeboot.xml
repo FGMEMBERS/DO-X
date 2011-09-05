@@ -25,8 +25,44 @@
       <red>   0.5 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor>0.3</factor>
+      <factor>0.2</factor>
     </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>YokeElevator</object-name>
+    <object-name>Yoke</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -4 </factor>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.045 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x> <!-- near to panel -->
+      <y> 1 </y> <!--up -->
+      <z> 0 </z> <!-- right -->
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>YokeAileron</object-name>
+    <object-name>Yoke</object-name>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> -8 </factor>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.045 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x> <!-- near to panel -->
+      <y> 1 </y> <!--up -->
+      <z> 0 </z> <!-- right -->
+    </axis>
   </animation>
 
   <animation>

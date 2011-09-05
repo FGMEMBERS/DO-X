@@ -2,11 +2,12 @@
 
 <PropertyList>
 
-  <path>seat.ac</path>
+  <path>pedal.ac</path>
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>seatP</object-name>
+    <object-name>pedal</object-name>
+    <object-name>lever</object-name>
 
     <!-- Objets transparents -->
   </animation>
@@ -26,6 +27,23 @@
       <blue>  0.25 </blue>
       <factor>0.3</factor>
     </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pedal</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 23 </factor>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> -0.018 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
   </animation>
 
 </PropertyList>

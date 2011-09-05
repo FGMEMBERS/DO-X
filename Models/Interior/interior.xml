@@ -82,11 +82,21 @@
     </offsets>
   </model>
 
+  <!-- Thermometer in the NavigationCabin -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/Instruments/thermometer/thermometer.xml</path>
+    <offsets>
+      <x-m> -10.730 </x-m>
+      <y-m> -1.150 </y-m>
+      <z-m> 0.820 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- Navigation lamp -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-nav.xml</path>
     <offsets>
-      <x-m>-10.200 </x-m>
+      <x-m>-10.000 </x-m>
       <y-m>-0.840 </y-m>
       <z-m> 1.010 </z-m>
     </offsets>
