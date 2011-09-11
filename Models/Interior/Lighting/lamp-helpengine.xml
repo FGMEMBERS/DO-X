@@ -10,27 +10,34 @@
     <object-name>lampOff</object-name>
     <object-name>shield</object-name>
       <condition>
-        <equals>
+        <not-equals>
           <property>controls/lighting/helpenginecabin</property>
           <value>1</value>
-        </equals>
+        </not-equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor>0.3</factor>
+      <red>   0.03 </red>
+      <green> 0.03 </green>
+      <blue>  0.03 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
   <animation>
     <type>material</type>
     <object-name>lamp</object-name>
+    <object-name>shield</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/helpenginecabin</property>
+          <value>1</value>
+        </equals>
+      </condition>
     <emission>
       <red>   1 </red>
       <green> 1 </green>
-      <blue>  0 </blue>
-      <factor>0.6</factor>
+      <blue>  1 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 

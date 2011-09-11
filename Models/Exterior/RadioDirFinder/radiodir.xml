@@ -38,5 +38,22 @@
     </axis>
   </animation>
 
+  <!-- Interior lighting -->
+  <animation>
+    <type>material</type>
+      <condition>
+        <equals>
+          <property>/controls/lighting/panel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.15 </red>
+      <green> 0.15 </green>
+      <blue>  0.15 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
 </PropertyList>
 

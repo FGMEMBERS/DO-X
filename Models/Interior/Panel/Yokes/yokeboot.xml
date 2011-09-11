@@ -22,10 +22,10 @@
         </equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor>0.2</factor>
+      <red>   0.22 </red>
+      <green> 0.12 </green>
+      <blue>  0.09 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 

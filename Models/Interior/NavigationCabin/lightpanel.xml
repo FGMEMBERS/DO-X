@@ -12,11 +12,10 @@
     <object-name>radioSwitch</object-name>
     <object-name>helpengineSwitch</object-name>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-      <factor-prop>sim/model//material/instruments/factor</factor-prop>
+      <red> 1 </red>
+      <green> 1 </green>
+      <blue> 1 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
@@ -56,10 +55,10 @@
         </equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor>0.5</factor>
+      <red>   0.27 </red>
+      <green> 0.17 </green>
+      <blue>  0.12 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 

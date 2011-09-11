@@ -53,16 +53,18 @@
       <generic>
         <int  type="double" n="13" alias="/controls/engines/throttle-pilot-left"/>
         <int  type="double" n="14" alias="/controls/engines/throttle-pilot-right"/>
-        <int  type="double" n="15" alias="/controls/engines/average-rpm-left"/>
-        <int  type="double" n="16" alias="/controls/engines/average-rpm-right"/>
-        <int  type="double" n="17" alias="/controls/anchor-lat"/>
-        <int  type="double" n="18" alias="/controls/anchor-lon"/>
-        <int  type="bool" n="19" alias="/controls/anchor"/>
-        <int  type="bool" n="20" alias="/controls/lighting/panel"/>
-        <int  type="bool" n="21" alias="/controls/lighting/navigationcabin"/>
-        <int  type="bool" n="22" alias="/controls/lighting/engineerpanel"/>
-        <int  type="bool" n="23" alias="/controls/lighting/radiocabin"/>
-        <int  type="bool" n="24" alias="/controls/lighting/helpenginecabin"/>
+        <int  type="double" n="15" alias="/controls/engines/helpengine-lever"/>
+        <int  type="double" n="16" alias="/controls/engines/average-rpm-left"/>
+        <int  type="double" n="17" alias="/controls/engines/average-rpm-right"/>
+        <int  type="double" n="18" alias="/controls/anchor-lat"/>
+        <int  type="double" n="19" alias="/controls/anchor-lon"/>
+        <int  type="bool" n="20" alias="/controls/anchor"/>
+        <int  type="bool" n="21" alias="/controls/lighting/panel"/>
+        <int  type="bool" n="22" alias="/controls/lighting/navigationcabin"/>
+        <int  type="bool" n="23" alias="/controls/lighting/engineerpanel"/>
+        <int  type="bool" n="24" alias="/controls/lighting/radiocabin"/>
+        <int  type="bool" n="25" alias="/controls/lighting/helpenginecabin"/>
+        <int  type="bool" n="26" alias="/controls/lighting/brightness"/>
       </generic>
     </controls>
 
@@ -139,8 +141,9 @@
   <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
   <controls>
     <engines>
-      <throttle-pilot-left>0</throttle-pilot-left>
-      <throttle-pilot-right>0</throttle-pilot-right>
+      <throttle-pilot-left type="double">0.0</throttle-pilot-left>
+      <throttle-pilot-right type="double">0.0</throttle-pilot-right>
+      <helpengine-lever type="double">0.5</helpengine-lever>
       <engine n="0">
         <magnetos>3</magnetos>
       </engine>
@@ -185,6 +188,7 @@
       <engineerpanel type="bool">0</engineerpanel>
       <radiocabin type="bool">0</radiocabin>
       <helpenginecabin type="bool">0</helpenginecabin>
+      <brightness type="double">1.0</brightness>
     </lighting>
   </controls>
 
@@ -252,6 +256,7 @@
       <file>Aircraft/DO-X/Nasal/dox-anchor.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-lights.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-helpengine.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-oil.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>

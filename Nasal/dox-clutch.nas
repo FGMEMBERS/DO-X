@@ -3,6 +3,41 @@
 # the clutch must set in the engineer panel
 # ==================================================
 
+# Click function for the Clutch settings
+var clickClutch = func(n){
+    var e = props.globals.getNode("/engines/engine["~n~"]/clutch", 1);
+var text = {
+    0: "Outer larboard front engine",
+    1: "Outer starboard front engine",
+    2: "Middle larboard front engine",
+    3: "Middle starboard front engine",
+    4: "Inner larboard front engine",
+    5: "Inner starboard front engine",
+    6: "Outer larboard back engine",
+    7: "Outer starboard back engine",
+    8: "Middle larboard back engine",
+    9: "Middle starboard back engine",
+    10: "Inner larboard back engine",
+    11: "Inner starboard back engine"
+};
+
+    if(e.getValue()){
+      e.setValue(0);
+      screen.log.write(text[n]~ "-> unlocked", 1.0, 0.7, 0.0);
+    }else{
+      e.setValue(1);
+      screen.log.write(text[n]~ "-> locked", 0.0, 0.7, 0.0);
+    }
+}
+
+#############  scrollfunction for whatever you want increase or decrease ####################
+var scrollGear = func(scale,path){
+    var val=getprop(path) + (scale);
+    if(val >1.0) val = 1.0;
+    if(val < 0.0) val = 0.0;
+    setprop(path,val);
+}
+
 # Les moteurs numérotés vue de dessus 
 #
 #              avant
@@ -145,13 +180,6 @@ var engControl = func(scale,eng,ctrl) {
     }
 }
 
-#############  scrollfunction for whatever you want increase or decrease ####################
-var scrollGear = func(scale,path){
-    var val=getprop(path) + (scale);
-    if(val >1.0) val = 1.0;
-    if(val < 0.0) val = 0.0;
-    setprop(path,val);
-}
 
 ############# Argh... it is nessecary to  hear, what the engines done, ######################
 ############ cause the pilots Throttle Gear find not the right position ####################

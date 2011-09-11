@@ -37,11 +37,10 @@
     <object-name>spirit_column</object-name>
     <object-name>glas_tube</object-name>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-      <factor-prop>0.3</factor-prop>
+      <red> 1 </red>
+      <green> 1 </green>
+      <blue> 1 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 

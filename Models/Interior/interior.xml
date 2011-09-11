@@ -8,66 +8,208 @@
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>inttour</object-name>
-    <object-name>mur1</object-name>
-    <object-name>mur2</object-name>
-    <object-name>mur3</object-name>
-    <object-name>mur4</object-name>
     <object-name>planchets</object-name>
+    <object-name>intPanel</object-name>
+    <object-name>woodPanel</object-name>
+    <object-name>intNav</object-name>
+    <object-name>woodNav</object-name>
+    <object-name>intEngineer</object-name>
+    <object-name>woodEngineer</object-name>
+    <object-name>intRadio</object-name>
+    <object-name>woodRadio</object-name>
+    <object-name>intHelpEng</object-name>
+    <object-name>woodHelpEng</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
   </animation>
 
-  <!-- Interior lighting -->
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Interior lighting Panel -->
   <animation>
     <type>material</type>
-    <object-name>interieur</object-name>
-    <object-name>inttour</object-name>
-    <object-name>mur1</object-name>
-    <object-name>mur2</object-name>
-    <object-name>mur3</object-name>
-    <object-name>mur4</object-name>
-    <object-name>planchets</object-name>
-		<condition>
-      <or>
+    <object-name>intPanel</object-name>
+      <condition>
         <equals>
           <property>controls/lighting/panel</property>
           <value>1</value>
         </equals>
+      </condition>
+    <emission>
+      <red>   0.23 </red>
+      <green> 0.14 </green>
+      <blue>  0.11 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>woodPanel</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/panel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.16 </red>
+      <green> 0.16 </green>
+      <blue>  0.16 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <!-- Interior lighting NavigationCabin -->
+  <animation>
+    <type>material</type>
+    <object-name>intNav</object-name>
+      <condition>
         <equals>
           <property>controls/lighting/navigationcabin</property>
           <value>1</value>
         </equals>
+      </condition>
+    <emission>
+      <red>   0.20 </red>
+      <green> 0.13 </green>
+      <blue>  0.12 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>woodNav</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/navigationcabin</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.16 </red>
+      <green> 0.16 </green>
+      <blue>  0.16 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <!-- Interior lighting EngineerCabin -->
+  <animation>
+    <type>material</type>
+    <object-name>intEngineer</object-name>
+      <condition>
         <equals>
           <property>controls/lighting/engineerpanel</property>
           <value>1</value>
         </equals>
+      </condition>
+    <emission>
+      <red>   0.19 </red>
+      <green> 0.14 </green>
+      <blue>  0.13 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>woodEngineer</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/engineerpanel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.16 </red>
+      <green> 0.16 </green>
+      <blue>  0.16 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <!-- Interior lighting RadioCabin -->
+  <animation>
+    <type>material</type>
+    <object-name>intRadio</object-name>
+      <condition>
         <equals>
           <property>controls/lighting/radiocabin</property>
           <value>1</value>
         </equals>
+      </condition>
+    <emission>
+      <red>   0.18 </red>
+      <green> 0.15 </green>
+      <blue>  0.14 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>woodRadio</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/radiocabin</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.16 </red>
+      <green> 0.16 </green>
+      <blue>  0.16 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <!-- Interior lighting HelpEngineCabin -->
+  <animation>
+    <type>material</type>
+    <object-name>intHelpEng</object-name>
+      <condition>
         <equals>
           <property>controls/lighting/helpenginecabin</property>
           <value>1</value>
         </equals>
-      </or>
-		</condition>
+      </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor>0.3</factor>
+      <red>   0.18 </red>
+      <green> 0.15 </green>
+      <blue>  0.14 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
-  <!-- Slats / Lattenrost -->
-  <model>
-    <path>Aircraft/DO-X/Models/Interior/Slats/slats.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
+  <animation>
+    <type>material</type>
+    <object-name>woodHelpEng</object-name>
+      <condition>
+        <equals>
+          <property>controls/lighting/helpenginecabin</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    <emission>
+      <red>   0.16 </red>
+      <green> 0.16 </green>
+      <blue>  0.16 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
 
   <!-- Table dans NavigationCabin  -->
   <model>
@@ -88,7 +230,7 @@
     <offsets>
       <x-m> -10.730 </x-m>
       <y-m> -1.150 </y-m>
-      <z-m> 0.820 </z-m> <!-- up -->
+      <z-m>  0.820 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -96,9 +238,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-nav.xml</path>
     <offsets>
-      <x-m>-10.000 </x-m>
-      <y-m>-0.840 </y-m>
-      <z-m> 1.010 </z-m>
+      <x-m> -10.000 </x-m>
+      <y-m>  -0.840 </y-m>
+      <z-m>   1.010 </z-m>
     </offsets>
   </model>
 
@@ -107,8 +249,8 @@
     <path>Aircraft/DO-X/Models/Interior/NavigationCabin/lightpanel.xml</path>
     <offsets>
       <x-m> -10.770 </x-m>
-      <y-m> -1.270 </y-m>
-      <z-m> 0.400 </z-m> <!-- up -->
+      <y-m>  -1.270 </y-m>
+      <z-m>   0.400 </z-m> <!-- up -->
     </offsets>
   </model>
 
@@ -136,9 +278,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-panel.xml</path>
     <offsets>
-      <x-m>-11.500 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  1.130 </z-m>
+      <x-m> -11.500 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>   1.130 </z-m>
     </offsets>
   </model>
 
@@ -181,15 +323,15 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/RadioCabin/radio.xml</path>
     <offsets>
-      <x-m> -3.700 </x-m><!-- back -->
-      <y-m>  1.300 </y-m><!-- right -->
-      <z-m>  0.080 </z-m><!-- up -->
+      <x-m> -3.700 </x-m> <!-- back -->
+      <y-m>  1.300 </y-m> <!-- right -->
+      <z-m>  0.080 </z-m> <!-- up -->
     </offsets>
   </model>
 
   <!-- Table dans Radio Cabin  -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/NavigationCabin/table.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/RadioCabin/table.xml</path>
     <offsets>
       <x-m> -3.300 </x-m>
       <y-m>  0.950 </y-m>
@@ -202,9 +344,9 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-radio.xml</path>
     <offsets>
-      <x-m>-3.350 </x-m>
-      <y-m> 0.700 </y-m>
-      <z-m> 0.860 </z-m>
+      <x-m> -3.350 </x-m>
+      <y-m>  0.700 </y-m>
+      <z-m>  0.860 </z-m>
     </offsets>
   </model>
 
@@ -212,9 +354,19 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Lighting/lamp-helpengine.xml</path>
     <offsets>
-      <x-m>-2.300 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.620 </z-m>
+      <x-m> -2.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.620 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Helpengine -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/HelpEngineCabin/helpengine.xml</path>
+    <offsets>
+      <x-m> -1.150 </x-m>
+      <y-m> -0.550 </y-m>
+      <z-m> -0.350 </z-m>
     </offsets>
   </model>
 

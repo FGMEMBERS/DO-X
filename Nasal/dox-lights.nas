@@ -52,7 +52,7 @@ var strobeFlashlight = func{
     if(val >1.0) val = 0;
     setprop("/sim/model/lights/strobe/state",val);
     # increase at framerate time
-    settimer(strobeFlashlight, 0);
+    settimer(strobeFlashlight, 0.125);
 }
 
 # fire it up

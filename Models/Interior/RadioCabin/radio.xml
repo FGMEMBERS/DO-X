@@ -21,10 +21,10 @@
         </equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.4 </green>
-      <blue>  0.4 </blue>
-      <factor>0.8</factor>
+      <red>   0.27 </red>
+      <green> 0.17 </green>
+      <blue>  0.12 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
@@ -50,7 +50,7 @@
   <text>
     <name>LabelRadio</name>
     <type type="string">literal</type>
-    <text type="string">Ich werde ein Funkgeraet</text>
+    <text type="string">Radios comming soon</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.018</character-size>
@@ -66,7 +66,7 @@
     <offsets>
       <x-m>  0.200 </x-m> <!-- near to panel -->
       <y-m>  0.010</y-m> <!-- right -->
-      <z-m>  0.205 </z-m> <!-- up -->
+      <z-m>  0.305 </z-m> <!-- up -->
       <heading-deg> -90 </heading-deg>
     </offsets>
   </text>

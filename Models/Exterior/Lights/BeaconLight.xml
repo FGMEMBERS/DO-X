@@ -25,11 +25,7 @@
               <property>/sim/model/lights/beacon/state</property>
               <value>0.3</value>
           </greater-than>
-          <property>/controls/lighting/nav-lights</property>
-          <greater-than>
-              <property>/sim/time/sun-angle-rad</property>
-              <value>1.57</value>
-          </greater-than>
+          <property>/controls/lighting/beacon</property>
         </condition>
     </animation>
 

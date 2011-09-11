@@ -26,10 +26,10 @@
         </equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-      <factor>0.3</factor>
+      <red>   0.27 </red>
+      <green> 0.17 </green>
+      <blue>  0.12 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
@@ -254,6 +254,16 @@
       <x-m>  0.650 </x-m> <!-- near to panel -->
       <y-m>  0.440 </y-m> <!-- right -->
       <z-m> -0.220 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
+  <!-- TrimWheels --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Trimwheels/trimwheels.xml</path>
+    <offsets>
+      <x-m>  1.050 </x-m> <!-- near to panel -->
+      <y-m> -0.380 </y-m> <!-- right -->
+      <z-m> 0 </z-m> <!-- up -->
     </offsets>
   </model>
 

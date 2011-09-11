@@ -58,10 +58,10 @@
         </equals>
       </condition>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.4 </green>
-      <blue>  0.4 </blue>
-      <factor>0.8</factor>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
 
@@ -156,69 +156,19 @@
     </axis>
   </animation>
 
-  <animation>
-   <type>translate</type>
-   <object-name>clutchF</object-name>
-   <property>/engines/engine[4]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>clutchF</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>dox.clickClutch(4)</script>
+    </binding>
+  </action>
+</animation>
 
-  <animation>
-   <type>pick</type>
-   <object-name>clutchF</object-name>
-   <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[4]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Inner larboard front-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[4]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[4]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Inner larboard front-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[4]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-  </animation>
-
-  
   <!-- Mixture -->
   <animation>
     <type>rotate</type>
@@ -364,65 +314,17 @@
   </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>clutchE</object-name>
-   <property>/engines/engine[10]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
-
-  <animation>
    <type>pick</type>
    <object-name>clutchE</object-name>
    <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[10]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Inner larboard back-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[10]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[10]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Inner larboard back-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[10]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>dox.clickClutch(10)</script>
+      </binding>
+    </action>
   </animation>
 
   <!-- Mixture -->
@@ -570,65 +472,17 @@
   </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>clutchD</object-name>
-   <property>/engines/engine[2]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
-
-  <animation>
    <type>pick</type>
    <object-name>clutchD</object-name>
    <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[2]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Middle larboard front-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[2]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[2]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Middle larboard front-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[2]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>dox.clickClutch(2)</script>
+      </binding>
+    </action>
   </animation>
   
   <!-- Mixture -->
@@ -776,65 +630,17 @@
   </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>clutchC</object-name>
-   <property>/engines/engine[8]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
-
-  <animation>
    <type>pick</type>
    <object-name>clutchC</object-name>
    <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[8]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Middle larboard back-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[8]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[8]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Middle larboard back-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[8]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>dox.clickClutch(8)</script>
+      </binding>
+    </action>
   </animation>
 
   <!-- Mixture -->
@@ -982,65 +788,17 @@
   </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>clutchB</object-name>
-   <property>/engines/engine[0]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
-
-  <animation>
    <type>pick</type>
    <object-name>clutchB</object-name>
    <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[0]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Outer larboard front-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[0]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[0]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Outer larboard front-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[0]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>dox.clickClutch(0)</script>
+      </binding>
+    </action>
   </animation>
   
   <!-- Mixture -->
@@ -1189,65 +947,17 @@
   </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>clutchA</object-name>
-   <property>/engines/engine[6]/clutch</property>
-   <factor>0</factor>
-   <axis>
-    <x>  0 </x>
-    <y>  0 </y>
-    <z>  0 </z>
-   </axis>
-  </animation>
-
-  <animation>
    <type>pick</type>
    <object-name>clutchA</object-name>
    <visible>true</visible>
-   <action>
-     <name>increase</name>
-     <button>0</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[6]/clutch") == 1){
-          screen.log.write("Click scrollwheel to unlock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Outer larboard back-engine -> locked", 0.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[6]/clutch</property>
-       <step>1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
-   <action>
-     <name>decrease</name>
-     <button>1</button>
-     <binding>
-       <command>nasal</command>
-       <script>
-        if (getprop("/engines/engine[6]/clutch") == 0){
-          screen.log.write("Click left mouse key to lock", 0.9, 0.9, 0.9);
-        }else{
-          screen.log.write("Outer larboard back-engine -> unlocked",1.0, 0.7, 0.0);
-        }
-        </script>
-     </binding>
-     <binding>
-       <command>property-adjust</command>
-       <property>/engines/engine[6]/clutch</property>
-       <step>-1</step>
-       <min>0</min>
-       <max>1</max>
-       <wrap>0</wrap>
-     </binding>
-   </action>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>dox.clickClutch(6)</script>
+      </binding>
+    </action>
   </animation>
   
   <!-- Mixture -->
