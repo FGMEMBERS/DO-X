@@ -267,6 +267,16 @@
     </offsets>
   </model>
 
+  <!-- Glasswiper for glass-shader effect --> 
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/Panel/More/glasswiper.xml</path>
+    <offsets>
+      <x-m> 1.320 </x-m> <!-- near to panel -->
+      <y-m>-1.270 </y-m> <!-- right -->
+      <z-m> 0.600 </z-m> <!-- up -->
+    </offsets>
+  </model>
+
   <!-- ******************************* PILOT-PANEL **********************************-->
   <!-- Positions on the Panel  -->
   <!--             1           -->
@@ -690,7 +700,7 @@
   <text>
     <name>LabelRDF</name>
     <type type="string">literal</type>
-    <text type="string">Radio Direction Finder (use ADF frequency)</text>
+    <text type="string">Radio Direction Finder (use NDB frequency)</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.1</character-size>

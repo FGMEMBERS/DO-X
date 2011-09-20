@@ -4,33 +4,18 @@
 
   <path>radiodir.ac</path>
 
-  <params>
-    <model>instrumentation/adf[0]/model</model>
-    <rotation-deg>instrumentation/adf[0]/rotation-deg</rotation-deg>
-    <adf-bearing-deg>instrumentation/adf[0]/indicated-bearing-deg</adf-bearing-deg>
-  </params>
-
   <animation>
     <object-name>radioDirection</object-name>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>radioDirection</object-name>
-    <condition>
-      <not>
-        <equals>
-          <property alias="../../../../../params/model"/>
-          <value>ki228</value>
-        </equals>
-      </not>
-    </condition>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>radioDirection</object-name>
-    <property alias="../../params/adf-bearing-deg"/>
+    <property>/instrumentation/rdf/rotation-deg</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 0</dep></entry>
+      <entry><ind>360</ind><dep>360</dep></entry>
+    </interpolation>
     <axis>
       <x>  0 </x>
       <y>  0 </y>

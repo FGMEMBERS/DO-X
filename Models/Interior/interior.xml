@@ -36,6 +36,18 @@
     <object-name>intvitres</object-name>
   </animation>
 
+  <!-- We love the glass-shader effect, but for the pilot with bad eyes we need this help:-) -->
+  <animation>
+    <type>select</type>
+    <object-name>intvitres</object-name>
+    <condition>
+      <not-equals>
+        <property>controls/glass-effect</property>
+        <value>0</value>
+      </not-equals>
+    </condition>
+  </animation>
+
   <!-- Interior lighting Panel -->
   <animation>
     <type>material</type>
@@ -248,7 +260,7 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/NavigationCabin/lightpanel.xml</path>
     <offsets>
-      <x-m> -10.770 </x-m>
+      <x-m> -10.780 </x-m>
       <y-m>  -1.270 </y-m>
       <z-m>   0.400 </z-m> <!-- up -->
     </offsets>
@@ -319,13 +331,14 @@
     </offsets>
   </model>
 
-  <!-- Radio in the Radio Cabin  -->
+  <!-- RadioDirectionFinder in the Radio Cabin  -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/RadioCabin/radio.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/RadioCabin/Instruments/rdf/rdf.xml</path>
     <offsets>
-      <x-m> -3.700 </x-m> <!-- back -->
-      <y-m>  1.300 </y-m> <!-- right -->
-      <z-m>  0.080 </z-m> <!-- up -->
+      <x-m> -3.430 </x-m> <!-- back -->
+      <y-m>  1.100 </y-m> <!-- right -->
+      <z-m>  0.350 </z-m> <!-- up -->
+      <heading-deg> -90 </heading-deg>
     </offsets>
   </model>
 
@@ -335,8 +348,27 @@
     <offsets>
       <x-m> -3.300 </x-m>
       <y-m>  0.950 </y-m>
-      <z-m>  0.000 </z-m> <!-- up -->
+      <z-m>  0 </z-m> <!-- up -->
       <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/RadioCabin/pencil.xml</path>
+    <offsets>
+      <x-m> -3.50 </x-m>
+      <y-m>  1.20 </y-m>
+      <z-m>  0 </z-m> <!-- up -->
+      <heading-deg> -45 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Headset on the table in the Radio Cabin  -->
+  <model>
+    <path>Aircraft/DO-X/Models/Interior/RadioCabin/Instruments/headset/headset.xml</path>
+    <offsets>
+      <x-m> -3.270 </x-m>
+      <y-m>  0.880 </y-m>
+      <z-m> -0.017 </z-m> <!-- up -->
     </offsets>
   </model>
 

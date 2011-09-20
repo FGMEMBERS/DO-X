@@ -95,11 +95,12 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  0.000 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">  0.450 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -3.500 </z-offset-m>	<!-- Back  -->
+      <x-offset-m archive="y">  0.200 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  0.400 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -3.430 </z-offset-m>	<!-- Back  -->
       <heading-offset-deg type="double"> -90 </heading-offset-deg>
-      <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
+      <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 60 </default-field-of-view-deg>
     </config>
   </view>
 

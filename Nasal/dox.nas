@@ -29,3 +29,14 @@ DOXL = setlistener("/sim/signals/fdm-initialized", func {
   }
 );
 
+
+# Change view to 
+var changeView = func (n){
+  var actualView = props.globals.getNode("/sim/current-view/view-number", 1);
+  if (actualView.getValue() == n){
+    actualView.setValue(0);
+  }else{
+    actualView.setValue(n);
+  }
+}
+

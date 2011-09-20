@@ -43,9 +43,9 @@
         <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>     <!--10 strobe-lights -->
         <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int>  <!--11 landing-lights -->
         <int n="12" alias="/controls/electric/key-pos">  0 </int>             <!--12 key position -->
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!--2 altitude for MP shadow -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!--2 altitude for MP shadow -->
       </generic>
     </multiplay>
 
@@ -65,6 +65,14 @@
         <int  type="bool" n="24" alias="/controls/lighting/radiocabin"/>
         <int  type="bool" n="25" alias="/controls/lighting/helpenginecabin"/>
         <int  type="bool" n="26" alias="/controls/lighting/brightness"/>
+        <int  type="bool" n="27" alias="/controls/glass-effect"/>
+        <int  type="bool" n="28" alias="/instrumentation/rdf/power-on"/>
+        <int  type="bool" n="29" alias="/instrumentation/rdf/fit-headset"/>
+        <int  type="double" n="30" alias="/instrumentation/rdf/rotation-deg"/>
+        <int  type="double" n="31" alias="/instrumentation/rdf/measured-deg[0]"/>
+        <int  type="double" n="32" alias="/instrumentation/rdf/measured-deg[1]"/>
+        <int  type="double" n="33" alias="/instrumentation/rdf/ident[0]"/>
+        <int  type="double" n="34" alias="/instrumentation/rdf/ident[1]"/>
       </generic>
     </controls>
 
@@ -132,6 +140,10 @@
         <name>Ctrl-I</name>
         <desc>Open DO X Engineer Menu</desc>
       </key>
+      <key>
+        <name>Ctrl-R</name>
+        <desc>Switch Pilot/Radio View</desc>
+      </key>
     </help>
 
     <menubar include="Dialogs/dox-menu.xml"/>
@@ -190,6 +202,9 @@
       <helpenginecabin type="bool">0</helpenginecabin>
       <brightness type="double">1.0</brightness>
     </lighting>
+
+    <glass-effect type="bool">1</glass-effect>
+
   </controls>
 
   <engines>
@@ -246,6 +261,16 @@
   <input>
     <keyboard include="Nasal/dox-keyboard.xml"/>
   </input>
+
+  <instrumentation>
+    <rdf>
+      <power-on type="bool">0</power-on>
+      <fit-headset type="bool">0</fit-headset>
+    </rdf>
+    <adf>
+      <power-btn type="bool">0</power-btn>
+    </adf>
+  </instrumentation>
  
   <nasal>
     <doors>
@@ -259,6 +284,7 @@
       <file>Aircraft/DO-X/Nasal/dox-helpengine.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-oil.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-rdf.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-starter.nas</file>
       <file>Aircraft/DO-X/Nasal/immat.nas</file>

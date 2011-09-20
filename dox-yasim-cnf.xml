@@ -7,6 +7,7 @@
     <description>Dornier Do X (YASim)</description>
     <flight-model archive="y">yasim</flight-model>
     <aero archive="y">dox-yasim</aero>
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
   </sim>
  
