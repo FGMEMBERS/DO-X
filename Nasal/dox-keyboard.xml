@@ -24,8 +24,8 @@
     </binding>
   </key>
 
-  <key n="83">
-    <name>S</name>
+  <key n="19">
+    <name>Ctrl-S</name>
     <desc>Stop Engine</desc>
     <binding>
       <command>nasal</command>

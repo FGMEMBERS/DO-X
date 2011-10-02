@@ -51,28 +51,44 @@
 
     <controls>
       <generic>
-        <int  type="double" n="13" alias="/controls/engines/throttle-pilot-left"/>
-        <int  type="double" n="14" alias="/controls/engines/throttle-pilot-right"/>
-        <int  type="double" n="15" alias="/controls/engines/helpengine-lever"/>
-        <int  type="double" n="16" alias="/controls/engines/average-rpm-left"/>
-        <int  type="double" n="17" alias="/controls/engines/average-rpm-right"/>
-        <int  type="double" n="18" alias="/controls/anchor-lat"/>
-        <int  type="double" n="19" alias="/controls/anchor-lon"/>
-        <int  type="bool" n="20" alias="/controls/anchor"/>
-        <int  type="bool" n="21" alias="/controls/lighting/panel"/>
-        <int  type="bool" n="22" alias="/controls/lighting/navigationcabin"/>
-        <int  type="bool" n="23" alias="/controls/lighting/engineerpanel"/>
-        <int  type="bool" n="24" alias="/controls/lighting/radiocabin"/>
-        <int  type="bool" n="25" alias="/controls/lighting/helpenginecabin"/>
-        <int  type="bool" n="26" alias="/controls/lighting/brightness"/>
-        <int  type="bool" n="27" alias="/controls/glass-effect"/>
-        <int  type="bool" n="28" alias="/instrumentation/rdf/power-on"/>
-        <int  type="bool" n="29" alias="/instrumentation/rdf/fit-headset"/>
-        <int  type="double" n="30" alias="/instrumentation/rdf/rotation-deg"/>
-        <int  type="double" n="31" alias="/instrumentation/rdf/measured-deg[0]"/>
-        <int  type="double" n="32" alias="/instrumentation/rdf/measured-deg[1]"/>
-        <int  type="double" n="33" alias="/instrumentation/rdf/ident[0]"/>
-        <int  type="double" n="34" alias="/instrumentation/rdf/ident[1]"/>
+        <int type="double" n="13" alias="/controls/engines/throttle-pilot-left"/>
+        <int type="double" n="14" alias="/controls/engines/throttle-pilot-right"/>
+        <int type="double" n="15" alias="/controls/engines/helpengine-lever"/>
+        <int type="double" n="16" alias="/controls/engines/average-rpm-left"/>
+        <int type="double" n="17" alias="/controls/engines/average-rpm-right"/>
+        <int type="double" n="18" alias="/controls/anchor-lat"/>
+        <int type="double" n="19" alias="/controls/anchor-lon"/>
+        <int type="bool"   n="20" alias="/controls/anchor"/>
+        <int type="bool"   n="21" alias="/controls/lighting/panel"/>
+        <int type="bool"   n="22" alias="/controls/lighting/navigationcabin"/>
+        <int type="bool"   n="23" alias="/controls/lighting/engineerpanel"/>
+        <int type="bool"   n="24" alias="/controls/lighting/radiocabin"/>
+        <int type="bool"   n="25" alias="/controls/lighting/helpenginecabin"/>
+        <int type="bool"   n="26" alias="/controls/lighting/brightness"/>
+        <int type="bool"   n="27" alias="/controls/glass-effect"/>
+        <int type="bool"   n="28" alias="/instrumentation/rdf/power-on"/>
+        <int type="double" n="29" alias="/instrumentation/rdf/rotation-deg"/>
+        <int type="double" n="30" alias="/instrumentation/rdf/frequency-select-knob"/>
+        <int type="double" n="31" alias="/instrumentation/rdf/ident[0]"/>
+        <int type="double" n="32" alias="/instrumentation/rdf/ident[1]"/>
+        <int type="double" n="33" alias="/instrumentation/afn2/heading-correction"/>
+        <int type="bool"   n="34" alias="/instrumentation/afn2/markeron"/>
+        <int type="double" n="35" alias="/instrumentation/afn2/distance"/>
+        <int type="bool"   n="36" alias="/instrumentation/rdf/headset/enabled"/>
+        <int type="bool"   n="37" alias="/instrumentation/rdf/headset/atc-enabled"/>
+        <int type="double" n="38" alias="/instrumentation/rdf/headset/atc-volume"/>
+        <int type="bool"   n="39" alias="/instrumentation/rdf/headset/avionics-enabled"/>
+        <int type="double" n="40" alias="/instrumentation/rdf/headset/avionics-volume"/>
+        <int type="bool"   n="41" alias="/instrumentation/rdf/headset/chatter-enabled"/>
+        <int type="double" n="42" alias="/instrumentation/rdf/headset/chatter-volume"/>
+        <int type="bool"   n="43" alias="/instrumentation/rdf/headset/effects-enabled"/>
+        <int type="double" n="44" alias="/instrumentation/rdf/headset/effects-volume"/>
+        <int type="bool"   n="45" alias="/instrumentation/rdf/headset/master-enabled"/>
+        <int type="double" n="46" alias="/instrumentation/rdf/headset/master-volume"/>
+        <int type="bool"   n="47" alias="/instrumentation/rdf/headset/adf-ident-audible"/>
+        <int type="double" n="48" alias="/instrumentation/rdf/headset/adf-volume-norm"/>
+        <int type="bool"   n="49" alias="/instrumentation/rdf/headset/nav-audio-btn"/>
+        <int type="double" n="50" alias="/instrumentation/rdf/headset/nav-volume"/>
       </generic>
     </controls>
 
@@ -97,7 +113,7 @@
         <desc>Start engine by engine</desc>
       </key>
       <key>
-        <name>S</name>
+        <name>Ctrl-S</name>
         <desc>Stop engine by engine</desc>
       </key>
       <key>
@@ -137,6 +153,10 @@
         <desc>Interior Lights on/off</desc>
       </key>
       <key>
+        <name>c</name>
+        <desc>Interior/Exterior View</desc>
+      </key>
+      <key>
         <name>Ctrl-I</name>
         <desc>Open DO X Engineer Menu</desc>
       </key>
@@ -144,6 +164,34 @@
         <name>Ctrl-R</name>
         <desc>Switch Pilot/Radio View</desc>
       </key>
+
+      <text>
+      _________ Engine control between Pilot and Engineer __________
+
+      In the Middle Panel between the pilot and copilot seat 
+      you see 12 lamps. 6 left for the larboard engines.
+      6 right for the starboard engines.
+      The two instruments show you the average rpm of all locked
+      engines.
+
+      Red      - engine off
+      Yellow   - engine is running but not locked to the two little 
+                 throttle gears of the pilot. Only the engineer
+                 have the control for this engine in that moment.
+                 The clutch lever to lock and unlock those engines
+                 you will find in the Engineer Cabin.
+      Green    - pilot have full control over this engine.
+
+      ________________ Navigation with RDF and NDB __________________
+
+      Switch view between Pilot and Radio Navigation Officer with Ctrl-R.
+      In the Radio Cabin you will find a RDF-panel. First you have to set
+      a NDB-frequency in range. Switch on the Instrument with the 
+      little knob AN/AUS. Fit on the headset and turn the DREHWINKEL-SCHEIBE
+      to find the loudest volume of the NDB-signal you have set.
+      If you have found the max. volume, click the pencil
+      below the RDF-panel and you get the new target calculation to this NDB.
+      </text>
     </help>
 
     <menubar include="Dialogs/dox-menu.xml"/>
@@ -265,11 +313,34 @@
   <instrumentation>
     <rdf>
       <power-on type="bool">0</power-on>
-      <fit-headset type="bool">0</fit-headset>
+      <frequency-select-knob type="bool">0</frequency-select-knob>
+      <headset>
+        <enabled type="bool">0</enabled>
+        <!-- properties swap if pilot fit headset -->
+        <atc-enabled type="bool">1</atc-enabled>
+        <atc-volume type="double">0.7</atc-volume>
+        <avionics-enabled type="bool">1</avionics-enabled>
+        <avionics-volume type="double">1.0</avionics-volume>
+        <chatter-enabled type="bool">0</chatter-enabled>
+        <chatter-volume type="double">0.0</chatter-volume>
+        <effects-enabled type="bool">1</effects-enabled>
+        <effects-volume type="double">0.08</effects-volume>
+        <master-enabled type="bool">1</master-enabled>
+        <master-volume type="double">0.7</master-volume>
+        <adf-ident-audible type="bool">1</adf-ident-audible>
+        <adf-volume-norm type="double">0.7</adf-volume-norm>
+        <nav-audio-btn type="bool">1</nav-audio-btn>
+        <nav-volume type="double">0.7</nav-volume>
+      </headset>
     </rdf>
     <adf>
       <power-btn type="bool">0</power-btn>
     </adf>
+    <afn2>
+      <heading-correction>0.0</heading-correction>
+      <distance>0.0</distance>
+      <markeron type="bool">0</markeron>
+    </afn2>
   </instrumentation>
  
   <nasal>
@@ -287,6 +358,7 @@
       <file>Aircraft/DO-X/Nasal/dox-rdf.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>
       <file>Aircraft/DO-X/Nasal/dox-starter.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-afn2.nas</file>
       <file>Aircraft/DO-X/Nasal/immat.nas</file>
       <file>Aircraft/DO-X/Nasal/liveries.nas</file>
     </dox>

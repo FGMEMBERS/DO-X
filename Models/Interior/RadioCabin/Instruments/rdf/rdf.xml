@@ -19,25 +19,7 @@
   <animation>
     <type>material</type>
     <object-name>rdfLamp</object-name>
-    <emission>
-      <red>   0 </red>
-      <green> 1 </green>
-      <blue>  0 </blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>ndbLampOut</object-name>
-    <emission>
-      <red>   1 </red>
-      <green> 0 </green>
-      <blue>  0 </blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
+    <object-name>vorLamp</object-name>
     <object-name>ndbLamp</object-name>
     <emission>
       <red>   0 </red>
@@ -48,8 +30,17 @@
 
   <animation>
     <type>material</type>
-    <object-name>freqHundred</object-name>
-    <object-name>freqTen</object-name>
+    <object-name>ndbLampOut</object-name>
+    <object-name>vorLampOut</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
     <object-name>rdfTab</object-name>
     <object-name>rdfTabCircle</object-name>
     <condition>
@@ -66,11 +57,69 @@
     </emission>
   </animation>
 
+  <animation>
+    <type>material</type>
+    <object-name>freqHundred</object-name>
+    <object-name>freqTen</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/instrumentation/rdf/power-on</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/adf/power-btn</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>freqHundredMhz</object-name>
+    <object-name>freqDecMhz</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/instrumentation/rdf/power-on</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/nav/power-btn</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+      <factor-prop>/controls/lighting/brightness</factor-prop>
+    </emission>
+  </animation>
+
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
     <object-name>freqHundred</object-name>
     <object-name>freqTen</object-name>
+    <object-name>freqHundredMhz</object-name>
+    <object-name>freqDecMhz</object-name>
     <object-name>freqKnob</object-name>
     <object-name>ndbLamp</object-name>
     <object-name>ndbLampOut</object-name>
@@ -89,6 +138,11 @@
     <object-name>visses</object-name>
     <object-name>rdfTab</object-name>
     <object-name>rdfTabCircle</object-name>
+    <object-name>vorLamp</object-name>
+    <object-name>vorLampOff</object-name>
+    <object-name>vorLampOut</object-name>
+    <object-name>adfVorSwitch</object-name>
+    <object-name>adfVorSwitchFeet</object-name>
     <condition>
       <equals>
         <property>controls/lighting/radiocabin</property>
@@ -135,6 +189,14 @@
           <property>/instrumentation/rdf/power-on</property>
           <value>1</value>
         </equals>
+        <equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/adf/power-btn</property>
+          <value>1</value>
+        </equals>
         <not-equals>
           <property>/instrumentation/adf/ident</property>
           <value></value>
@@ -158,6 +220,14 @@
             <value>1</value>
           </equals>
           <equals>
+            <property>/instrumentation/rdf/frequency-select-knob</property>
+            <value>0</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/adf/power-btn</property>
+            <value>1</value>
+          </equals>
+          <equals>
             <property>/instrumentation/adf/ident</property>
             <value></value>
           </equals>
@@ -165,6 +235,14 @@
         <and>
           <equals>
             <property>/instrumentation/rdf/power-on</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/rdf/frequency-select-knob</property>
+            <value>0</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/adf/power-btn</property>
             <value>1</value>
           </equals>
           <equals>
@@ -180,13 +258,119 @@
     <type>select</type>
     <object-name>ndbLampOff</object-name>
     <condition>
+      <or>
       <not-equals>
         <property>/instrumentation/rdf/power-on</property>
         <value>1</value>
       </not-equals>
+      <not-equals>
+        <property>/instrumentation/adf/power-btn</property>
+        <value>1</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/rdf/frequency-select-knob</property>
+        <value>0</value>
+      </not-equals>
+      </or>
     </condition>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>vorLamp</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/instrumentation/rdf/power-on</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/nav/power-btn</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/nav/ident</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/instrumentation/nav/in-range</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>vorLampOut</object-name>
+    <condition>
+      <or>
+        <and>
+          <equals>
+            <property>/instrumentation/rdf/power-on</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/rdf/frequency-select-knob</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/nav/power-btn</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/nav/ident</property>
+            <value>0</value>
+          </equals>
+        </and>
+        <and>
+          <equals>
+            <property>/instrumentation/rdf/power-on</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/rdf/frequency-select-knob</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/nav/power-btn</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/instrumentation/nav/in-range</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>vorLampOff</object-name>
+    <condition>
+      <or>
+        <not-equals>
+          <property>/instrumentation/rdf/power-on</property>
+          <value>1</value>
+        </not-equals>
+        <not-equals>
+          <property>/instrumentation/nav/power-btn</property>
+          <value>1</value>
+        </not-equals>
+        <not-equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>1</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!-- On/Off Knob -->
   <animation>
     <type>rotate</type>
     <object-name>rdfSwitch</object-name>
@@ -214,13 +398,46 @@
     <visible>true</visible>
     <action>
       <button>0</button>
+      <repeatable>false</repeatable>
       <binding>
-        <command>property-toggle</command>
-        <property>/instrumentation/adf/power-btn</property>
+        <command>nasal</command>
+        <script>dox.clickRdfSwitch();</script>
       </binding>
+    </action>
+  </animation>
+
+  <!-- NDB / VOR or ILS Switch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>adfVorSwitch</object-name>
+    <property>/instrumentation/rdf/frequency-select-knob</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 70 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.085 </y-m>
+      <z-m>-0.150 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>adfVorSwitch</object-name>
+    <object-name>adfVorSwitchFeet</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/instrumentation/rdf/power-on</property>
+        <property>/instrumentation/rdf/frequency-select-knob</property>
       </binding>
     </action>
   </animation>
@@ -343,7 +560,7 @@
     </action>
   </animation>
 
-  <!-- Outer Frequency-circle -->
+  <!-- Outer NDB Frequency-circle -->
   <animation>
     <type>rotate</type>
     <object-name>freqHundred</object-name>
@@ -354,7 +571,7 @@
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
-      <y-m>  0.080 </y-m>
+      <y-m>  0.000 </y-m>
       <z-m> -0.150 </z-m>
     </center>
     <axis>
@@ -408,7 +625,7 @@
     </action>
   </animation>
 
-  <!-- inner Frequency-circle -->
+  <!-- inner NDB Frequency-circle -->
   <animation>
     <type>rotate</type>
     <object-name>freqTen</object-name>
@@ -419,7 +636,7 @@
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
-      <y-m>  0.080 </y-m>
+      <y-m>  0.000 </y-m>
       <z-m> -0.150 </z-m>
     </center>
     <axis>
@@ -473,6 +690,136 @@
     </action>
   </animation>
 
+  <!-- Outer VOR Frequency-circle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>freqHundredMhz</object-name>
+    <property>/instrumentation/nav/frequencies/selected-mhz</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 200 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.170 </y-m>
+      <z-m> -0.150 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>freqHundredMhz</object-name>
+    <property>/instrumentation/nav/frequencies/selected-mhz</property>
+    <factor>0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>freqHundredMhz</object-name>
+   <visible>true</visible>
+    <action>
+      <name>small decrease (scrollwheel)</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>200</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>small increase (scrollwheel)</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <step>1</step>
+        <min>0</min>
+        <max>200</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- inner VOR Frequency-circle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>freqDecMhz</object-name>
+    <property>/instrumentation/nav/frequencies/selected-mhz</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0</dep></entry>
+      <entry><ind>  200 </ind><dep>72000</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.170 </y-m>
+      <z-m> -0.150 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>freqDecMhz</object-name>
+    <property>/instrumentation/nav/frequencies/selected-mhz</property>
+    <factor>0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>freqDecMhz</object-name>
+   <visible>true</visible>
+    <action>
+      <name>small decrease (scrollwheel)</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <step>-0.01</step>
+        <min>0</min>
+        <max>200</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>small increase (scrollwheel)</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <step>0.01</step>
+        <min>0</min>
+        <max>200</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  </animation>
+
   <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
@@ -495,7 +842,7 @@
   <text>
     <name>LabelRdfPanel</name>
     <type type="string">literal</type>
-    <text type="string">Select a NDB Frequency first. Switch on the Peilgerat. If the NDB is in range, you see the green light left side of the frequency selector. Find with the Drehwinkel-Scheibe the loudest volume of this signal and click the pencil on this table. After work switch off the Peilgerat.</text>
+    <text type="string">Select a kHz (NDB left knob) or MHz (VOR/DME/Localizer right knob) Frequency first. Switch on the Peilgerat. If the Beacon is in range, you see the green light left side of the frequency selector. Find with the Drehwinkel-Scheibe the loudest volume of this signal and click the pencil on this table. After work switch off the Peilgerat.</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.012</character-size>

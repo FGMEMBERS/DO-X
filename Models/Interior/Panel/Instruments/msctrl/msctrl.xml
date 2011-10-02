@@ -20,8 +20,9 @@
 
   <animation>
     <type>shader</type>
+    <shader>chrome</shader>
     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
   </animation>
 
   <animation>
