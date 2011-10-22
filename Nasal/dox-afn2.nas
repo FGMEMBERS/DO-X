@@ -24,8 +24,10 @@ var afn2Direction = func{
     var disTerr = dis - gearAglM;
     if (disTerr < 100 and gs == 0){
       setprop("/instrumentation/afn2/markeron",1);
+      setprop("/sim/multiplay/generic/int[13]",1);
     }else{
       setprop("/instrumentation/afn2/markeron",0);
+      setprop("/sim/multiplay/generic/int[13]",0);
     }
 
     # If the target is an ILS Beacon take the gs altitude
@@ -34,18 +36,24 @@ var afn2Direction = func{
       var middle = getprop("/instrumentation/marker-beacon/middle");
       if(middle == 1){
         setprop("/instrumentation/afn2/markeron",1);
+        setprop("/sim/multiplay/generic/int[13]",1);
       }else{
         setprop("/instrumentation/afn2/markeron",0);
+        setprop("/sim/multiplay/generic/int[13]",0);
       }
     }
 
     #screen.log.write("True Heading: "~rotDiff, 1.0, 0.7, 0.0);
     setprop("/instrumentation/afn2/heading-correction",rotDiff);
     setprop("/instrumentation/afn2/distance",disTerr);
+    setprop("/sim/multiplay/generic/float[4]",rotDiff);
+    setprop("/sim/multiplay/generic/float[5]",disTerr);
   
   }else{
     setprop("/instrumentation/afn2/heading-correction",0);
     setprop("/instrumentation/afn2/distance",0);
+    setprop("/sim/multiplay/generic/float[4]",0);
+    setprop("/sim/multiplay/generic/float[5]",0);
   }
 
   settimer(afn2Direction, 0);

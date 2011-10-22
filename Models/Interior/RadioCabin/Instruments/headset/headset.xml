@@ -124,7 +124,7 @@
     <type>material</type>
     <condition>
       <equals>
-        <property>controls/lighting/radiocabin</property>
+        <property>/controls/lighting/radiocabin</property>
         <value>1</value>
       </equals>
     </condition>

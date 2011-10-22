@@ -127,8 +127,8 @@
     </binding>
   </key>
 
-  <key n="18">
-    <name>Ctrl-R</name>
+  <key n="60">
+    <name> > </name>
     <desc>View of the Radio Navigation Officer</desc>
     <binding>
       <command>nasal</command>

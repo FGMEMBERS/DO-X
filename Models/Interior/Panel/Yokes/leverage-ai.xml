@@ -31,7 +31,7 @@
   <animation>
    <type>translate</type>
     <object-name>leverage</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 0.024 </factor>
    <axis>
      <x>-1.0</x>

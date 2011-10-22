@@ -39,4 +39,3 @@ var changeView = func (n){
     actualView.setValue(n);
   }
 }
-

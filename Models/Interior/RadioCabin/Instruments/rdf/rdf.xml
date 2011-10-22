@@ -413,11 +413,11 @@
     <property>/instrumentation/rdf/frequency-select-knob</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 70 </dep></entry>
+      <entry><ind> 1 </ind><dep> 60 </dep></entry>
     </interpolation>
     <center>
       <x-m> 0.000 </x-m>
-      <y-m> 0.085 </y-m>
+      <y-m> 0.092 </y-m>
       <z-m>-0.150 </z-m>
     </center>
     <axis>
@@ -449,8 +449,8 @@
     <object-name>rdfTabCircle</object-name>
     <property>/instrumentation/rdf/rotation-deg</property>
     <interpolation>
-      <entry><ind>   0 </ind><dep> 360 </dep></entry>
-      <entry><ind> 360 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0 </ind><dep> 360 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <condition>
       <equals>
@@ -494,9 +494,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>1</step>
+        <step>0.002777778</step>
         <min>0</min>
-        <max>360</max>
+        <max>1</max>
         <wrap>1</wrap>
       </binding>
     </action>
@@ -507,9 +507,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>-1</step>
+        <step>-0.002777778</step>
         <min>0</min>
-        <max>360</max>
+        <max>1</max>
         <wrap>1</wrap>
       </binding>
     </action>
@@ -539,9 +539,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>10</step>
+        <step>0.02777778</step>
         <min>0</min>
-        <max>360</max>
+        <max>1</max>
         <wrap>1</wrap>
       </binding>
     </action>
@@ -552,9 +552,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>-10</step>
+        <step>-0.02777778</step>
         <min>0</min>
-        <max>360</max>
+        <max>1</max>
         <wrap>1</wrap>
       </binding>
     </action>
@@ -570,7 +570,7 @@
       <entry><ind> 2000 </ind><dep> 360 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
+      <x-m>  0.006 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.150 </z-m>
     </center>
@@ -635,7 +635,7 @@
       <entry><ind> 2000 </ind><dep> 7200 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
+      <x-m>  0.013 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.150 </z-m>
     </center>
@@ -700,7 +700,7 @@
       <entry><ind> 200 </ind><dep> 360 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
+      <x-m>  0.006 </x-m>
       <y-m>  0.170 </y-m>
       <z-m> -0.150 </z-m>
     </center>
@@ -765,7 +765,7 @@
       <entry><ind>  200 </ind><dep>72000</dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
+      <x-m>  0.013 </x-m>
       <y-m>  0.170 </y-m>
       <z-m> -0.150 </z-m>
     </center>

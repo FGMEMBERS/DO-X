@@ -33,7 +33,7 @@
   <animation>
     <type>rotate</type>
     <object-name>throttleL</object-name>
-    <property>controls/engines/throttle-pilot-left</property>
+    <property>/controls/engines/throttle-pilot-left</property>
     <factor> -66 </factor>
     <center>
       <x-m> 0 </x-m> <!-- near to panel -->
@@ -98,7 +98,7 @@
   <animation>
     <type>rotate</type>
     <object-name>throttleR</object-name>
-    <property>controls/engines/throttle-pilot-right</property>
+    <property>/controls/engines/throttle-pilot-right</property>
     <factor> -66 </factor>
     <center>
       <x-m> 0 </x-m> <!-- near to panel -->

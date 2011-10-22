@@ -34,7 +34,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ball</object-name>
-    <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+    <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
     <center>
       <x-m> -0.033 </x-m>
       <y-m>  0.000 </y-m>

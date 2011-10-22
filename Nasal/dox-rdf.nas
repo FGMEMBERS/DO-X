@@ -1,6 +1,9 @@
 # ===================================
 # Radio Direction Finder RDF settings
 # ===================================
+
+var rotation_degree = "/instrumentation/rdf/rotation-deg";
+
 var mymod = func(x,y){
   var res = x/y;
   var resInt = int(res);
@@ -28,20 +31,26 @@ var indiBearingDeg = func(a,b){
 
 # Switch on/off
 var clickRdfSwitch = func{
-    var nav = props.globals.getNode("/instrumentation/nav/power-btn", 1);
-    var adf = props.globals.getNode("/instrumentation/adf/power-btn", 1);
     var rdf = props.globals.getNode("/instrumentation/rdf/power-on", 1);
-
     if(rdf.getValue()){
       rdf.setValue(0);
+    }else{
+      rdf.setValue(1);
+    }
+}
+
+setlistener("/instrumentation/rdf/power-on", func(state) {
+    var state = state.getValue();
+    var adf = props.globals.getNode("/instrumentation/adf/power-btn", 1);
+    var nav = props.globals.getNode("/instrumentation/nav/power-btn", 1);
+    if(state == 0){
       adf.setValue(0);
       nav.setValue(1);  # we need it always for correct afn2 working
     }else{
-      rdf.setValue(1);
       adf.setValue(1);
       nav.setValue(1);
     }
-}
+});
 
 ############### Set always the right position of the RDF Aerial #################
 var rdfAerialPos = func{
@@ -53,8 +62,8 @@ var rdfAerialPos = func{
   var navRange = getprop("/instrumentation/nav/in-range");
 
   if (state == 1){
-    var rdfDeg = getprop("/instrumentation/rdf/rotation-deg");
-
+    var rdfDeg = getprop(rotation_degree)*360; # rdfDeg is a float
+    # freqSel 0 = NDB, 1 = VOR or ILS
     if(freqSel == 1){
       var aircraftDirDeg = getprop("/orientation/heading-magnetic-deg");
       var dirDeg = getprop("/instrumentation/nav/heading-deg");
@@ -78,7 +87,7 @@ var rdfAerialPos = func{
     }
 
     # set volume in headset
-    if(rotDiff < 0.5){
+    if(rotDiff < 0.8){
       vol.setValue(1);
     }elsif(rotDiff < 3){
       vol.setValue(0.7);
@@ -104,7 +113,7 @@ var rdfAerialPos = func{
     var rdfDeg = 90;
   }
 
-  setprop("/instrumentation/rdf/rotation-deg", rdfDeg);
+  setprop(rotation_degree, (rdfDeg/360));
   settimer(rdfAerialPos, 0);
 };
 
@@ -114,12 +123,12 @@ rdfAerialPos();
 
 # if state of RDF change, set the Aerial on 0 deg
 setlistener("/instrumentation/rdf/power-on", func {
-    setprop("/instrumentation/rdf/rotation-deg", 0);
+    setprop(rotation_degree, 0);
 });
 
 ############### Show the course correction deg ###################################
 var rdfNavInfo = func {
-    var rdfDeg = getprop("/instrumentation/rdf/rotation-deg");
+    var rdfDeg = getprop(rotation_degree)*360;
     var freqSel = getprop("/instrumentation/rdf/frequency-select-knob"); # 0 = NDB, 1 = VOR or ILS
     var text2 = "";
     if(freqSel == 1){
@@ -139,28 +148,44 @@ var rdfNavInfo = func {
     # if the volume of the adf signal is not 0.2 or higher, there is no signal in range
     if (controlVol >= 0.2) {
 
+      # build the heading correction message for the pilot
+      mp_msg = "";
+
       var newRdfDeg = rdfDeg;
       if (rdfDeg > 180){
         newRdfDeg = abs(360 - rdfDeg);
       }
       headCorrection = int(newRdfDeg);
 
-      if (rdfDeg > 180 and rdfDeg < 360){
+      if (rdfDeg > 180.5 and rdfDeg < 359.5){
         screen.log.write(text~" -> "~headCorrection~" degree to larboard", 1.0, 0.1, 0.1);
-      }elsif(rdfDeg > 0 and rdfDeg < 180){
+        mp_msg = text~" -> "~headCorrection~" degree to larboard";
+      }elsif(rdfDeg > 0.5 and rdfDeg < 179.5){
         screen.log.write(text~" -> "~headCorrection~" degree to starboard", 1.0, 0.1, 0.1);
-      }elsif(rdfDeg == 180){
+        mp_msg = text~" -> "~headCorrection~" degree to starboard";
+      }elsif(rdfDeg >= 179.5 and rdfDeg <= 180.5){
         screen.log.write(text~" on 180 degree", 1.0, 0.1, 0.1);
-      }elsif(rdfDeg == 0){
+        mp_msg = text~" on 180 degree";
+      }elsif(rdfDeg >= 359.5 or rdfDeg <= 0.5){
         screen.log.write("Hold this heading. Beacon - "~text~" is straight ahead.", 1.0, 0.1, 0.1);
+        mp_msg = "Hold this heading. Beacon - "~text~" is straight ahead.";
       }
       
       if(text2 != ""){
         screen.log.write(text2, 1.0, 0.1, 0.1);
+        mp_msg = mp_msg~ " " ~text2;
       }
+
     }else{
         screen.log.write("Nonviable calculation. Please first find a viable signal in range.", 1.0, 0.1, 0.1);
+        mp_msg = "";
     }
+    setprop("/instrumentation/rdf/message-to-pilot",mp_msg);
+}
+
+############### Delete the Heading Correction Messages ###################################
+var del_msg_from_navigator = func{
+  setprop("/instrumentation/rdf/message-to-pilot","");
 }
 
 

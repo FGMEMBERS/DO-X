@@ -61,7 +61,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Yoke</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor> -90 </factor>
     <center>
       <x-m> 0.000 </x-m> <!-- near to panel -->

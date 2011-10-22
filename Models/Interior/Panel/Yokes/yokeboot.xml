@@ -51,7 +51,7 @@
     <type>rotate</type>
     <object-name>YokeAileron</object-name>
     <object-name>Yoke</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor> -8 </factor>
     <center>
       <x-m> 0.000 </x-m>

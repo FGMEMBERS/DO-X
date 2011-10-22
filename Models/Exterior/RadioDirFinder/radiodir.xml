@@ -14,7 +14,7 @@
     <property>/instrumentation/rdf/rotation-deg</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>360</ind><dep>360</dep></entry>
+      <entry><ind>1</ind><dep>360</dep></entry>
     </interpolation>
     <axis>
       <x>  0 </x>

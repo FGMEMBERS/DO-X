@@ -18,7 +18,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rudderwheel</object-name>
-    <property>controls/flight/rudder-trim</property>
+    <property>/controls/flight/rudder-trim</property>
     <factor>-4680</factor>
     <center>
       <x-m>-0.170</x-m>
@@ -70,7 +70,7 @@
   <animation>
     <type>rotate</type>
     <object-name>eltrimwheel</object-name>
-    <property>controls/flight/elevator-trim</property>
+    <property>/controls/flight/elevator-trim</property>
     <factor>-1080</factor>
     <center>
       <x-m> 0.145 </x-m>
@@ -122,7 +122,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ailtrimwheel</object-name>
-    <property>controls/flight/aileron-trim</property>
+    <property>/controls/flight/aileron-trim</property>
     <factor>-1080</factor>
     <center>
       <x-m> 0.145 </x-m>
@@ -175,7 +175,7 @@
     <type>material</type>
       <condition>
         <equals>
-          <property>controls/lighting/panel</property>
+          <property>/controls/lighting/panel</property>
           <value>1</value>
         </equals>
       </condition>
