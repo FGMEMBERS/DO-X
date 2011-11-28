@@ -12,6 +12,13 @@
     <aircraft-version>0.2.0</aircraft-version>
     <status>Alpha</status>
 
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 4 </systems>
+      <cockpit type="int"> 4 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
     <fuel-fraction>1.0</fuel-fraction>

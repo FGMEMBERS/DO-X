@@ -198,28 +198,22 @@
 
   <!-- Une ombre pour OSG  -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/DO-X/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.05063 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -4.30900 </z-m>
+    </offsets>
   </model>
 
   <!-- Immatriculation -->
   <model>
     <path>Aircraft/DO-X/Models/Immat/immat.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Effets de vagues en particules -->
   <model>
     <path>Aircraft/DO-X/Models/Effects/waves/waves.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Anchor -->
@@ -238,11 +232,6 @@
   <!-- Intérieur, zone passagers -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- RadioDirectionFinder on the Front Deck-->
@@ -314,7 +303,6 @@
       <z-m>  3.329 </z-m>
     </offsets>
   </model>
-
 
   <!-- Cranking effects -->
   <!-- Coté gauche -->
