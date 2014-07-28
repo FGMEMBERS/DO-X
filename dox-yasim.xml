@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Dornier Do X Emmanuel BARANGER
                   Pierre GEOFFROY
+                  
+    Source       : http://en.wikipedia.org/wiki/Dornier_Do_X
 
     Wingspan     : 157 ft 5 in (48 m)
     lenght       : 134 ft 2 in (41 m)
@@ -11,7 +13,7 @@
     Cruise speed : 109 mph     (175 km/h)
     Max speed    : 131 mph     (210 km/h)
 -->
-<airplane mass="62280">
+<airplane mass="62280" version="YASIM_VERSION_CURRENT">
 
   <approach speed="55" aoa="7">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>

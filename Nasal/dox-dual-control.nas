@@ -260,4 +260,3 @@ var copilot_alias_aimodel = func(pilot) {
     setprop(l_dual_control, 1); # set in copilots "fdm/yasim/fcs/dual-control/enabled"
 
 }
-

@@ -187,5 +187,3 @@ var rdfNavInfo = func {
 var del_msg_from_navigator = func{
   setprop("/instrumentation/rdf/message-to-pilot","");
 }
-
-

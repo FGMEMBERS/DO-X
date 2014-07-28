@@ -1,28 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  <sim>
+  
+  <sim include="Systems/views-copilot.xml">
+    
     <description>Dornier Do X - Copilot</description>
     <author>Emmanuel BARANGER (3D/FDM), Marc KRAUS (Interior 3D/Multiplayer), Pierre GEOFFROY (FDM)</author>
-    <aircraft-version>0.2.0</aircraft-version>
+    <aircraft-version>0.3.0</aircraft-version>
     <status>Alpha</status>
-
+    
     <flight-model>null</flight-model>
     <aero>DO-X</aero>
-
+    
     <startup>
       <splash-texture>Aircraft/DO-X/dox-splash.png</splash-texture>
     </startup>
-
+    
     <sound>
       <audible>true</audible>
       <path archive="y">Aircraft/DO-X/Sounds/dox-copilot-sound.xml</path>
     </sound>
-
+    
     <model>
       <path>Aircraft/DO-X/Models/dox-copilot.xml</path>
     </model>
-
+    
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
@@ -34,90 +36,7 @@
         <string n="0" alias="/instrumentation/rdf/message-to-pilot"></string>    <!-- MP heading-correction message for the pilot -->
       </generic>
     </multiplay>
-
-    <view n="100">
-      <name>Radio Cabin View</name>
-      <type>lookfrom</type>
-      <config>
-        <internal type="bool">true</internal>
-        <from-model type="bool">false</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
-        <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
-        <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
-        <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
-        <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
-        <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
-        <at-model type="bool">false</at-model>
-        <at-model-idx type="int">0</at-model-idx>
-        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-        <x-offset-m archive="y">  0.200 </x-offset-m>	<!-- Right -->
-        <y-offset-m archive="y">  0.400 </y-offset-m>	<!-- Up    -->
-        <z-offset-m archive="y"> -3.430 </z-offset-m>	<!-- Back  -->
-        <heading-offset-deg type="double"> -90 </heading-offset-deg>
-        <pitch-offset-deg type="double"> -5 </pitch-offset-deg>
-        <default-field-of-view-deg type="double"> 60 </default-field-of-view-deg>
-      </config>
-    </view>
-
-    <!-- Doesn't work that great - lots of jitter. -->
-    <view n="0">
-     <name>Copilot View</name>
-     <type>lookfrom</type>
-     <config>
-      <internal type="bool">true</internal>
-      <from-model type="bool">false</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
-      <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
-      <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
-      <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
-      <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
-      <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
-      <at-model type="bool">false</at-model>
-      <at-model-idx type="int">0</at-model-idx>
-      <x-offset-m archive="y">   0.685 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">   0.455 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -11.450 </z-offset-m>	<!-- Back  -->
-      <heading-offset-deg type="double">0</heading-offset-deg>
-      <pitch-offset-deg type="double">-10</pitch-offset-deg>
-      <roll-offset-deg type="double">0</roll-offset-deg>
-      <default-field-of-view-deg> 70 </default-field-of-view-deg>
-     </config>
-    </view>
-
-    <!-- Move the center of the external views. -->
-    <view n="1">
-     <config>
-      <at-model type="bool">false</at-model>
-      <target-z-offset-m archive="y"> 20.0 </target-z-offset-m>
-     </config>
-    </view>
-    <view n="2">
-     <config>
-      <at-model type="bool">false</at-model>
-      <target-z-offset-m archive="y"> 20.0 </target-z-offset-m>
-     </config>
-    </view>
-    <view n="3">
-     <config>
-      <at-model type="bool">false</at-model>
-      <target-z-offset-m archive="y"> 20.0 </target-z-offset-m>
-     </config>
-    </view>
-    <view n="5">
-     <config>
-      <at-model type="bool">false</at-model>
-      <target-z-offset-m archive="y"> 20.0 </target-z-offset-m>
-     </config>
-    </view>
-    <view n="6">
-     <config>
-      <at-model type="bool">false</at-model>
-      <target-z-offset-m archive="y"> 20.0 </target-z-offset-m>
-     </config>
-    </view>
-
+    
     <controls>
       <generic>
         <int type="bool" n="29" alias="/controls/glass-effect"/>
@@ -144,47 +63,13 @@
         <int type="double" n="50" alias="/instrumentation/rdf/headset/nav-volume"/>
       </generic>
     </controls>
-
-    <help>
-      <title>Dornier Do X</title>
-      <key>
-        <name> > </name>
-        <desc>Switch Copilot/Radio View</desc>
-      </key>
-      <text>
-      ________________ Navigation with RDF and NDB __________________
-
-      Switch view between Copilot-Seat and Radio Navigation Seat with Ctrl-R.
-      In the Radio Cabin you will find a RDF-panel. First you have to set
-      a NDB, ILS or VOR/DME -frequency in range. Switch on the Instrument with the 
-      little knob AN/AUS. Fit on the headset and turn the DREHWINKEL-SCHEIBE
-      to find the loudest volume of the beacon-signal you have set.
-      If you have found the max. volume, click the pencil
-      below the RDF-panel. So the pilot get the 
-      heading correctino message on his panel.
-      </text>
-    </help>
-
-    <menubar>
-     <default>
-      <menu n="10">
-      <label>Dornier Do X</label>
-      <enabled type="bool">true</enabled>
-       <item>
-        <label>Select MP-pilot</label>
-        <binding>
-         <command>nasal</command>
-         <script>
-          dual_control_tools.
-            copilot_dialog.show(aircraft_dual_control.pilot_type);
-         </script>
-        </binding>
-       </item>
-      </menu>
-     </default>
-    </menubar>
+    
+    <help include="Systems/help-copilot.xml"/>
+    
+    <menubar include="Dialogs/dox-copilot-menu.xml"/>
+    
   </sim>
-
+  
   <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
   <controls>
     <engines>
@@ -228,7 +113,7 @@
         <magnetos>3</magnetos>
       </engine>
     </engines>
-
+    
     <lighting>
       <panel type="bool">1</panel>
       <navigationcabin type="bool">1</navigationcabin>
@@ -237,11 +122,15 @@
       <helpenginecabin type="bool">1</helpenginecabin>
       <brightness type="double">1.0</brightness>
     </lighting>
-
+    
     <glass-effect type="bool">1</glass-effect>
-
+    
   </controls>
-
+  
+  <input>
+    <keyboard include="Systems/dox-keyboard-copilot.xml"/>
+  </input>
+  
   <instrumentation>
     <rdf>
       <power-on>0</power-on>
@@ -269,7 +158,7 @@
       <power-btn type="bool">0</power-btn>
     </adf>
   </instrumentation>
-
+  
   <nasal>
     <dox>
       <file>Aircraft/DO-X/Nasal/dox.nas</file>
@@ -279,27 +168,14 @@
       <file>Aircraft/DO-X/Nasal/dox-rdf.nas</file>
     </dox>
     <dual_control_tools>
-     <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
     </dual_control_tools>
     <aircraft_dual_control>
-     <file>Aircraft/DO-X/Nasal/dox-dual-control.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-dual-control.nas</file>
     </aircraft_dual_control>
     <dual_control>
-     <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
     </dual_control>
   </nasal>
-
-  <input>
-    <keyboard>
-        <key n="60">
-          <name> > </name>
-          <desc>View of the Radio Navigation Officer</desc>
-          <binding>
-            <command>nasal</command>
-            <script>dox.changeView(8);</script>
-          </binding>
-        </key>
-    </keyboard>
-  </input>
-
+  
 </PropertyList>

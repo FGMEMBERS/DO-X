@@ -1,9 +1,8 @@
 # DO X 
 #
-#	set up menu dialogs
+# set up menu dialogs
 #
 # stolen from Gary Neely aka 'Buckaroo's Lockheed 1049h
-
 
 DoxMain = {};
 
@@ -28,7 +27,6 @@ DOXL = setlistener("/sim/signals/fdm-initialized", func {
   removelistener(DOXL);
   }
 );
-
 
 # Change view to 
 var changeView = func (n){

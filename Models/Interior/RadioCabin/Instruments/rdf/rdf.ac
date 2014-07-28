@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 26
 OBJECT poly
@@ -7,8 +7,9 @@ name "adfVorSwitch"
 loc 0.0091 -0.150168 -0.084335
 data 12
 adfVorSwitch
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 17
 -0.011705 0.001311 -0.004528
 -0.011976 -0.000001 -0.004032
@@ -138,8 +139,9 @@ name "adfVorSwitchFeet"
 loc -0.000622 -0.147231 -0.08991
 data 16
 adfVorSwitchFeet
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 17
 -0.003675 -0.000222 -0.01763
 -0.003271 -0.006956 -0.016288
@@ -261,8 +263,9 @@ name "freqDecMhz"
 loc 0.013078 -0.149977 -0.170309
 data 10
 freqDecMhz
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 209
 -0.020478 -0.000001 -0.042985
 -0.020478 -0.016449 -0.039713
@@ -1752,8 +1755,9 @@ name "freqHundred"
 loc 0.006613 -0.149955 -0.000337
 data 11
 freqHundred
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 241
 0.009163 -0.019295 -0.005765
 0.009163 -0.017803 -0.009365
@@ -3499,8 +3503,9 @@ name "freqHundredMhz"
 loc 0.006613 -0.149955 -0.170056
 data 14
 freqHundredMhz
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 289
 0.009163 -0.019295 -0.005765
 0.009163 -0.017803 -0.009365
@@ -3759,7 +3764,7 @@ numvert 289
 -0.010219 -0.031995 -0.031995
 -0.010219 -0.017315 -0.041804
 -0.010219 0 -0.045249
--0.010219 -0 -0.046447
+-0.010219 0 -0.046447
 -0.010219 -0.017775 -0.042912
 -0.010219 -0.032843 -0.032843
 -0.010219 -0.042912 -0.017775
@@ -3767,7 +3772,7 @@ numvert 289
 -0.010219 -0.042912 0.017774
 -0.010219 -0.032843 0.032842
 -0.010219 -0.017775 0.04291
--0.010219 -0 0.046447
+-0.010219 0 0.046447
 -0.010219 0.017774 0.04291
 -0.010219 0.032842 0.032842
 -0.010219 0.04291 0.017774
@@ -3782,7 +3787,7 @@ numvert 289
 -0.010912 0.04291 0.017774
 -0.010912 0.032842 0.032842
 -0.010912 0.017774 0.04291
--0.010912 -0 0.046447
+-0.010912 0 0.046447
 -0.010912 -0.017775 0.04291
 -0.010912 -0.032843 0.032842
 -0.010912 -0.042912 0.017774
@@ -3790,7 +3795,7 @@ numvert 289
 -0.010912 -0.042912 -0.017775
 -0.010912 -0.032843 -0.032843
 -0.010912 -0.017775 -0.042912
--0.010912 -0 -0.046447
+-0.010912 0 -0.046447
 numsurf 248
 SURF 0x10
 mat 0
@@ -5518,8 +5523,9 @@ name "freqTen"
 loc 0.013078 -0.149977 -0.00034
 data 7
 freqTen
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 209
 -0.020537 -0.000001 -0.042362
 -0.020537 -0.016211 -0.039137
@@ -7009,8 +7015,9 @@ name "ndbLamp"
 loc -0.000711 -0.092989 -0.042532
 data 7
 ndbLamp
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003308 -0.003685 -0.003685
 -0.003308 -0.005211 -0
@@ -7117,8 +7124,9 @@ name "ndbLampOff"
 loc -0.000324 -0.093041 -0.042517
 data 10
 ndbLampOff
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003253 -0.003624 -0.003624
 -0.003253 -0.005124 -0.000002
@@ -7225,8 +7233,9 @@ name "ndbLampOut"
 loc -0.000324 -0.093024 -0.042523
 data 10
 ndbLampOut
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003253 -0.003624 -0.003623
 -0.003253 -0.005123 -0.000001
@@ -7333,8 +7342,9 @@ name "ndbNeedle"
 loc -0.002686 -0.108668 0.000063
 data 9
 ndbNeedle
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 0.001124 -0.016385 -0.000507
 0.001124 -0.016385 0.000507
@@ -7443,8 +7453,9 @@ name "ndbreboard"
 loc -0.004188 -0.110727 -0.000012
 data 10
 ndbreboard
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 216
 0.007097 -0.017039 -0.023271
 0.007097 -0.017039 0.023271
@@ -8957,8 +8968,9 @@ name "rdfLamp"
 loc -0.004144 0.139573 0.069155
 data 7
 rdfLamp
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.005904 -0.006577 -0.006575
 -0.005904 -0.0093 -0
@@ -9065,8 +9077,9 @@ name "rdfLampOff"
 loc -0.003454 0.139605 0.069117
 data 10
 rdfLampOff
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.005806 -0.006468 -0.006468
 -0.005806 -0.009143 -0.000002
@@ -9173,8 +9186,9 @@ name "rdfSwitch"
 loc 0.0091 0.133437 0.035901
 data 9
 rdfSwitch
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 17
 -0.011705 0.004528 0.001311
 -0.011976 0.004032 -0.000001
@@ -9304,8 +9318,9 @@ name "rdfSwitchFeet"
 loc -0.001214 0.139676 0.036029
 data 13
 rdfSwitchFeet
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 17
 -0.002498 -0.000001 -0.01763
 -0.002498 -0.006747 -0.016288
@@ -9427,8 +9442,9 @@ name "rdfTab"
 loc 0.015043 0.000173 -0.00007
 data 6
 rdfTab
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 145
 0.030285 -0.033682 -0.010218
 0.030285 -0.031042 -0.016592
@@ -10406,8 +10422,9 @@ name "rdfTabCircle"
 loc -0.011641 0.000191 0.000138
 data 12
 rdfTabCircle
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 65
 -0.002605 0 -0.075761
 -0.002605 -0.014781 -0.074305
@@ -10897,8 +10914,9 @@ name "rdfbox"
 loc -0.07491 -0.000464 -0.066737
 data 6
 rdfbox
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 39
 0.07282 -0.257944 0.169705
 -0.07282 -0.257944 0.169705
@@ -11188,8 +11206,9 @@ name "sign"
 loc -0.00116 0.139542 -0.084318
 data 4
 sign
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 4
 0 -0.01596 -0.184189
 0 -0.01596 0.184189
@@ -11209,8 +11228,9 @@ name "signFreq"
 loc -0.00116 -0.189948 0.00016
 data 8
 signFreq
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 0 0.000453 -0.055491
 0 0.000453 0.055459
@@ -11263,8 +11283,9 @@ name "signKurs"
 loc -0.00116 0.087306 0.002841
 data 8
 signKurs
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 4
 0 -0.007284 -0.055475
 0 -0.007283 0.055475
@@ -11284,8 +11305,9 @@ name "signMorse"
 loc -0.00116 -0.000528 -0.171833
 data 9
 signMorse
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 4
 0 -0.056606 -0.07527
 0 -0.056605 0.075271
@@ -11305,8 +11327,9 @@ name "visses"
 loc -0.000582 -0.033358 -0.04268
 data 6
 visses
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 292
 -0.000373 -0.221116 -0.22249
 -0.000371 -0.221163 -0.221055
@@ -13551,8 +13574,9 @@ name "vorLamp"
 loc -0.000711 -0.092989 -0.213445
 data 7
 vorLamp
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003308 -0.003685 -0.003685
 -0.003308 -0.005211 -0
@@ -13659,8 +13683,9 @@ name "vorLampOff"
 loc -0.000324 -0.093041 -0.213416
 data 10
 vorLampOff
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003253 -0.003624 -0.003624
 -0.003253 -0.005124 -0.000002
@@ -13767,8 +13792,9 @@ name "vorLampOut"
 loc -0.000324 -0.093024 -0.213422
 data 10
 vorLampOut
-texture "colors.png"
-texrep 1 1
+texture "rdf.png"
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 16
 -0.003253 -0.003624 -0.003623
 -0.003253 -0.005123 -0.000001

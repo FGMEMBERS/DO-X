@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>headset.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>headset</object-name>
     <object-name>cable</object-name>
-
+    
     <!-- Objets transparents -->
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>cable</object-name>
@@ -22,7 +22,7 @@
       </equals>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>headset</object-name>
@@ -33,7 +33,7 @@
       </not-equals>
     </condition>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>headset</object-name>
@@ -42,83 +42,83 @@
     <action>
       <button>0</button>
       <repeatable>true</repeatable>
-        <binding>
-          <command>property-toggle</command>
-          <property>/instrumentation/rdf/headset/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/atc-enabled</property>
-          <property>/sim/sound/atc/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/atc-volume</property>
-          <property>/sim/sound/atc/volume</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/avionics-enabled</property>
-          <property>/sim/sound/avionics/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/avionics-volume</property>
-          <property>/sim/sound/avionics/volume</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/chatter-enabled</property>
-          <property>/sim/sound/chatter/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/chatter-volume</property>
-          <property>/sim/sound/chatter/volume</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/effects-enabled</property>
-          <property>/sim/sound/effects/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/effects-volume</property>
-          <property>/sim/sound/effects/volume</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/master-enabled</property>
-          <property>/sim/sound/enabled</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/master-volume</property>
-          <property>/sim/sound/volume</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/adf-ident-audible</property>
-          <property>/instrumentation/adf/ident-audible</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/adf-volume-norm</property>
-          <property>/instrumentation/adf/volume-norm</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/nav-audio-btn</property>
-          <property>/instrumentation/nav/audio-btn</property>
-        </binding>
-        <binding>
-          <command>property-swap</command>
-          <property>/instrumentation/rdf/headset/nav-volume</property>
-          <property>/instrumentation/nav/volume</property>
-        </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/rdf/headset/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/atc-enabled</property>
+        <property>/sim/sound/atc/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/atc-volume</property>
+        <property>/sim/sound/atc/volume</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/avionics-enabled</property>
+        <property>/sim/sound/avionics/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/avionics-volume</property>
+        <property>/sim/sound/avionics/volume</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/chatter-enabled</property>
+        <property>/sim/sound/chatter/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/chatter-volume</property>
+        <property>/sim/sound/chatter/volume</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/effects-enabled</property>
+        <property>/sim/sound/effects/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/effects-volume</property>
+        <property>/sim/sound/effects/volume</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/master-enabled</property>
+        <property>/sim/sound/enabled</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/master-volume</property>
+        <property>/sim/sound/volume</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/adf-ident-audible</property>
+        <property>/instrumentation/adf/ident-audible</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/adf-volume-norm</property>
+        <property>/instrumentation/adf/volume-norm</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/nav-audio-btn</property>
+        <property>/instrumentation/nav/audio-btn</property>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property>/instrumentation/rdf/headset/nav-volume</property>
+        <property>/instrumentation/nav/volume</property>
+      </binding>
     </action>
   </animation> 
-
+  
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
@@ -135,7 +135,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
@@ -146,7 +146,7 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelHeadset</object-name>
@@ -154,7 +154,7 @@
       <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <text>
     <name>LabelHeadset</name>
     <type type="string">literal</type>
@@ -173,11 +173,10 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>  0.000 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.060 </z-m> <!-- up -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m>  0.060 </z-m> <!-- up            -->
       <heading-deg> -90 </heading-deg>
     </offsets>
   </text>
-
+  
 </PropertyList>
-

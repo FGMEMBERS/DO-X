@@ -71,12 +71,3 @@ setlistener("/instrumentation/airspeed-indicator/true-speed-kt", func(as) {
       screen.log.write("Anchor chains ruptured!!", 1.0, 0.0, 0.0);
     }
 });
-
-
-
-
-
-
-
-
-

@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>radio.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>radio</object-name>
-
+    
     <!-- Objets transparents -->
   </animation>
-
+  
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
-      <condition>
-        <equals>
-          <property>controls/lighting/radiocabin</property>
-          <value>1</value>
-        </equals>
-      </condition>
+    <condition>
+      <equals>
+        <property>controls/lighting/radiocabin</property>
+        <value>1</value>
+      </equals>
+    </condition>
     <emission>
       <red>   0.27 </red>
       <green> 0.17 </green>
@@ -27,26 +27,26 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
-<!-- Labels activated by hotspots -->
+  
+  <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
     <object-name>LabelRadio</object-name>
     <emission>
-        <red>1.0</red>
-        <green>0.8</green>
-        <blue>0.0</blue>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelRadio</object-name>
     <condition>
-        <property>/sim/panel-hotspots</property>
+      <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <text>
     <name>LabelRadio</name>
     <type type="string">literal</type>
@@ -64,9 +64,9 @@
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m>  0.200 </x-m> <!-- near to panel -->
-      <y-m>  0.010</y-m> <!-- right -->
-      <z-m>  0.305 </z-m> <!-- up -->
+      <x-m> 0.200 </x-m> <!-- near to panel -->
+      <y-m> 0.010 </y-m> <!-- right         -->
+      <z-m> 0.305 </z-m> <!-- up            -->
       <heading-deg> -90 </heading-deg>
     </offsets>
   </text>

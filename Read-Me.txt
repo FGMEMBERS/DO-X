@@ -1,4 +1,4 @@
-English/FranÁais
+English/Fran√ßais
 
 [English]
 ----------
@@ -24,22 +24,22 @@ Passagers                     :
 Some useful keys:
 =================
 
-
-
 Thanks
 ======
 
+Marc KRAUS for his fantastic work on the interior, intruments and liveries
 
 ===============
 BARANGER Emmanuel
 January, 04, 2008
 June, 22, 2009
+July, 28, 2014
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
 
-
-[FranÁais]
+[Fran√ßais]
 ----------
 
 Un peu d'histoire
@@ -50,29 +50,29 @@ Dornier Do X
 
 Constructeur                  : Dornier
 Type                          : Hydravion de transport
-AnnÈe                         :
+Ann√©e                         :
 Moteur                        :
 Envergure                     :
 Longueur                      :
 Hauteur                       :
-Poids ‡ vide                  :
-Vitesse de croisiËre          :
+Poids √† vide                  :
+Vitesse de croisi√®re          :
 Equipage                      :
 Passagers                     :
-
 
 Quelques touches utiles :
 =========================
 
-
 Remerciements
 =============
 
-
+Marc KRAUS pour son fantastique travail sur l'int√©rieur, les instruments et les livr√©es
 ===============
 BARANGER Emmanuel
-04 Janvier 2008.
+04 Janvier 2008
 22 Juin 2009
+28 Juillet 2014
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr

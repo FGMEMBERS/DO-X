@@ -50,7 +50,7 @@ var scrollGear = func(scale,path){
 #                |
 
 #############  Throttle Control for the keybord PgUp and PgDown by pilot ###############
-#................ called from the /Nasal/dox-keyboard.xml
+#              called from the /Nasal/dox-keyboard.xml
 
 # all engines
 var throttleControl = func{
@@ -118,7 +118,6 @@ var throttleControlR = func{
     controlRootThrottle(arg[0],arg[1],pilotenginesR,"right");
 }
 
-
 ###################   Main functionn for the throttle increase decrease ######################
 #.......................called only from the functions in this file
 var controlRootThrottle = func{
@@ -180,7 +179,6 @@ var engControl = func(scale,eng,ctrl) {
     }
 }
 
-
 ############# Argh... it is nessecary to  hear, what the engines done, ######################
 ############ cause the pilots Throttle Gear find not the right position ####################
 # We build a new joystick function
@@ -213,11 +211,3 @@ var doxAxisHandler = func(pre, post) {
 
 # And now, overwrite the original joystick function
 controls.throttleAxis = doxAxisHandler("/controls/engines/engine[", "]/throttle");
-
-
-
-
-
-
-
-

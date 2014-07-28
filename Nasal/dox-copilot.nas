@@ -4,7 +4,6 @@ setlistener("/sim/signals/fdm-initialized", func {
     gui.menuEnable("autopilot", 0);
 });
 
-
 ################################################################################
 # Support the sound
 setlistener("/controls/engines/average-rpm-left", func(rpm) {

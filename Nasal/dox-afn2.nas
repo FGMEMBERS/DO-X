@@ -60,6 +60,5 @@ var afn2Direction = func{
 
 };
 
-
 #fire it up
 afn2Direction();

@@ -99,4 +99,3 @@ setlistener("/engines/engine[11]/oil-temperature-degf", func(degf) {
     setprop("/engines/engine[11]/oiltemp-degci", degci);
     setprop("/engines/engine[11]/oiltemp-degco", degco);
 });
-

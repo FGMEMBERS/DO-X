@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>clock.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>rebord</object-name>
@@ -13,22 +13,17 @@
     <object-name>minutes</object-name>
     <object-name>hour</object-name>
     <object-name>pressureset</object-name>
-
+    
     <!-- Objets transparents -->
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>shader</type>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <texture>glass.png</texture>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/DO-X/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -37,13 +32,13 @@
     <object-name>chrono.min</object-name>
     <object-name>chrono.sec</object-name>
     <emission>
-      <red> 1 </red>
+      <red>   1 </red>
       <green> 1 </green>
-      <blue> 1 </blue>
+      <blue>  1 </blue>
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>hour</object-name>
@@ -55,7 +50,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>minutes</object-name>
@@ -67,7 +62,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>chrono.min</object-name>
@@ -79,7 +74,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>chrono.sec</object-name>
@@ -96,7 +91,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
@@ -107,7 +102,7 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelClock</object-name>
@@ -115,7 +110,7 @@
       <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <text>
     <name>LabelClock</name>
     <type type="string">literal</type>
@@ -138,6 +133,5 @@
       <z-m>  0.065 </z-m> <!-- up -->
     </offsets>
   </text>
-
+  
 </PropertyList>
-

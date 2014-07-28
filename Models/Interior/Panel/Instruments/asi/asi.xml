@@ -1,38 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>asi.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>visses</object-name>
     <object-name>rebord</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-
+    
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/DO-X/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
     <object-name>needle</object-name>
     <emission>
-      <red> 1 </red>
+      <red>   1 </red>
       <green> 1 </green>
-      <blue> 1 </blue>
+      <blue>  1 </blue>
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
@@ -50,26 +49,26 @@
       <z>  0 </z>
     </axis>
   </animation>
-
-<!-- Labels activated by hotspots -->
+  
+  <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
     <object-name>LabelASI</object-name>
     <emission>
-        <red>1.0</red>
-        <green>0.8</green>
-        <blue>0.0</blue>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelASI</object-name>
     <condition>
-        <property>/sim/panel-hotspots</property>
+      <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <text>
     <name>LabelASI</name>
     <type type="string">literal</type>
@@ -82,17 +81,16 @@
     <max-height>0.2</max-height>
     <max-width>0.1</max-width>
     <font-resolution>
-        <width type="int">32</width>
-        <height type="int">32</height>
+      <width type="int">32</width>
+      <height type="int">32</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m>  0.01 </x-m> <!-- near to panel -->
-      <y-m>  0 </y-m> <!-- right -->
-      <z-m>  0.065 </z-m> <!-- up -->
+      <x-m>  0.010 </x-m> <!-- near to panel -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m>  0.065 </z-m> <!-- up            -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
-
+  
 </PropertyList>
-

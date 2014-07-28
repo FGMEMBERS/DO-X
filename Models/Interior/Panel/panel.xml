@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>panel.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>panel</object-name>
@@ -12,19 +12,19 @@
     
     <!-- Objets transparents -->
   </animation>
-
+  
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
     <object-name>panel</object-name>
     <object-name>leather</object-name>
     <object-name>visses</object-name>
-      <condition>
-        <equals>
-          <property>controls/lighting/panel</property>
-          <value>1</value>
-        </equals>
-      </condition>
+    <condition>
+      <equals>
+        <property>controls/lighting/panel</property>
+        <value>1</value>
+      </equals>
+    </condition>
     <emission>
       <red>   0.27 </red>
       <green> 0.17 </green>
@@ -32,7 +32,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <!-- *********  Central-Position of the Instruments in the front of the Cockpit ************ -->
   <!-- Clock Central --> 
   <model>
@@ -43,7 +43,7 @@
       <z-m>  0.220 </z-m>
     </offsets>
   </model>
-
+  
   <!-- ATT Central --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/att/att-big.xml</path>
@@ -53,15 +53,15 @@
       <z-m>  0.020 </z-m>
     </offsets>
   </model>
-
+  
   <!-- Yokes --> 
   <!-- Yoke Pilot --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yoke.xml</path>
     <offsets>
       <x-m>  0.650 </x-m> <!-- near to panel -->
-      <y-m> -0.670 </y-m> <!-- right -->
-      <z-m> -0.420 </z-m> <!-- up -->
+      <y-m> -0.670 </y-m> <!-- right         -->
+      <z-m> -0.420 </z-m> <!-- up            -->
     </offsets>
   </model>
   
@@ -70,8 +70,8 @@
     <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yoke.xml</path>
     <offsets>
       <x-m>  0.650 </x-m> <!-- near to panel -->
-      <y-m>  0.670 </y-m> <!-- right -->
-      <z-m> -0.420 </z-m> <!-- up -->
+      <y-m>  0.670 </y-m> <!-- right         -->
+      <z-m> -0.420 </z-m> <!-- up            -->
     </offsets>
   </model>
   
@@ -80,19 +80,19 @@
     <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/yokeboot.xml</path>
     <offsets>
       <x-m>  0.650 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m> -0.420 </z-m> <!-- up -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m> -0.420 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Seats --> 
   <!-- Seat Pilot --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Seats/seat.xml</path>
     <offsets>
-      <x-m>  0 </x-m> <!-- near to panel -->
-      <y-m> -0.670 </y-m> <!-- right -->
-      <z-m> 0 </z-m> <!-- up -->
+      <x-m>  0.000 </x-m> <!-- near to panel -->
+      <y-m> -0.670 </y-m> <!-- right         -->
+      <z-m>  0.000 </z-m> <!-- up            -->
     </offsets>
   </model>
   
@@ -100,199 +100,199 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Seats/seat.xml</path>
     <offsets>
-      <x-m>  0 </x-m> <!-- near to panel -->
-      <y-m>  0.670 </y-m> <!-- right -->
-      <z-m> 0 </z-m> <!-- up -->
+      <x-m> 0.000 </x-m> <!-- near to panel -->
+      <y-m> 0.670 </y-m> <!-- right         -->
+      <z-m> 0.000 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Throttle Control Pilot-->
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Throttle/throttle.xml</path>
     <offsets>
       <x-m>  0.170 </x-m> <!-- near to panel -->
-      <y-m> -0.970 </y-m> <!-- right -->
-      <z-m>  0.250 </z-m> <!-- up -->
+      <y-m> -0.970 </y-m> <!-- right         -->
+      <z-m>  0.250 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Pedals --> 
   <!-- Pedal Pilot Left--> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-l.xml</path>
     <offsets>
       <x-m>  0.420 </x-m> <!-- near to panel -->
-      <y-m> -0.775 </y-m> <!-- right -->
-      <z-m> -0.135 </z-m> <!-- up -->
+      <y-m> -0.775 </y-m> <!-- right         -->
+      <z-m> -0.135 </z-m> <!-- up            -->
       <pitch-deg> -56 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-l.xml</path>
     <offsets>
       <x-m>  0.380 </x-m> <!-- near to panel -->
-      <y-m> -0.775 </y-m> <!-- right -->
-      <z-m> -0.327 </z-m> <!-- up -->
+      <y-m> -0.775 </y-m> <!-- right         -->
+      <z-m> -0.327 </z-m> <!-- up            -->
       <pitch-deg> 18.3 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-l.xml</path>
     <offsets>
       <x-m>  0.440 </x-m> <!-- near to panel -->
-      <y-m> -0.705 </y-m> <!-- right -->
-      <z-m> -0.140 </z-m> <!-- up -->
+      <y-m> -0.705 </y-m> <!-- right         -->
+      <z-m> -0.140 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Pedal Pilot Right--> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-r.xml</path>
     <offsets>
       <x-m>  0.420 </x-m> <!-- near to panel -->
-      <y-m> -0.580 </y-m> <!-- right -->
-      <z-m> -0.135 </z-m> <!-- up -->
+      <y-m> -0.580 </y-m> <!-- right         -->
+      <z-m> -0.135 </z-m> <!-- up            -->
       <pitch-deg> -56 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-r.xml</path>
     <offsets>
       <x-m>  0.380 </x-m> <!-- near to panel -->
-      <y-m> -0.580 </y-m> <!-- right -->
-      <z-m> -0.327 </z-m> <!-- up -->
+      <y-m> -0.580 </y-m> <!-- right         -->
+      <z-m> -0.327 </z-m> <!-- up            -->
       <pitch-deg> 18.3 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-r.xml</path>
     <offsets>
       <x-m>  0.440 </x-m> <!-- near to panel -->
-      <y-m> -0.510 </y-m> <!-- right -->
-      <z-m> -0.140 </z-m> <!-- up -->
+      <y-m> -0.510 </y-m> <!-- right         -->
+      <z-m> -0.140 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Pedal Copilot Left--> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-l.xml</path>
     <offsets>
       <x-m>  0.420 </x-m> <!-- near to panel -->
-      <y-m>  0.580 </y-m> <!-- right -->
-      <z-m> -0.135 </z-m> <!-- up -->
+      <y-m>  0.580 </y-m> <!-- right         -->
+      <z-m> -0.135 </z-m> <!-- up            -->
       <pitch-deg> -56 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-l.xml</path>
     <offsets>
       <x-m>  0.380 </x-m> <!-- near to panel -->
-      <y-m>  0.580 </y-m> <!-- right -->
-      <z-m> -0.327 </z-m> <!-- up -->
+      <y-m>  0.580 </y-m> <!-- right         -->
+      <z-m> -0.327 </z-m> <!-- up            -->
       <pitch-deg> 18.3 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-l.xml</path>
     <offsets>
       <x-m>  0.440 </x-m> <!-- near to panel -->
-      <y-m>  0.510 </y-m> <!-- right -->
-      <z-m> -0.140 </z-m> <!-- up -->
+      <y-m>  0.510 </y-m> <!-- right         -->
+      <z-m> -0.140 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Pedal Copilot Right--> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/pedal-r.xml</path>
     <offsets>
       <x-m>  0.420 </x-m> <!-- near to panel -->
-      <y-m>  0.775 </y-m> <!-- right -->
-      <z-m> -0.135 </z-m> <!-- up -->
+      <y-m>  0.775 </y-m> <!-- right         -->
+      <z-m> -0.135 </z-m> <!-- up            -->
       <pitch-deg> -56 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/lever-r.xml</path>
     <offsets>
       <x-m>  0.380 </x-m> <!-- near to panel -->
-      <y-m>  0.775 </y-m> <!-- right -->
-      <z-m> -0.327 </z-m> <!-- up -->
+      <y-m>  0.775 </y-m> <!-- right         -->
+      <z-m> -0.327 </z-m> <!-- up            -->
       <pitch-deg> 18.3 </pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-r.xml</path>
     <offsets>
       <x-m>  0.440 </x-m> <!-- near to panel -->
-      <y-m>  0.705 </y-m> <!-- right -->
-      <z-m> -0.140 </z-m> <!-- up -->
+      <y-m>  0.705 </y-m> <!-- right         -->
+      <z-m> -0.140 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- The leverage for the elevator-Yoke -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/leverage-el.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-el.xml</path>
     <offsets>
       <x-m>  0.650 </x-m> <!-- near to panel -->
-      <y-m>  0.565 </y-m> <!-- right -->
-      <z-m> -0.220 </z-m> <!-- up -->
+      <y-m>  0.565 </y-m> <!-- right         -->
+      <z-m> -0.220 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- The leverage for the  aileron-Yoke -->
   <model>
-    <path>Aircraft/DO-X/Models/Interior/Panel/Yokes/leverage-ai.xml</path>
+    <path>Aircraft/DO-X/Models/Interior/Panel/Pedals/leverage-ai.xml</path>
     <offsets>
       <x-m>  0.650 </x-m> <!-- near to panel -->
-      <y-m>  0.440 </y-m> <!-- right -->
-      <z-m> -0.220 </z-m> <!-- up -->
+      <y-m>  0.440 </y-m> <!-- right         -->
+      <z-m> -0.220 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- TrimWheels --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Trimwheels/trimwheels.xml</path>
     <offsets>
       <x-m>  1.050 </x-m> <!-- near to panel -->
-      <y-m> -0.380 </y-m> <!-- right -->
-      <z-m> 0 </z-m> <!-- up -->
+      <y-m> -0.380 </y-m> <!-- right         -->
+      <z-m>  0.000 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Glasswiper for pilot glass-shader effect --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/More/glasswiper.xml</path>
     <offsets>
       <x-m> 1.320 </x-m> <!-- near to panel -->
-      <y-m>-1.270 </y-m> <!-- right -->
-      <z-m> 0.600 </z-m> <!-- up -->
+      <y-m>-1.270 </y-m> <!-- right         -->
+      <z-m> 0.600 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- Glasswiper for copilot glass-shader effect --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/More/glasswiper.xml</path>
     <offsets>
       <x-m> 1.320 </x-m> <!-- near to panel -->
-      <y-m> 1.270 </y-m> <!-- right -->
-      <z-m> 0.600 </z-m> <!-- up -->
+      <y-m> 1.270 </y-m> <!-- right         -->
+      <z-m> 0.600 </z-m> <!-- up            -->
     </offsets>
   </model>
-
+  
   <!-- ******************************* PILOT-PANEL **********************************-->
   <!-- Positions on the Panel  -->
   <!--             1           -->
   <!--       2   3   4   5.    -->
   <!--       6.    8     7.    -->
-
+  
   <!-- 1. MAGNETIC COMPASS --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
@@ -302,40 +302,40 @@
       <z-m>  0.565 </z-m>
     </offsets>
   </model>
-
+  
   <!-- 2. SPEED --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
+      <x-m>  0.084 </x-m>
       <y-m> -0.785 </y-m>
       <z-m>  0.455 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 3. VERTICAL SPEED --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m> <!-- near to panel -->
-      <y-m> -0.675 </y-m> <!-- right -->
-      <z-m>  0.455 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
+      <x-m>  0.084 </x-m> <!-- near to panel -->
+      <y-m> -0.675 </y-m> <!-- right         -->
+      <z-m>  0.455 </z-m> <!-- up            -->
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 4. TURN --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
+      <x-m>  0.084 </x-m>
       <y-m> -0.575 </y-m>
       <z-m>  0.455 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 5. HI / KURS Gyro --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/hi/hi.xml</path>
@@ -346,29 +346,29 @@
       <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 6. ALT --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.111 </x-m>
+      <x-m>  0.110 </x-m>
       <y-m> -0.770 </y-m>
       <z-m>  0.325 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 7. AFN --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
     <offsets>
-      <x-m>  0.115 </x-m>
+      <x-m>  0.112 </x-m>
       <y-m> -0.447 </y-m>
       <z-m>  0.308 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 8. Message Board from the Navigator --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/More/msgboard.xml</path>
@@ -379,89 +379,89 @@
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- ****************************** COPILOT-PANEL *********************************-->
   <!-- Positions on the Copilot-Panel -->
   <!--               11            -->
   <!--       12   13   14   15.    -->
   <!--       16.            17.    -->
-
+  
   <!-- 11. MAGNETIC COMPASS --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/compass/compass_magnetic.xml</path>
     <offsets>
-      <x-m>  0.020 </x-m>
-      <y-m>  0.635 </y-m>
-      <z-m>  0.565 </z-m>
+      <x-m> 0.020 </x-m>
+      <y-m> 0.635 </y-m>
+      <z-m> 0.565 </z-m>
     </offsets>
   </model>
-
+  
   <!-- 12. COPILOT CONRTOL FOR FLIGHTGEAR MOUSE PILOTS --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/msctrl/msctrl.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m>  0.447 </y-m>
-      <z-m>  0.455 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.084 </x-m>
+      <y-m> 0.447 </y-m>
+      <z-m> 0.455 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 13. COPILOT TURN --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m>  0.575 </y-m>
-      <z-m>  0.455 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.084 </x-m>
+      <y-m> 0.575 </y-m>
+      <z-m> 0.455 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 14. COPILOT VERTICAL SPEED --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/vario/vario.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m> <!-- near to panel -->
-      <y-m>  0.675 </y-m> <!-- right -->
-      <z-m>  0.455 </z-m> <!-- up -->
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.084 </x-m> <!-- near to panel -->
+      <y-m> 0.675 </y-m> <!-- right         -->
+      <z-m> 0.455 </z-m> <!-- up            -->
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 15. COPILOT SPEED --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m>  0.785 </y-m>
-      <z-m>  0.455 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.084 </x-m>
+      <y-m> 0.785 </y-m>
+      <z-m> 0.455 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 16. COPILOT AFN2 --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/afn2/afn2.xml</path>
     <offsets>
-      <x-m>  0.115 </x-m>
-      <y-m>  0.447 </y-m>
-      <z-m>  0.308 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.112 </x-m>
+      <y-m> 0.447 </y-m>
+      <z-m> 0.308 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- 17. COPILOT ALT --> 
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.111 </x-m>
-      <y-m>  0.770 </y-m>
-      <z-m>  0.325 </z-m>
-      <pitch-deg> -8 </pitch-deg>
+      <x-m> 0.110 </x-m>
+      <y-m> 0.770 </y-m>
+      <z-m> 0.325 </z-m>
+      <pitch-deg> -10 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- ****************************** MIDDLE-(ENGINE-CONTROL)-PANEL *********************************-->
   <!-- Moteurs extérieur gauche avant --> 
   <model>
@@ -470,9 +470,7 @@
       <x-m>  0.245 </x-m>
       <y-m> -0.300 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   <!-- Moteurs extérieur gauche arrière -->
@@ -481,14 +479,12 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.300 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
-
+  
+  
   <!-- Moteur milieu gauche avant -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-2.xml</path>
@@ -496,9 +492,7 @@
       <x-m>  0.245 </x-m>
       <y-m> -0.240 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   <!-- Moteur milieu gauche arrière -->
@@ -507,13 +501,11 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.240 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- Moteur intérieur gauche avant -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-4.xml</path>
@@ -521,9 +513,7 @@
       <x-m>  0.245 </x-m>
       <y-m> -0.180 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   <!-- Moteur intérieur gauche arrière -->
@@ -532,23 +522,19 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m> -0.180 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- Average RPM for the locked (clutch on)  larboard engines -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmL.xml</path>
     <offsets>
-      <x-m>  0.265 </x-m>
+      <x-m>  0.258 </x-m>
       <y-m> -0.075 </y-m>
       <z-m> -0.185 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   
@@ -556,12 +542,10 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/Panel/Instruments/aft-ger/aft-ger.xml</path>
     <offsets>
-      <x-m>  0.280 </x-m>
+      <x-m>  0.273 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.175 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   
@@ -569,12 +553,10 @@
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/rpm/rpmR.xml</path>
     <offsets>
-      <x-m>  0.265 </x-m>
+      <x-m>  0.258 </x-m>
       <y-m>  0.075 </y-m>
       <z-m> -0.185 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   
@@ -585,9 +567,7 @@
       <x-m>  0.245 </x-m>
       <y-m>  0.180 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   
@@ -597,13 +577,11 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.180 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- Moteur milieu droit avant -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-3.xml</path>
@@ -611,9 +589,7 @@
       <x-m>  0.245 </x-m>
       <y-m>  0.240 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   <!-- Moteur milieu droit arrière -->
@@ -622,13 +598,11 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.240 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
+  
   <!-- Moteur extérieur droit avant -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/EngineerPanel/Instruments/clutchctrl/clutchctrl-1.xml</path>
@@ -636,9 +610,7 @@
       <x-m>  0.245 </x-m>
       <y-m>  0.300 </y-m>
       <z-m> -0.170 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
   
@@ -648,14 +620,11 @@
     <offsets>
       <x-m>  0.280 </x-m>
       <y-m>  0.300 </y-m>
-      <z-m> -0.220 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -33 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <z-m> -0.225 </z-m>
+      <pitch-deg> -31 </pitch-deg>
     </offsets>
   </model>
-
-
+  
   <!--************************ Text on the Panel **************************-->
   <text>
     <name>Registration</name>
@@ -675,13 +644,13 @@
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m> 0.117 </x-m> <!-- near to panel -->
-      <y-m> -0.635 </y-m> <!-- right -->
-      <z-m>  0.450 </z-m> <!-- up -->
+      <x-m>  0.117 </x-m> <!-- near to panel -->
+      <y-m> -0.635 </y-m> <!-- right         -->
+      <z-m>  0.450 </z-m> <!-- up            -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
-
+  
   <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
@@ -695,7 +664,7 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelRDF</object-name>
@@ -706,7 +675,7 @@
       <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <!-- Radio Direction Finder on FrontDeck --> 
   <text>
     <name>LabelRDF</name>
@@ -726,11 +695,11 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m> -3.200 </x-m> <!-- near to panel -->
-      <y-m>  0.830 </y-m> <!-- right -->
-      <z-m>  0.570 </z-m> <!-- up -->
+      <y-m>  0.830 </y-m> <!-- right         -->
+      <z-m>  0.570 </z-m> <!-- up            -->
     </offsets>
   </text>
-
+  
   <!-- Fluglage zentral --> 
   <text>
     <name>LabelAI</name>
@@ -750,12 +719,12 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m> -0.410 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.120 </z-m> <!-- up -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m>  0.120 </z-m> <!-- up            -->
       <pitch-deg> -8 </pitch-deg>
     </offsets>
   </text>
-
+  
   <!-- RPM on Middle Panel --> 
   <text>
     <name>LabelMiddle</name>
@@ -775,12 +744,12 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>  0.250 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.082 </z-m> <!-- up -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m>  0.082 </z-m> <!-- up            -->
       <pitch-deg> -15 </pitch-deg>
     </offsets>
   </text>
-
+  
   <!-- Throttle Gear left side of the pilot panel --> 
   <text>
     <name>LabelThrottle</name>
@@ -800,10 +769,9 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>  0.170 </x-m> <!-- near to panel -->
-      <y-m> -0.950 </y-m> <!-- right -->
-      <z-m>  0.450 </z-m> <!-- up -->
+      <y-m> -0.950 </y-m> <!-- right         -->
+      <z-m>  0.450 </z-m> <!-- up            -->
     </offsets>
   </text>
-
+  
 </PropertyList>
-

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>rdf.ac</path>
-
+  
   <!-- Power on switch are always on sight :-) -->
   <animation>
     <type>material</type>
@@ -15,7 +15,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>rdfLamp</object-name>
@@ -27,7 +27,7 @@
       <blue>  0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>ndbLampOut</object-name>
@@ -38,7 +38,7 @@
       <blue>  0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>rdfTab</object-name>
@@ -56,7 +56,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>freqHundred</object-name>
@@ -84,7 +84,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>freqHundredMhz</object-name>
@@ -112,7 +112,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <!-- Interior lighting -->
   <animation>
     <type>material</type>
@@ -156,7 +156,7 @@
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-
+  
   <!-- Power on -->
   <animation>
     <type>select</type>
@@ -168,7 +168,7 @@
       </equals>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>rdfLampOff</object-name>
@@ -179,7 +179,7 @@
       </not-equals>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>ndbLamp</object-name>
@@ -208,7 +208,7 @@
       </and>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>ndbLampOut</object-name>
@@ -253,28 +253,28 @@
       </or>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>ndbLampOff</object-name>
     <condition>
       <or>
-      <not-equals>
-        <property>/instrumentation/rdf/power-on</property>
-        <value>1</value>
-      </not-equals>
-      <not-equals>
-        <property>/instrumentation/adf/power-btn</property>
-        <value>1</value>
-      </not-equals>
-      <not-equals>
-        <property>/instrumentation/rdf/frequency-select-knob</property>
-        <value>0</value>
-      </not-equals>
+        <not-equals>
+          <property>/instrumentation/rdf/power-on</property>
+          <value>1</value>
+        </not-equals>
+        <not-equals>
+          <property>/instrumentation/adf/power-btn</property>
+          <value>1</value>
+        </not-equals>
+        <not-equals>
+          <property>/instrumentation/rdf/frequency-select-knob</property>
+          <value>0</value>
+        </not-equals>
       </or>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>vorLamp</object-name>
@@ -303,7 +303,7 @@
       </and>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>vorLampOut</object-name>
@@ -348,7 +348,7 @@
       </or>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>vorLampOff</object-name>
@@ -369,7 +369,7 @@
       </or>
     </condition>
   </animation>
-
+  
   <!-- On/Off Knob -->
   <animation>
     <type>rotate</type>
@@ -390,7 +390,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>rdfSwitch</object-name>
@@ -405,7 +405,7 @@
       </binding>
     </action>
   </animation>
-
+  
   <!-- NDB / VOR or ILS Switch -->
   <animation>
     <type>rotate</type>
@@ -426,7 +426,7 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>adfVorSwitch</object-name>
@@ -441,7 +441,7 @@
       </binding>
     </action>
   </animation>
-
+  
   <!-- Bearing Knob -->
   <animation>
     <type>rotate</type>
@@ -458,18 +458,13 @@
         <value>1</value>
       </equals>
     </condition>
-    <center>
-      <x-m>  0 </x-m>
-      <y-m>  0 </y-m>
-      <z-m>  0 </z-m>
-    </center>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <!-- scroll the edges of the knob-->
   <animation>
     <type>translate</type>
@@ -482,7 +477,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>rdfTab</object-name>
@@ -494,10 +489,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>0.002777778</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>1</wrap>
+        <step> 0.002777778 </step>
+        <min>  0.000000000 </min>
+        <max>  1.000000000 </max>
+        <wrap> 1.000000000 </wrap>
       </binding>
     </action>
     <action>
@@ -507,14 +502,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>-0.002777778</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>1</wrap>
+        <step> -0.002777778 </step>
+        <min>   0.000000000 </min>
+        <max>   1.000000000 </max>
+        <wrap>  1.000000000 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- scroll the circle of the knob-->
   <animation>
     <type>translate</type>
@@ -527,7 +522,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>rdfTabCircle</object-name>
@@ -539,10 +534,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>0.02777778</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>1</wrap>
+        <step> 0.02777778 </step>
+        <min>  0.00000000 </min>
+        <max>  1.00000000 </max>
+        <wrap> 1.00000000 </wrap>
       </binding>
     </action>
     <action>
@@ -552,14 +547,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/rdf/rotation-deg</property>
-        <step>-0.02777778</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>1</wrap>
+        <step> -0.02777778 </step>
+        <min>   0.00000000 </min>
+        <max>   1.00000000 </max>
+        <wrap>  1.00000000 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- Outer NDB Frequency-circle -->
   <animation>
     <type>rotate</type>
@@ -580,7 +575,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>translate</type>
     <object-name>freqHundred</object-name>
@@ -592,11 +587,11 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
-   <type>pick</type>
-   <object-name>freqHundred</object-name>
-   <visible>true</visible>
+    <type>pick</type>
+    <object-name>freqHundred</object-name>
+    <visible>true</visible>
     <action>
       <name>small decrease (scrollwheel)</name>
       <button>3</button>
@@ -604,10 +599,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
-        <step>-100</step>
-        <min>0</min>
-        <max>2000</max>
-        <wrap>1</wrap>
+        <step> -100 </step>
+        <min>     0 </min>
+        <max>  2000 </max>
+        <wrap>    1 </wrap>
       </binding>
     </action>
     <action>
@@ -617,14 +612,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
-        <step>100</step>
-        <min>0</min>
-        <max>2000</max>
-        <wrap>1</wrap>
+        <step> 100 </step>
+        <min>    0 </min>
+        <max> 2000 </max>
+        <wrap>   1 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- inner NDB Frequency-circle -->
   <animation>
     <type>rotate</type>
@@ -645,7 +640,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>translate</type>
     <object-name>freqTen</object-name>
@@ -657,11 +652,11 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
-   <type>pick</type>
-   <object-name>freqTen</object-name>
-   <visible>true</visible>
+    <type>pick</type>
+    <object-name>freqTen</object-name>
+    <visible>true</visible>
     <action>
       <name>small decrease (scrollwheel)</name>
       <button>3</button>
@@ -669,10 +664,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>2000</max>
-        <wrap>1</wrap>
+        <step>  -1 </step>
+        <min>    0 </min>
+        <max> 2000 </max>
+        <wrap>   1 </wrap>
       </binding>
     </action>
     <action>
@@ -682,14 +677,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
-        <step>1</step>
-        <min>0</min>
-        <max>2000</max>
-        <wrap>1</wrap>
+        <step>   1 </step>
+        <min>    0 </min>
+        <max> 2000 </max>
+        <wrap>   1 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- Outer VOR Frequency-circle -->
   <animation>
     <type>rotate</type>
@@ -710,7 +705,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>translate</type>
     <object-name>freqHundredMhz</object-name>
@@ -722,11 +717,11 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
-   <type>pick</type>
-   <object-name>freqHundredMhz</object-name>
-   <visible>true</visible>
+    <type>pick</type>
+    <object-name>freqHundredMhz</object-name>
+    <visible>true</visible>
     <action>
       <name>small decrease (scrollwheel)</name>
       <button>3</button>
@@ -734,10 +729,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/nav/frequencies/selected-mhz</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>200</max>
-        <wrap>1</wrap>
+        <step> -1 </step>
+        <min>   0 </min>
+        <max> 200 </max>
+        <wrap>  1 </wrap>
       </binding>
     </action>
     <action>
@@ -747,14 +742,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/nav/frequencies/selected-mhz</property>
-        <step>1</step>
-        <min>0</min>
-        <max>200</max>
-        <wrap>1</wrap>
+        <step>  1 </step>
+        <min>   0 </min>
+        <max> 200 </max>
+        <wrap>  1 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- inner VOR Frequency-circle -->
   <animation>
     <type>rotate</type>
@@ -775,7 +770,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>translate</type>
     <object-name>freqDecMhz</object-name>
@@ -787,11 +782,11 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
-   <type>pick</type>
-   <object-name>freqDecMhz</object-name>
-   <visible>true</visible>
+    <type>pick</type>
+    <object-name>freqDecMhz</object-name>
+    <visible>true</visible>
     <action>
       <name>small decrease (scrollwheel)</name>
       <button>3</button>
@@ -799,10 +794,10 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/nav/frequencies/selected-mhz</property>
-        <step>-0.01</step>
-        <min>0</min>
-        <max>200</max>
-        <wrap>1</wrap>
+        <step> -0.01 </step>
+        <min>   0.00 </min>
+        <max> 200.00 </max>
+        <wrap>  1.00 </wrap>
       </binding>
     </action>
     <action>
@@ -812,14 +807,14 @@
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/nav/frequencies/selected-mhz</property>
-        <step>0.01</step>
-        <min>0</min>
-        <max>200</max>
-        <wrap>1</wrap>
+        <step>  0.01 </step>
+        <min>   0.00 </min>
+        <max> 200.00 </max>
+        <wrap>  1.00 </wrap>
       </binding>
     </action>
   </animation>
-
+  
   <!-- Labels activated by hotspots -->
   <animation>
     <type>material</type>
@@ -830,7 +825,7 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>LabelRdfPanel</object-name>
@@ -838,7 +833,7 @@
       <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
+  
   <text>
     <name>LabelRdfPanel</name>
     <type type="string">literal</type>
@@ -857,9 +852,9 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>  0.000 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right -->
-      <z-m>  0.115 </z-m> <!-- up -->
+      <y-m>  0.000 </y-m> <!-- right         -->
+      <z-m>  0.115 </z-m> <!-- up            -->
     </offsets>
   </text>
-
+  
 </PropertyList>

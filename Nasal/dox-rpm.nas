@@ -51,4 +51,3 @@ var updateRPM = func{
 }
 
 updateRPM();
-
