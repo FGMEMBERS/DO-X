@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <sim include="Systems/views-copilot.xml">
+    
+    <description>Dornier Do X - Copilot</description>
+    <author>Emmanuel BARANGER (3D/FDM), Marc KRAUS (Interior 3D/Multiplayer), Pierre GEOFFROY (FDM)</author>
+    <aircraft-version>0.3.0</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model>null</flight-model>
+    <aero>DO-X</aero>
+    
+    <startup>
+      <splash-texture>Aircraft/DO-X/dox-splash.png</splash-texture>
+    </startup>
+    
+    <sound>
+      <audible>true</audible>
+      <path archive="y">Aircraft/DO-X/Sounds/dox-copilot-sound.xml</path>
+    </sound>
+    
+    <model>
+      <path>Aircraft/DO-X/Models/dox-copilot.xml</path>
+    </model>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int n="0" alias="/instrumentation/rdf/power-on">0</int>                <!-- Power-on of the RDF for MP/Pilot -->
+        <int n="1" alias="/instrumentation/rdf/frequency-select-knob">0</int>   <!-- Select NDB or VOR of the RDF for MP/Pilot -->
+        <int n="2" alias="/instrumentation/adf/frequencies/selected-khz">0</int>            <!-- Frequency of ADF for MP/Pilot -->
+        <float n="0" alias="/instrumentation/rdf/rotation-deg">0</float>          <!-- 0 Aileron direction for MP/Pilot -->
+        <float n="1" alias="/instrumentation/nav/frequencies/selected-mhz">0</float>       <!-- Frequency of NAV for MP/Pilot -->
+        <string n="0" alias="/instrumentation/rdf/message-to-pilot"></string>    <!-- MP heading-correction message for the pilot -->
+      </generic>
+    </multiplay>
+    
+    <controls>
+      <generic>
+        <int type="bool" n="29" alias="/controls/glass-effect"/>
+        <int type="double" n="30" alias="/controls/engines/throttle-pilot-left"/>
+        <int type="double" n="31" alias="/controls/engines/throttle-pilot-right"/>
+        <int n="32" alias="/instrumentation/afn2/markeron"/>
+        <int type="double" n="33" alias="/instrumentation/afn2/heading-correction"/>
+        <int type="double" n="34" alias="/instrumentation/afn2/distance"/>
+        <int n="35" alias="/controls/anchor"/>
+        <int type="bool"   n="36" alias="/instrumentation/rdf/headset/enabled"/>
+        <int type="bool"   n="37" alias="/instrumentation/rdf/headset/atc-enabled"/>
+        <int type="double" n="38" alias="/instrumentation/rdf/headset/atc-volume"/>
+        <int type="bool"   n="39" alias="/instrumentation/rdf/headset/avionics-enabled"/>
+        <int type="double" n="40" alias="/instrumentation/rdf/headset/avionics-volume"/>
+        <int type="bool"   n="41" alias="/instrumentation/rdf/headset/chatter-enabled"/>
+        <int type="double" n="42" alias="/instrumentation/rdf/headset/chatter-volume"/>
+        <int type="bool"   n="43" alias="/instrumentation/rdf/headset/effects-enabled"/>
+        <int type="double" n="44" alias="/instrumentation/rdf/headset/effects-volume"/>
+        <int type="bool"   n="45" alias="/instrumentation/rdf/headset/master-enabled"/>
+        <int type="double" n="46" alias="/instrumentation/rdf/headset/master-volume"/>
+        <int type="bool"   n="47" alias="/instrumentation/rdf/headset/adf-ident-audible"/>
+        <int type="double" n="48" alias="/instrumentation/rdf/headset/adf-volume-norm"/>
+        <int type="bool"   n="49" alias="/instrumentation/rdf/headset/nav-audio-btn"/>
+        <int type="double" n="50" alias="/instrumentation/rdf/headset/nav-volume"/>
+      </generic>
+    </controls>
+    
+    <help include="Systems/help-copilot.xml"/>
+    
+    <menubar include="Dialogs/dox-copilot-menu.xml"/>
+    
+  </sim>
+  
+  <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
+  <controls>
+    <engines>
+      <throttle-pilot-left type="double">0.0</throttle-pilot-left>
+      <throttle-pilot-right type="double">0.0</throttle-pilot-right>
+      <helpengine-lever type="double">0.5</helpengine-lever>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="4">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="5">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="6">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="7">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="8">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="9">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="10">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="11">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+    
+    <lighting>
+      <panel type="bool">1</panel>
+      <navigationcabin type="bool">1</navigationcabin>
+      <engineerpanel type="bool">1</engineerpanel>
+      <radiocabin type="bool">1</radiocabin>
+      <helpenginecabin type="bool">1</helpenginecabin>
+      <brightness type="double">1.0</brightness>
+    </lighting>
+    
+    <glass-effect type="bool">1</glass-effect>
+    
+  </controls>
+  
+  <input>
+    <keyboard include="Systems/dox-keyboard-copilot.xml"/>
+  </input>
+  
+  <instrumentation>
+    <rdf>
+      <power-on>0</power-on>
+      <frequency-select-knob>0</frequency-select-knob>
+      <headset>
+        <enabled type="bool">0</enabled>
+        <!-- properties swap if pilot fit headset -->
+        <atc-enabled type="bool">1</atc-enabled>
+        <atc-volume type="double">0.7</atc-volume>
+        <avionics-enabled type="bool">1</avionics-enabled>
+        <avionics-volume type="double">1.0</avionics-volume>
+        <chatter-enabled type="bool">0</chatter-enabled>
+        <chatter-volume type="double">0.0</chatter-volume>
+        <effects-enabled type="bool">1</effects-enabled>
+        <effects-volume type="double">0.08</effects-volume>
+        <master-enabled type="bool">1</master-enabled>
+        <master-volume type="double">0.7</master-volume>
+        <adf-ident-audible type="bool">1</adf-ident-audible>
+        <adf-volume-norm type="double">0.7</adf-volume-norm>
+        <nav-audio-btn type="bool">1</nav-audio-btn>
+        <nav-volume type="double">0.7</nav-volume>
+      </headset>
+    </rdf>
+    <adf>
+      <power-btn type="bool">0</power-btn>
+    </adf>
+  </instrumentation>
+  
+  <nasal>
+    <dox>
+      <file>Aircraft/DO-X/Nasal/dox.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-copilot.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-rdf.nas</file>
+    </dox>
+    <dual_control_tools>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Aircraft/DO-X/Nasal/dox-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+  
+</PropertyList>

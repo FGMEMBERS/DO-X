@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>Dornier Do X</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">dox-yasim</aero>
+    <type type="string">seaplane</type>
+    <author>Emmanuel BARANGER (3D/FDM), Marc KRAUS (Interior 3D/Multiplayer), Pierre GEOFFROY (FDM)</author>
+    <aircraft-version>0.3.0</aircraft-version>
+    <status>Alpha</status>
+
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 4 </systems>
+      <cockpit type="int"> 4 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/DO-X/dox-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/DO-X/Sounds/dox-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/DO-X/Models/dox.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!-- 5 immat -->
+        <int type="int" n="7">  0 </int>                                           <!-- 7 color -->
+        <int type="int" n="9" alias="/controls/electric/key-pos">  0 </int>        <!-- 9 key position -->
+        <int type="int" n="10"> 0 </int>                                           <!-- 10 average-rpm-L -->
+        <int type="int" n="11"> 0 </int>                                           <!-- 11 average-rpm-R -->
+        <int type="int" n="12" alias="/controls/anchor"> 0 </int>                  <!-- 12 anchor -->
+        <int type="int" n="13" alias="/instrumentation/afn2/markeron"> 0 </int>    <!-- 13 AFN2 maker -->
+        <int type="bool" n="16" alias="/controls/lighting/nav-lights">  0 </int>   <!-- 16 nav-lights -->
+        <int type="bool" n="17" alias="/controls/lighting/landing-lights"> 0 </int><!-- 17 landing-lights -->
+        <int type="double" n="18" alias="/sim/model/lights/beacon/state"> 0 </int> <!-- 18 beacon-lights -->
+        <int type="double" n="19" alias="/sim/model/lights/strobe/state"> 0 </int> <!-- 19 strobe-lights -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                     <!-- 2 altitude for MP shadow -->
+        <float n="3" alias="/instrumentation/rdf/rotation-deg">0</float>           <!-- 3 Aileron direction for MP -->
+        <float n="4" alias="/instrumentation/afn2/heading-correction">  0 </float> <!-- 4 AFN2 heading-correction for MP -->
+        <float n="5" alias="/instrumentation/afn2/distance">0</float>              <!-- 5 AFN2 distance for MP -->
+        <float n="6" alias="/instrumentation/vertical-speed-indicator/indicated-speed-fpm">0</float>  <!-- 6 Vertical Speed for MP -->
+        <float n="7" alias="/instrumentation/slip-skid-ball/indicated-slip-skid">0</float>            <!-- 7 slip-skid ball in turn instrument for MP -->
+        <float n="8" alias="/instrumentation/turn-indicator/indicated-turn-rate">0</float>            <!-- 8 turn rate for MP -->
+        <float n="9" alias="/instrumentation/magnetic-compass/indicated-heading-deg">0</float>        <!-- 9 magnetic Compass for MP -->
+        <float n="10" alias="/controls/engines/throttle-pilot-right">0</float>        <!-- 10 throttle gear right for MP -->
+        <float n="11" alias="/controls/engines/throttle-pilot-left">0</float>         <!-- 11 throttle gear left for MP -->
+      </generic>
+    </multiplay>
+
+
+    <controls>
+      <generic>
+        <int type="double" n="1" alias="/controls/engines/throttle-pilot-left"/>
+        <int type="double" n="2" alias="/controls/engines/throttle-pilot-right"/>
+        <int type="double" n="3" alias="/controls/engines/helpengine-lever"/>
+        <int type="double" n="4" alias="/controls/anchor-lat"/>
+        <int type="double" n="5" alias="/controls/anchor-lon"/>
+        <int type="bool"   n="6" alias="/controls/anchor"/>
+        <int type="bool"   n="7" alias="/controls/lighting/panel"/>
+        <int type="bool"   n="8" alias="/controls/lighting/navigationcabin"/>
+        <int type="bool"   n="9" alias="/controls/lighting/engineerpanel"/>
+        <int type="bool"   n="10" alias="/controls/lighting/radiocabin"/>
+        <int type="bool"   n="11" alias="/controls/lighting/helpenginecabin"/>
+        <int type="bool"   n="12" alias="/controls/lighting/brightness"/>
+        <int type="bool"   n="13" alias="/controls/glass-effect"/>
+        <int n="14" alias="/instrumentation/rdf/power-on"/>
+        <int n="15" alias="/instrumentation/rdf/frequency-select-knob"/>
+        <int type="double" n="16" alias="/instrumentation/afn2/heading-correction"/>
+        <int n="17" alias="/instrumentation/afn2/markeron"/>
+        <int type="double" n="18" alias="/instrumentation/afn2/distance"/>
+        <int type="bool"   n="19" alias="/instrumentation/rdf/headset/enabled"/>
+        <int type="bool"   n="20" alias="/instrumentation/rdf/headset/atc-enabled"/>
+        <int type="double" n="21" alias="/instrumentation/rdf/headset/atc-volume"/>
+        <int type="bool"   n="22" alias="/instrumentation/rdf/headset/avionics-enabled"/>
+        <int type="double" n="23" alias="/instrumentation/rdf/headset/avionics-volume"/>
+        <int type="bool"   n="24" alias="/instrumentation/rdf/headset/chatter-enabled"/>
+        <int type="double" n="25" alias="/instrumentation/rdf/headset/chatter-volume"/>
+        <int type="bool"   n="26" alias="/instrumentation/rdf/headset/effects-enabled"/>
+        <int type="double" n="27" alias="/instrumentation/rdf/headset/effects-volume"/>
+        <int type="bool"   n="28" alias="/instrumentation/rdf/headset/master-enabled"/>
+        <int type="double" n="29" alias="/instrumentation/rdf/headset/master-volume"/>
+        <int type="bool"   n="30" alias="/instrumentation/rdf/headset/adf-ident-audible"/>
+        <int type="double" n="31" alias="/instrumentation/rdf/headset/adf-volume-norm"/>
+        <int type="bool"   n="32" alias="/instrumentation/rdf/headset/nav-audio-btn"/>
+        <int type="double" n="33" alias="/instrumentation/rdf/headset/nav-volume"/>
+        <string n="0" type="string" alias="/instrumentation/rdf/message-to-pilot"/> <!-- From the Navigation Officer dox-rdf.nas-->
+      </generic>
+    </controls>
+
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/dox-menu.xml"/>
+
+  </sim>
+
+  <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
+  <controls>
+    <engines>
+      <throttle-pilot-left type="double">0.0</throttle-pilot-left>
+      <throttle-pilot-right type="double">0.0</throttle-pilot-right>
+      <helpengine-lever type="double">0.5</helpengine-lever>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="4">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="5">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="6">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="7">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="8">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="9">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="10">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="11">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+
+    <lighting>
+      <panel type="bool">0</panel>
+      <navigationcabin type="bool">0</navigationcabin>
+      <engineerpanel type="bool">0</engineerpanel>
+      <radiocabin type="bool">0</radiocabin>
+      <helpenginecabin type="bool">0</helpenginecabin>
+      <brightness type="double">1.0</brightness>
+    </lighting>
+
+    <glass-effect type="bool">1</glass-effect>
+
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="1">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="2">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="3">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="4">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="5">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="6">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="7">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="8">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="9">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="10">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+    <engine n="11">
+      <rpm>50</rpm>
+      <clutch type="bool">1</clutch>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Systems/dox-keyboard.xml"/>
+  </input>
+
+  <instrumentation>
+    <rdf>
+      <power-on type="bool">0</power-on>
+      <frequency-select-knob type="bool">0</frequency-select-knob>
+      <headset>
+        <enabled type="bool">0</enabled>
+        <!-- properties swap if pilot fit headset -->
+        <atc-enabled type="bool">1</atc-enabled>
+        <atc-volume type="double">0.7</atc-volume>
+        <avionics-enabled type="bool">1</avionics-enabled>
+        <avionics-volume type="double">1.0</avionics-volume>
+        <chatter-enabled type="bool">0</chatter-enabled>
+        <chatter-volume type="double">0.0</chatter-volume>
+        <effects-enabled type="bool">1</effects-enabled>
+        <effects-volume type="double">0.08</effects-volume>
+        <master-enabled type="bool">1</master-enabled>
+        <master-volume type="double">0.7</master-volume>
+        <adf-ident-audible type="bool">1</adf-ident-audible>
+        <adf-volume-norm type="double">0.7</adf-volume-norm>
+        <nav-audio-btn type="bool">1</nav-audio-btn>
+        <nav-volume type="double">0.7</nav-volume>
+      </headset>
+    </rdf>
+    <adf>
+      <power-btn type="bool">0</power-btn>
+    </adf>
+    <afn2>
+      <heading-correction>0.0</heading-correction>
+      <distance>0.0</distance>
+      <markeron type="bool">0</markeron>
+    </afn2>
+  </instrumentation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/DO-X/Nasal/doors.nas</file>
+    </doors>
+    <dox>
+      <file>Aircraft/DO-X/Nasal/dox.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-anchor.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-lights.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-clutch.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-helpengine.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-menu.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-oil.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-rdf.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-rpm.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-starter.nas</file>
+      <file>Aircraft/DO-X/Nasal/dox-afn2.nas</file>
+      <file>Aircraft/DO-X/Nasal/immat.nas</file>
+      <file>Aircraft/DO-X/Nasal/liveries.nas</file>
+    </dox>
+    <!-- Dual control. -->
+    <dual_control_tools>
+     <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+     <file>Aircraft/DO-X/Nasal/dox-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+     <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+
+  <!-- Dual control depend on this value -->
+  <fdm>
+    <yasim>
+      <fcs>
+        <dual-control>
+          <enabled type="bool">0</enabled>
+        </dual-control>
+      </fcs>
+    </yasim>
+  </fdm>
+  
+</PropertyList>
+

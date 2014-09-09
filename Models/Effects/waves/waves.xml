@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Tail -->
+  <model>
+    <path>Aircraft/DO-X/Models/Effects/waves/tail.xml</path>
+    <offsets>
+      <x-m> 12 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> -4 </z-m>
+    </offsets>
+  </model> 
+
+</PropertyList>
