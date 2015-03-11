@@ -16,3 +16,4 @@ var helpEngControl = func(scale) {
     scrollGear((scale * 2),"controls/lighting/brightness");
   }
 }
+

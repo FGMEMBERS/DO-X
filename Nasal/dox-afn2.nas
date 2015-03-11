@@ -7,12 +7,12 @@ var afn2Direction = func{
   
   if (state.getValue() == 1){
 
-    var th = getprop("/orientation/heading-magnetic-deg");
-    var navh = getprop("/instrumentation/nav/heading-deg");
-    var dis = getprop("/instrumentation/nav/nav-distance");
+    var th = getprop("/orientation/heading-magnetic-deg") or 0;
+    var navh = getprop("/instrumentation/nav/heading-deg") or 0;
+    var dis = getprop("/instrumentation/nav/nav-distance") or 0;
     var gs = getprop("/instrumentation/nav/gs-in-range");
-    var gsDis = getprop("/instrumentation/nav/gs-distance");
-    var gearAglM = getprop("/position/gear-agl-m");
+    var gsDis = getprop("/instrumentation/nav/gs-distance") or 0;
+    var gearAglM = getprop("/position/gear-agl-m") or 0;
 
     # Heading correction
     var rotDiff = navh - th;
@@ -59,6 +59,7 @@ var afn2Direction = func{
   settimer(afn2Direction, 0);
 
 };
+
 
 #fire it up
 afn2Direction();

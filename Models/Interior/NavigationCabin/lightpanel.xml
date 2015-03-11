@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -50,7 +50,7 @@
     <object-name>sign</object-name>
       <condition>
         <equals>
-          <property>controls/lighting/navigationcabin</property>
+          <property>/controls/lighting/navigationcabin</property>
           <value>1</value>
         </equals>
       </condition>
@@ -68,7 +68,7 @@
     <object-name>panelLamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/panel</property>
+        <property>/controls/lighting/panel</property>
         <value>1</value>
       </equals>
     </condition>
@@ -79,7 +79,7 @@
     <object-name>panelLampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/panel</property>
+        <property>/controls/lighting/panel</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -88,7 +88,7 @@
  <animation>
    <type>rotate</type>
    <object-name>panelSwitch</object-name>
-   <property>controls/lighting/panel</property>
+   <property>/controls/lighting/panel</property>
    <factor>-25</factor>
    <axis>
      <x>0.0</x>
@@ -111,7 +111,7 @@
      <repeatable>false</repeatable>
      <binding>
        <command>property-toggle</command>
-       <property>controls/lighting/panel</property>
+       <property>/controls/lighting/panel</property>
      </binding>
    </action>
  </animation>
@@ -122,7 +122,7 @@
     <object-name>navLamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/navigationcabin</property>
+        <property>/controls/lighting/navigationcabin</property>
         <value>1</value>
       </equals>
     </condition>
@@ -133,7 +133,7 @@
     <object-name>navLampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/navigationcabin</property>
+        <property>/controls/lighting/navigationcabin</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -142,7 +142,7 @@
  <animation>
    <type>rotate</type>
    <object-name>navSwitch</object-name>
-   <property>controls/lighting/navigationcabin</property>
+   <property>/controls/lighting/navigationcabin</property>
    <factor>-25</factor>
    <axis>
      <x>0.0</x>
@@ -165,7 +165,7 @@
      <repeatable>false</repeatable>
      <binding>
        <command>property-toggle</command>
-       <property>controls/lighting/navigationcabin</property>
+       <property>/controls/lighting/navigationcabin</property>
      </binding>
    </action>
  </animation>
@@ -176,7 +176,7 @@
     <object-name>engineerLamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/engineerpanel</property>
+        <property>/controls/lighting/engineerpanel</property>
         <value>1</value>
       </equals>
     </condition>
@@ -187,7 +187,7 @@
     <object-name>engineerLampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/engineerpanel</property>
+        <property>/controls/lighting/engineerpanel</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -196,7 +196,7 @@
  <animation>
    <type>rotate</type>
    <object-name>engineerSwitch</object-name>
-   <property>controls/lighting/engineerpanel</property>
+   <property>/controls/lighting/engineerpanel</property>
    <factor>-25</factor>
    <axis>
      <x>0.0</x>
@@ -219,7 +219,7 @@
      <repeatable>false</repeatable>
      <binding>
        <command>property-toggle</command>
-       <property>controls/lighting/engineerpanel</property>
+       <property>/controls/lighting/engineerpanel</property>
      </binding>
    </action>
  </animation>
@@ -230,7 +230,7 @@
     <object-name>radioLamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/radiocabin</property>
+        <property>/controls/lighting/radiocabin</property>
         <value>1</value>
       </equals>
     </condition>
@@ -241,7 +241,7 @@
     <object-name>radioLampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/radiocabin</property>
+        <property>/controls/lighting/radiocabin</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -250,7 +250,7 @@
  <animation>
    <type>rotate</type>
    <object-name>radioSwitch</object-name>
-   <property>controls/lighting/radiocabin</property>
+   <property>/controls/lighting/radiocabin</property>
    <factor>-25</factor>
    <axis>
      <x>0.0</x>
@@ -273,7 +273,7 @@
      <repeatable>false</repeatable>
      <binding>
        <command>property-toggle</command>
-       <property>controls/lighting/radiocabin</property>
+       <property>/controls/lighting/radiocabin</property>
      </binding>
    </action>
  </animation>
@@ -284,7 +284,7 @@
     <object-name>helpengineLamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/helpenginecabin</property>
+        <property>/controls/lighting/helpenginecabin</property>
         <value>1</value>
       </equals>
     </condition>
@@ -295,7 +295,7 @@
     <object-name>helpengineLampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/helpenginecabin</property>
+        <property>/controls/lighting/helpenginecabin</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -304,13 +304,18 @@
  <animation>
    <type>rotate</type>
    <object-name>helpengineSwitch</object-name>
-   <property>controls/lighting/helpenginecabin</property>
+   <property>/controls/lighting/helpenginecabin</property>
    <factor>-25</factor>
    <axis>
-     <x> 0 </x>
-     <y> 1 </y>
-     <z> 0 </z>
+     <x>0.0</x>
+     <y>1.0</y>
+     <z>0.0</z>
    </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
  </animation>
 
  <animation>
@@ -322,7 +327,7 @@
      <repeatable>false</repeatable>
      <binding>
        <command>property-toggle</command>
-       <property>controls/lighting/helpenginecabin</property>
+       <property>/controls/lighting/helpenginecabin</property>
      </binding>
    </action>
  </animation>

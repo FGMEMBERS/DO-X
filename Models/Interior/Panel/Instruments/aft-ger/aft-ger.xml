@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -12,12 +12,6 @@
     <object-name>glas_tube</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/DO-X/Models/Effects/Glass/glass</inherits-from>
-    <object-name>glas_tube</object-name>
-  </effect>
-  
   <animation> 
     <type>scale</type>
     <object-name>spirit_column</object-name>
@@ -43,9 +37,9 @@
     <object-name>spirit_column</object-name>
     <object-name>glas_tube</object-name>
     <emission>
-      <red>   1 </red>
+      <red> 1 </red>
       <green> 1 </green>
-      <blue>  1 </blue>
+      <blue> 1 </blue>
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
@@ -100,8 +94,8 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>  0.010 </x-m> <!-- near to panel -->
-      <y-m>  0.000 </y-m> <!-- right         -->
-      <z-m>  0.065 </z-m> <!-- up            -->
+      <y-m>  0.000 </y-m> <!-- right -->
+      <z-m>  0.065 </z-m> <!-- up -->
     </offsets>
   </text>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -47,11 +47,11 @@
     <condition>
       <and>
         <equals>
-          <property>engines/engine[10]/running</property>
+          <property>/engines/engine[10]/running</property>
           <value>1</value>
         </equals>
         <equals>
-          <property>engines/engine[10]/clutch</property>
+          <property>/engines/engine[10]/clutch</property>
           <value>1</value>
         </equals>
       </and>
@@ -64,11 +64,11 @@
     <condition>
       <and>
         <equals>
-          <property>engines/engine[10]/running</property>
+          <property>/engines/engine[10]/running</property>
           <value>1</value>
         </equals>
         <less-than>
-          <property>engines/engine[10]/clutch</property>
+          <property>/engines/engine[10]/clutch</property>
           <value>1</value>
         </less-than>
       </and>
@@ -80,10 +80,11 @@
     <object-name>LampEngineOff</object-name>
     <condition>
       <equals>
-        <property>engines/engine[10]/running</property>
+        <property>/engines/engine[10]/running</property>
         <value>0</value>
       </equals>
     </condition>
   </animation>
 
 </PropertyList>
+

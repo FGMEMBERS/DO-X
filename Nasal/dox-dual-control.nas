@@ -2,8 +2,9 @@
 ##
 ##  Nasal for dual control of the DO-X over the multiplayer network.
 ##
-##  Stolen and modify by Marc Kraus (info(at)marc-kraus.de) from
+##  Stolen from
 ##  Copyright (C) 2008 - 2010  Anders Gidenstam  (anders(at)gidenstam.org)
+##  and modify by Marc Kraus (info(at)marc-kraus.de)
 ##  This file is licensed under the GPL license version 2 or later
 ##
 ###############################################################################
@@ -260,3 +261,4 @@ var copilot_alias_aimodel = func(pilot) {
     setprop(l_dual_control, 1); # set in copilots "fdm/yasim/fcs/dual-control/enabled"
 
 }
+

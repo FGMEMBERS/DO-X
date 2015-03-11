@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Dornier Do X Emmanuel BARANGER
                   Pierre GEOFFROY
-                  
-    Source       : http://en.wikipedia.org/wiki/Dornier_Do_X
 
     Wingspan     : 157 ft 5 in (48 m)
     lenght       : 134 ft 2 in (41 m)
@@ -13,7 +11,7 @@
     Cruise speed : 109 mph     (175 km/h)
     Max speed    : 131 mph     (210 km/h)
 -->
-<airplane mass="62280" version="YASIM_VERSION_CURRENT">
+<airplane mass="62280">
 
   <approach speed="55" aoa="7">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
@@ -523,6 +521,19 @@
         spring-factor-not-planing="0.7">
         <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0=".25" dst1="-.25"/>
   </gear>
+
+  <!--thruster turn on the towel -->
+  <thruster x="-4.0" y="0.0" z="-3.0" 
+            vx="0" vy="1.0" vz="0"
+            thrust="5000">
+            <control-input axis="/controls/special/towel" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+  </thruster>
+
+  <thruster x="4.0" y="-40.0" z="-3.0" 
+            vx="0" vy="-1.0" vz="0"
+            thrust="5000">
+            <control-input axis="/controls/special/towel" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+  </thruster>
 
   <tank x="7.5" y="0" z="-1.5" capacity="5258"/>
   <tank x="7.5" y="0" z="-1.5" capacity="5258"/>

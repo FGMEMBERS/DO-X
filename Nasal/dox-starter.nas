@@ -100,48 +100,84 @@ var startEngines = func{
   if(!r4) {
     switchEngine(4);
     return
+  }else{
+    setprop("/controls/engines/engine[4]/starter", 0);
+    setprop("/controls/engines/engine[4]/cranking", 0);
   }
   if(!r5) {
     switchEngine(5);
+  }else{
+    setprop("/controls/engines/engine[5]/starter", 0);
+    setprop("/controls/engines/engine[5]/cranking", 0);
   }
   if(!r10) {
     switchEngine(10);
     return
+  }else{
+    setprop("/controls/engines/engine[10]/starter", 0);
+    setprop("/controls/engines/engine[10]/cranking", 0);
   }
   if(!r11) {
     switchEngine(11);
     return
+  }else{
+    setprop("/controls/engines/engine[11]/starter", 0);
+    setprop("/controls/engines/engine[11]/cranking", 0);
   }
   if(!r2) {
     switchEngine(2);
     return
+  }else{
+    setprop("/controls/engines/engine[2]/starter", 0);
+    setprop("/controls/engines/engine[2]/cranking", 0);
   }
   if(!r3) {
     switchEngine(3);
     return
+  }else{
+    setprop("/controls/engines/engine[3]/starter", 0);
+    setprop("/controls/engines/engine[3]/cranking", 0);
   }
   if(!r8) {
     switchEngine(8);
+  }else{
+    setprop("/controls/engines/engine[8]/starter", 0);
+    setprop("/controls/engines/engine[8]/cranking", 0);
   }
   if(!r9) {
     switchEngine(9);
     return
+  }else{
+    setprop("/controls/engines/engine[9]/starter", 0);
+    setprop("/controls/engines/engine[9]/cranking", 0);
   }
   if(!r0) {
     switchEngine(0);
     return
+  }else{
+    setprop("/controls/engines/engine[0]/starter", 0);
+    setprop("/controls/engines/engine[0]/cranking", 0);
   }
   if(!r1) {
     switchEngine(1);
     return
+  }else{
+    setprop("/controls/engines/engine[1]/starter", 0);
+    setprop("/controls/engines/engine[1]/cranking", 0);
   }
   if(!r6) {
     switchEngine(6);
     return
+  }else{
+    setprop("/controls/engines/engine[6]/starter", 0);
+    setprop("/controls/engines/engine[6]/cranking", 0);
   }
   if(!r7) {
     switchEngine(7);
     return
+  }else{
+    setprop("/controls/engines/engine[7]/starter", 0);
+    setprop("/controls/engines/engine[7]/cranking", 0);
   }
 }
 

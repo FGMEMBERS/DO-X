@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -149,7 +149,7 @@
     </axis>
   </animation>
 
-  <!--épaule-->
+  <!--epaule-->
   <animation>
     <type>rotate</type>
     <object-name>avantbrasG</object-name>
@@ -198,7 +198,7 @@
   </animation>
     
   <!-- Tourner le volant-->
-  <!--épaule gauche-->
+  <!--epaule gauche-->
   <animation>
     <type>rotate</type>
     <object-name>avantbrasG</object-name>
@@ -221,7 +221,7 @@
     </axis>
   </animation>
 
-  <!--épaule droite-->
+  <!--epaule droite-->
   <animation>
     <type>rotate</type>
     <object-name>avantbrasD</object-name>
@@ -244,7 +244,7 @@
     </axis>
   </animation>
   
- <!-- Pédales--> 
+ <!-- Pedales--> 
   <!--gauche-->
   <animation>
     <type>rotate</type>
@@ -356,3 +356,4 @@
   </animation>
   
 </PropertyList>
+

@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite" rgb 0.8 0.8 0.8 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0
 OBJECT world
 kids 1
 OBJECT poly
@@ -8,8 +8,7 @@ loc -0.002408 -0.011023 0.045107
 data 6
 pencil
 texture "radio_nav.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texrep 1 1
 numvert 26
 0 -0.00552 0.025194
 0.004781 -0.00276 0.025194
@@ -30,7 +29,7 @@ numvert 26
 0.000454 0.000262 0.047827
 0.000454 -0.000262 0.047827
 0 -0.000524 0.047827
-0 0 -0.13915
+0 -0 -0.13915
 -0.003925 -0.002266 -0.13915
 -0.003925 0.002266 -0.13915
 0 0.004532 -0.13915

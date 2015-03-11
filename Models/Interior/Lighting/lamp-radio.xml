@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -11,7 +11,7 @@
     <object-name>shield</object-name>
       <condition>
         <not-equals>
-          <property>controls/lighting/radiocabin</property>
+          <property>/controls/lighting/radiocabin</property>
           <value>1</value>
         </not-equals>
       </condition>
@@ -29,14 +29,14 @@
     <object-name>shield</object-name>
       <condition>
         <equals>
-          <property>controls/lighting/radiocabin</property>
+          <property>/controls/lighting/radiocabin</property>
           <value>1</value>
         </equals>
       </condition>
     <emission>
-      <red>   2 </red>
-      <green> 2 </green>
-      <blue>  2 </blue>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
@@ -46,7 +46,7 @@
     <object-name>lamp</object-name>
     <condition>
       <equals>
-        <property>controls/lighting/radiocabin</property>
+        <property>/controls/lighting/radiocabin</property>
         <value>1</value>
       </equals>
     </condition>
@@ -57,7 +57,7 @@
     <object-name>lampOff</object-name>
     <condition>
       <not-equals>
-        <property>controls/lighting/radiocabin</property>
+        <property>/controls/lighting/radiocabin</property>
         <value>1</value>
       </not-equals>
     </condition>
@@ -67,28 +67,38 @@
     <type>rotate</type>
     <property>/orientation/roll-deg</property>
     <interpolation>
-      <entry><ind> -90 </ind><dep> -90 </dep></entry>
-      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind>-90.0</ind><dep>-90.0</dep></entry>
+      <entry><ind> 90.0</ind><dep> 90.0</dep></entry>
     </interpolation>
     <axis>
-      <x> 1 </x>
-      <y> 0 </y>
-      <z> 0 </z>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
     </axis>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
   </animation>
 
   <animation>
     <type>rotate</type>
     <property>/orientation/pitch-deg</property>
     <interpolation>
-      <entry><ind> -90 </ind><dep> -90 </dep></entry>
-      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind>-90.0</ind><dep>-90.0</dep></entry>
+      <entry><ind> 90.0</ind><dep> 90.0</dep></entry>
     </interpolation>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
     </axis>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
   </animation>
 
 </PropertyList>

@@ -1,8 +1,9 @@
 # DO X 
 #
-# set up menu dialogs
+#	set up menu dialogs
 #
 # stolen from Gary Neely aka 'Buckaroo's Lockheed 1049h
+
 
 DoxMain = {};
 
@@ -28,6 +29,7 @@ DOXL = setlistener("/sim/signals/fdm-initialized", func {
   }
 );
 
+
 # Change view to 
 var changeView = func (n){
   var actualView = props.globals.getNode("/sim/current-view/view-number", 1);
@@ -37,3 +39,11 @@ var changeView = func (n){
     actualView.setValue(n);
   }
 }
+
+# help on water control the rudder with turn thruster
+setlistener("/controls/flight/rudder", func(r) {
+    var r = r.getValue() or 0;
+    var a = getprop("/position/altitude-agl-ft") or 0;
+    if (a < 15) setprop("/controls/special/towel", r * 0.8);
+}, 0, 1);
+

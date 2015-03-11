@@ -1,15 +1,14 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite" rgb 0.8 0.8 0.8 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "cable"
-loc 0.502315 0 -0
+loc 0.502315 -0 -0
 data 5
 cable
 texture "headset.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texrep 1 1
 numvert 113
 -0.710312 0.123307 -0.374165
 -0.710241 0.121153 -0.375137
@@ -908,8 +907,7 @@ loc 0 0 -0
 data 7
 headset
 texture "headset.png"
-texrep 1.000000 1.000000
-crease 180.000005
+texrep 1 1
 numvert 852
 0.081768 0.031417 -0.075702
 -0.092041 0.036284 -0.075647

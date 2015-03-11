@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-  
+
   <path>compass-big.ac</path>
-  
+
   <animation>
     <object-name>fond</object-name>
     <object-name>visses</object-name>
@@ -12,29 +12,30 @@
     <object-name>face</object-name>
     <object-name>face2</object-name>
     <object-name>needle</object-name>
-    
+
     <object-name>vitre</object-name>
   </animation>
-  
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/DO-X/Models/Effects/Glass/glass</inherits-from>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
-  </effect>
-  
+  </animation>
+
   <animation>
     <type>material</type>
     <object-name>face</object-name>
     <object-name>face2</object-name>
     <object-name>needle</object-name>
     <emission>
-      <red>   1 </red>
+      <red> 1 </red>
       <green> 1 </green>
-      <blue>  1 </blue>
+      <blue> 1 </blue>
       <factor-prop>/controls/lighting/brightness</factor-prop>
     </emission>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>face</object-name>
@@ -45,7 +46,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>face2</object-name>
@@ -56,5 +57,6 @@
       <z> 0 </z>
     </axis>
   </animation>
-  
+
 </PropertyList>
+

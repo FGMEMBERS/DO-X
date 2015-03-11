@@ -1,23 +1,16 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
-  <sim include="Systems/views.xml">
+  <sim include="Nasal/views.xml">
 
     <description>Dornier Do X</description>
     <flight-model archive="y">yasim</flight-model>
     <aero archive="y">dox-yasim</aero>
     <type type="string">seaplane</type>
-    <author>Emmanuel BARANGER (3D/FDM), Marc KRAUS (Interior 3D/Multiplayer), Pierre GEOFFROY (FDM)</author>
-    <aircraft-version>0.3.0</aircraft-version>
+    <author>Marc Kraus :: Lake of Constance Hangar, Emmanuel BARANGER, Pierre GEOFFROY</author>
+    <aircraft-version>1.0.0</aircraft-version>
     <status>Alpha</status>
-
-    <rating>
-      <FDM type="int">     3 </FDM>
-      <systems type="int"> 4 </systems>
-      <cockpit type="int"> 4 </cockpit>
-      <model type="int">   4 </model>
-    </rating>
 
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
@@ -112,9 +105,177 @@
       </generic>
     </controls>
 
-    <help include="Systems/help.xml"/>
+    <help>
+      <title>Dornier Do X</title>
+     <!--
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+     -->
+      <key>
+        <name>B</name>
+        <desc>Cast Anchor (down)</desc>
+      </key>
+      <key>
+        <name>b</name>
+        <desc>Hoist Anchor (up)</desc>
+      </key>
+      <key>
+        <name>w</name>
+        <desc>walking forward (only in Copilot View)</desc>
+      </key>
+      <key>
+        <name>a</name>
+        <desc>walking left (only in Copilot View)</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>walking right (only in Copilot View)</desc>
+      </key>
+      <key>
+        <name>S</name>
+        <desc>Running back (only in Copilot View)</desc>
+      </key>
+      <key>
+        <name>s</name>
+        <desc>Start engine by engine or going back on walking (only in Copilot View)</desc>
+      </key>
+      <key>
+        <name>Ctrl-S</name>
+        <desc>Stop engine by engine</desc>
+      </key>
+      <key>
+        <name>PgUp</name>
+        <desc>Increase speed of locked engines</desc>
+      </key>
+      <key>
+        <name>PgDown</name>
+        <desc>Decrease speed of locked engines</desc>
+      </key>
+      <key>
+        <name>,</name>
+        <desc>Increase speed left locked engines</desc>
+      </key>
+      <key>
+        <name>;</name>
+        <desc>Decrease speed left locked engines</desc>
+      </key>
+      <key>
+        <name>.</name>
+        <desc>Increase speed right locked engines</desc>
+      </key>
+      <key>
+        <name>:</name>
+        <desc>Decrease speed right locked engines</desc>
+      </key>
+      <key>
+        <name>m</name>
+        <desc>Increase Mixtures</desc>
+      </key>
+      <key>
+        <name>M</name>
+        <desc>Decrease Mixtures</desc>
+      </key>
+      <key>
+        <name>l</name>
+        <desc>Interior Lights on/off</desc>
+      </key>
+      <key>
+        <name>c</name>
+        <desc>Interior/Exterior View</desc>
+      </key>
+      <key>
+        <name>Ctrl-I</name>
+        <desc>Open DO X Engineer Menu</desc>
+      </key>
+      <key>
+        <name> > </name>
+        <desc>Switch Pilot/Radio View</desc>
+      </key>
 
-    <menubar include="Dialogs/dox-menu.xml"/>
+      <text>
+      _________ Engine control between Pilot and Engineer __________
+
+      In the Middle Panel between the pilot and copilot seat 
+      you see 12 lamps. 6 left for the larboard engines.
+      6 right for the starboard engines.
+      The two instruments show you the average rpm of all locked
+      engines.
+
+      Red      - engine off
+      Yellow   - engine is running but not locked to the two little 
+                 throttle gears of the pilot. Only the engineer
+                 have the control for this engine in that moment.
+                 The clutch lever to lock and unlock those engines
+                 you will find in the Engineer Cabin.
+      Green    - pilot have full control over this engine.
+
+      ________________ Navigation with RDF and NDB __________________
+
+      Switch view between Pilot and Radio Navigation Officer with Ctrl-R.
+      In the Radio Cabin you will find a RDF-panel. First you have to set
+      a NDB, ILS or VOR/DME -frequency in range. Switch on the Instrument with the 
+      little knob AN/AUS. Fit on the headset and turn the DREHWINKEL-SCHEIBE
+      to find the loudest volume of the beacon-signal you have set.
+      If you have found the max. volume, click the pencil
+      below the RDF-panel.
+      </text>
+    </help>
+
+    <menubar>
+      <default>
+        <menu n="10">
+          <label>Dornier Do X</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
+          <item>
+            <label>Yokes On/Off</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/yokes-visible</property>
+            </binding>
+          </item>
+          <item>
+            <label>Immatriculation</label>
+            <binding>
+              <command>nasal</command>
+              <script>dox.immat_dialog.toggle()</script>
+            </binding>
+          </item>
+          <item>
+            <label>Engineer Menu</label>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>dox-engineer</dialog-name>
+            </binding>
+          </item>
+          <item>
+            <label>Interior Lights on/off</label>
+            <binding>
+              <command>nasal</command>
+              <script>dox.interiorLights()</script>
+            </binding>
+          </item>
+          <item>
+           <label>Select MP-Copilot</label>
+           <binding>
+            <command>nasal</command>
+            <script>
+              dual_control_tools.
+                copilot_dialog.show(aircraft_dual_control.copilot_type);
+             </script>
+            </binding>
+           </item>
+         </menu>
+       </default>
+    </menubar>
 
   </sim>
 
@@ -227,15 +388,18 @@
   </engines>
 
   <input>
-    <keyboard include="Systems/dox-keyboard.xml"/>
+    <keyboard include="Nasal/dox-keyboard.xml"/>
   </input>
 
   <instrumentation>
     <rdf>
       <power-on type="bool">0</power-on>
       <frequency-select-knob type="bool">0</frequency-select-knob>
+      <rotation-deg type="double">90</rotation-deg>
+      <cat-ship-in-range type="bool">false</cat-ship-in-range>
       <headset>
         <enabled type="bool">0</enabled>
+        <position type="bool">0/</position>
         <!-- properties swap if pilot fit headset -->
         <atc-enabled type="bool">1</atc-enabled>
         <atc-volume type="double">0.7</atc-volume>
@@ -261,6 +425,22 @@
       <distance>0.0</distance>
       <markeron type="bool">0</markeron>
     </afn2>
+    <!-- Flightgear Rallye Watch  -->
+    <frw>
+      <running type="bool">0</running>
+      <btn-mode type="bool">0</btn-mode>
+      <btn-reset type="bool">0</btn-reset>
+      <btn-start-stop type="bool">0</btn-start-stop>
+      <flight-time>
+        <start-time type="double">0</start-time>
+        <accu type="double">0</accu>
+        <total type="double">0</total>
+        <hours type="int">0</hours>
+        <minutes type="int">0</minutes>
+        <seconds type="int">0</seconds>
+      </flight-time>
+    </frw>
+    <!-- END Flightgear Rallye Watch  -->
   </instrumentation>
 
   <nasal>
@@ -282,16 +462,26 @@
       <file>Aircraft/DO-X/Nasal/immat.nas</file>
       <file>Aircraft/DO-X/Nasal/liveries.nas</file>
     </dox>
+    <frw>
+      <file>Aircraft/DO-X/Nasal/frw.nas</file>
+    </frw>
     <!-- Dual control. -->
     <dual_control_tools>
-     <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+     <file>Aircraft/DO-X/Nasal/Gidenstam/dual-control-tools.nas</file>
     </dual_control_tools>
     <aircraft_dual_control>
      <file>Aircraft/DO-X/Nasal/dox-dual-control.nas</file>
     </aircraft_dual_control>
     <dual_control>
-     <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
+     <file>Aircraft/DO-X/Nasal/Gidenstam/pilot-dual-control.nas</file>
     </dual_control>
+    <!-- Walk View -->
+    <walkview>
+      <file>Aircraft/DO-X/Nasal/Gidenstam/walkview.nas</file>
+    </walkview>
+    <WalkViews>
+      <file>Aircraft/DO-X/Nasal/dox-walk-view.nas</file>
+    </WalkViews>
   </nasal>
 
   <!-- Dual control depend on this value -->
@@ -304,6 +494,5 @@
       </fcs>
     </yasim>
   </fdm>
-  
 </PropertyList>
 

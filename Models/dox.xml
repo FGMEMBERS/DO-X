@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -11,15 +11,19 @@
       var self = cmdarg();
 
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
-      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
       crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
 
     <unload>
       livery_update.stop();
       crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -48,6 +52,18 @@
   </animation>
 
   <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>gouvernail</object-name>
@@ -70,24 +86,37 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
   </animation>
 
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/DO-X/Models/Effects/Glass/glass</inherits-from>
-    <object-name>vitres</object-name>
-  </effect>
-  
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>vitres</object-name>
-  </effect>
-  
   <!-- ############################ LIGHTS ################################ -->
   <!-- Landing Light-->
   <model>
@@ -169,22 +198,28 @@
 
   <!-- Une ombre pour OSG  -->
   <model>
+    <name>shadowOSG</name>
     <path>Aircraft/DO-X/Models/shadow.xml</path>
-    <offsets>
-      <x-m>  0.05063 </x-m>
-      <y-m>  0.00000 </y-m>
-      <z-m> -4.30900 </z-m>
-    </offsets>
   </model>
 
   <!-- Immatriculation -->
   <model>
     <path>Aircraft/DO-X/Models/Immat/immat.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
   </model>
 
   <!-- Effets de vagues en particules -->
   <model>
     <path>Aircraft/DO-X/Models/Effects/waves/waves.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
   </model>
 
   <!-- Anchor -->
@@ -203,6 +238,11 @@
   <!-- Intérieur, zone passagers -->
   <model>
     <path>Aircraft/DO-X/Models/Interior/interior.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
   </model>
 
   <!-- RadioDirectionFinder on the Front Deck-->
@@ -275,22 +315,7 @@
     </offsets>
   </model>
 
-  <animation>
-    <type>material</type>
-    <object-name>moteur</object-name>
-    <object-name>echappe</object-name>
-    <object-name>support</object-name>
-    
-    <property-base>sim/model/livery-engine</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>engines.png</texture>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-  </animation>
-  
+
   <!-- Cranking effects -->
   <!-- Coté gauche -->
   <!-- Extérieur gauche - Gauche avant -->
@@ -534,6 +559,46 @@
     </offsets>
   </model>
 
+  <animation>
+    <type>material</type>
+    <object-name>moteur</object-name>
+    <object-name>echappe</object-name>
+    <object-name>support</object-name>
+
+    <property-base>sim/model/livery-engine</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Engines/colors-E.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
   <!-- Gouverne de direction -->
   <animation>
     <type>rotate</type>
@@ -657,3 +722,4 @@
   </animation>
 
 </PropertyList>
+

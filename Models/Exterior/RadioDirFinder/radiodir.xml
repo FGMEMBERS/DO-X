@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -13,8 +13,8 @@
     <object-name>radioDirection</object-name>
     <property>/instrumentation/rdf/rotation-deg</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 360 </dep></entry>
+      <entry><ind>0</ind><dep> 0</dep></entry>
+      <entry><ind>1</ind><dep>360</dep></entry>
     </interpolation>
     <axis>
       <x>  0 </x>
@@ -41,3 +41,4 @@
   </animation>
 
 </PropertyList>
+

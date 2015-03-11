@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
+<?xml version="1.0"?>
 <PropertyList>
 
-  <path>dox-copilot.ac</path>
+ <path>dox-copilot.ac</path>
  
-  <!--
-  <nasal>
-    <load>
-    </load>
-    <unload>
-    </unload>
-  </nasal>
-  -->
+ <!-- nasal>
+  <load>
+  </load>
+  <unload>
+  </unload>
+ </nasal -->
 
 </PropertyList>
