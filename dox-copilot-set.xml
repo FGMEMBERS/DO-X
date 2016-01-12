@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  
+
   <sim include="Systems/views-copilot.xml">
-    
+
     <description>Dornier Do X - Copilot</description>
     <author>Emmanuel BARANGER (3D/FDM), Marc KRAUS (Interior 3D/Multiplayer), Pierre GEOFFROY (FDM)</author>
     <aircraft-version>0.3.0</aircraft-version>
     <status>Alpha</status>
+    <variant-of>dox</variant-of>
     
     <flight-model>null</flight-model>
     <aero>DO-X</aero>
-    
+
     <startup>
       <splash-texture>Aircraft/DO-X/dox-splash.png</splash-texture>
     </startup>
-    
+
     <sound>
       <audible>true</audible>
       <path archive="y">Aircraft/DO-X/Sounds/dox-copilot-sound.xml</path>
     </sound>
-    
+
     <model>
       <path>Aircraft/DO-X/Models/dox-copilot.xml</path>
     </model>
-    
+
     <multiplay>
       <chat_display>1</chat_display>
-      <generic> 
+      <generic>
         <int n="0" alias="/instrumentation/rdf/power-on">0</int>                <!-- Power-on of the RDF for MP/Pilot -->
         <int n="1" alias="/instrumentation/rdf/frequency-select-knob">0</int>   <!-- Select NDB or VOR of the RDF for MP/Pilot -->
         <int n="2" alias="/instrumentation/adf/frequencies/selected-khz">0</int>            <!-- Frequency of ADF for MP/Pilot -->
@@ -36,7 +37,7 @@
         <string n="0" alias="/instrumentation/rdf/message-to-pilot"></string>    <!-- MP heading-correction message for the pilot -->
       </generic>
     </multiplay>
-    
+
     <controls>
       <generic>
         <int type="bool" n="29" alias="/controls/glass-effect"/>
@@ -63,13 +64,13 @@
         <int type="double" n="50" alias="/instrumentation/rdf/headset/nav-volume"/>
       </generic>
     </controls>
-    
+
     <help include="Systems/help-copilot.xml"/>
-    
+
     <menubar include="Dialogs/dox-copilot-menu.xml"/>
-    
+
   </sim>
-  
+
   <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
   <controls>
     <engines>
@@ -113,7 +114,7 @@
         <magnetos>3</magnetos>
       </engine>
     </engines>
-    
+
     <lighting>
       <panel type="bool">1</panel>
       <navigationcabin type="bool">1</navigationcabin>
@@ -122,15 +123,15 @@
       <helpenginecabin type="bool">1</helpenginecabin>
       <brightness type="double">1.0</brightness>
     </lighting>
-    
+
     <glass-effect type="bool">1</glass-effect>
-    
+
   </controls>
-  
+
   <input>
     <keyboard include="Systems/dox-keyboard-copilot.xml"/>
   </input>
-  
+
   <instrumentation>
     <rdf>
       <power-on>0</power-on>
@@ -158,7 +159,7 @@
       <power-btn type="bool">0</power-btn>
     </adf>
   </instrumentation>
-  
+
   <nasal>
     <dox>
       <file>Aircraft/DO-X/Nasal/dox.nas</file>
@@ -177,5 +178,5 @@
       <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
     </dual_control>
   </nasal>
-  
+
 </PropertyList>
