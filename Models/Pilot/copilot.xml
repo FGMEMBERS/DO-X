@@ -62,10 +62,16 @@
   <object-name>AnimeTete</object-name>
     <condition>
       <not>
-        <equals>
-        <property>sim/current-view/name</property>
-        <value type="string">Cockpit View</value>
-        </equals>
+        <or>
+          <equals>
+            <property>/sim/current-view/name</property>
+            <value type="string">Copilot</value>
+          </equals>
+          <equals>
+            <property>/sim/current-view/name</property>
+            <value type="string">Navigation Officer</value>
+          </equals>
+        </or>
       </not>
     </condition>
   </animation>
