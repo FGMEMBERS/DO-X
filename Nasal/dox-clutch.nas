@@ -211,3 +211,26 @@ var doxAxisHandler = func(pre, post) {
 
 # And now, overwrite the original joystick function
 controls.throttleAxis = doxAxisHandler("/controls/engines/engine[", "]/throttle");
+
+_setlistener("/controls/engines/throttle-all", func{
+    var engines = [];
+    var sel = props.globals.getNode("/sim/input/selected", 1);
+    var engs = props.globals.getNode("/controls/engines").getChildren("engine");
+
+    foreach (var e; engs) {
+        var index = e.getIndex();
+        var s = sel.getChild("engine", index, 1);
+        if(s.getType() == "NONE") s.setBoolValue(1);
+        var clutch = getprop("/engines/engine["~index~"]/clutch");
+        if(clutch == 1){
+            append(engines, { index: index, controls: e, selected: s });
+        }
+    }
+    var val = getprop("/controls/engines/throttle-all");
+    foreach(var e; engines){
+        if(e.selected.getValue())
+             setprop("/controls/engines/engine["  ~ e.index ~ "]/throttle", (1 - val) / 2);
+         }
+  setprop("controls/engines/throttle-pilot-left",((1 - val) / 2));
+    setprop("controls/engines/throttle-pilot-right",((1 - val) / 2));
+},0,0);
