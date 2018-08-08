@@ -449,7 +449,7 @@
         reduce-friction-by-extension="1.0"
         speed-planing="25" 
         spring-factor-not-planing="0.2">
-        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+        <!--<control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>-->
   </gear>
 
   <!-- Center 1 -->
