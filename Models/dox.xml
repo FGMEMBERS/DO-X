@@ -40,7 +40,6 @@
     <object-name>barresmoteurs</object-name>
     <object-name>socleRadio</object-name>
     <object-name>socleWind</object-name>
-
     <object-name>trous</object-name>
 
     <!-- Objets transparents -->
@@ -64,7 +63,6 @@
     <object-name>barresmoteurs</object-name>
     <object-name>socleRadio</object-name>
     <object-name>socleWind</object-name>
-
     <object-name>trous</object-name>
 
     <property-base>sim/model/livery</property-base>
@@ -76,6 +74,42 @@
       <blue-prop>emission/blue</blue-prop>
     </emission>
   </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>moteur</object-name>
+    <object-name>echappe</object-name>
+    <object-name>support</object-name>
+    <property-base>sim/model/livery-engine</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Aircraft/DO-X/Models/Engines/engines.png</texture>
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+ <object-name>fuselage</object-name>
+    <object-name>gouvernail</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>flotteurs</object-name>
+    <object-name>derive</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionD</object-name>
+    <object-name>axes</object-name>
+    <object-name>barresmoteurs</object-name>
+    <object-name>socleRadio</object-name>
+    <object-name>socleWind</object-name>
+    <object-name>trous</object-name>    
+  </effect>    
+
 
   <!-- working for Rembrandt -->
   <effect>
@@ -215,9 +249,9 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 1 extérieur gauche -->
+  <!-- Bloc moteurs 1 -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines1.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m> -9.350 </y-m>
@@ -225,9 +259,29 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 2 milieu gauche -->
+  <!-- Hélice tractive -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines2.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA1.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m> -9.350 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB1.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m> -9.350 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bloc moteurs 2 -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m> -5.513 </y-m>
@@ -235,9 +289,29 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 3 intérieur gauche -->
+  <!-- Hélice tractive -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines3.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA2.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m> -5.513 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB2.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m> -5.513 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bloc moteurs 3 -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m> -1.845 </y-m>
@@ -245,9 +319,29 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 4 intérieur droit -->
+  <!-- Hélice tractive -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines4.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA3.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m> -1.845 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB3.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m> -1.845 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bloc moteurs 4 -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m>  1.845 </y-m>
@@ -255,9 +349,29 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 5 milieu droit -->
+  <!-- Hélice tractive -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines5.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA4.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m>  1.845 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB4.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m>  1.845 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bloc moteurs 5 -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m>  5.513 </y-m>
@@ -265,9 +379,29 @@
     </offsets>
   </model>
 
-  <!-- Bloc moteurs 6 extérieur droit -->
+  <!-- Hélice tractive -->
   <model>
-    <path>Aircraft/DO-X/Models/Engines/engines6.xml</path>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA5.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m>  5.513 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB5.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m>  5.513 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bloc moteurs 6 -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/engine-housing.xml</path>
     <offsets>
       <x-m> -7.239 </x-m>
       <y-m>  9.350 </y-m>
@@ -275,21 +409,25 @@
     </offsets>
   </model>
 
-  <animation>
-    <type>material</type>
-    <object-name>moteur</object-name>
-    <object-name>echappe</object-name>
-    <object-name>support</object-name>
-    
-    <property-base>sim/model/livery-engine</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>engines.png</texture>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-  </animation>
+  <!-- Hélice tractive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerA6.xml</path>
+    <offsets>
+      <x-m> -9.221 </x-m>
+      <y-m>  9.350 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hélice propulsive -->
+  <model>
+    <path>Aircraft/DO-X/Models/Engines/Propellers/propellerB6.xml</path>
+    <offsets>
+      <x-m> -5.277 </x-m>
+      <y-m>  9.350 </y-m>
+      <z-m>  3.458 </z-m>
+    </offsets>
+  </model>
   
   <!-- Cranking effects -->
   <!-- Coté gauche -->
