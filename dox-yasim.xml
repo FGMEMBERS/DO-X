@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Dornier Do X Emmanuel BARANGER
                   Pierre GEOFFROY
@@ -449,6 +449,7 @@
         reduce-friction-by-extension="1.0"
         speed-planing="25" 
         spring-factor-not-planing="0.2">
+        <!--<control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>-->
   </gear>
 
   <!-- Center 1 -->
@@ -525,5 +526,7 @@
 
   <tank x="7.5" y="0" z="-1.5" capacity="5258"/>
   <tank x="7.5" y="0" z="-1.5" capacity="5258"/>
+
+  <ballast x="-9.0" y="0.0" z="0.8" mass="-8000"/> 
 
 </airplane>

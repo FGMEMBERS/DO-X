@@ -19,6 +19,18 @@
       <model type="int">   4 </model>
     </rating>
 
+    <tags>
+      <tag>transport</tag>
+      <tag>dornier</tag>
+      <tag>1920s</tag>
+      <tag>1930s</tag>
+      <tag>prototype</tag>
+      <tag>seaplane</tag>
+      <tag>high-wing</tag>
+      <tag>piston</tag>
+      <tag>propeller</tag>
+    </tags>
+
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
     <fuel-fraction>1.0</fuel-fraction>
